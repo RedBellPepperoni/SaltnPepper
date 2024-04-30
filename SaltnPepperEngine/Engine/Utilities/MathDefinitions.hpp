@@ -55,14 +55,15 @@ namespace SaltnPepperEngine
 		inline static constexpr float HALFPI = XM_PIDIV2;
 		inline static constexpr float EPSILON = FLT_EPSILON;
 
-		inline static constexpr float DEGtoRAD = PI / 180.0f;
-		inline static constexpr float DEGtoRAD_2 = PI / 360.0f;
-		inline static constexpr float RADtoDEG = 1.0f / DEGtoRAD;
-		inline static constexpr float RADtoDEG_2 = 1.0f / DEGtoRAD_2;
 
 		// General Math Wrappers
 
-		inline static constexpr float SquareRoot(const float value)
+		/// <summary>
+		/// Returns the Square root of a value
+		/// </summary>
+
+		template <typename T>
+		static inline T SquareRoot(T value)
 		{
 			return std::sqrt(value);
 		}
@@ -83,14 +84,26 @@ namespace SaltnPepperEngine
 		}
 
 		/// <summary>
+		///  Get the Squared length/Magnitude of the given vector (faster than Length())
+		/// </summary>
+		/// <param name="Vector4"></param>
+		/// <returns> float </returns>
+		static constexpr float LengthSquared(const Vector4& vector)
+		{
+			return (vector.x * vector.x + vector.y * vector.y + vector.z * vector.z + vector.w * vector.w);
+		}
+
+
+		/// <summary>
 		///  Get the actual Length/Magnitude of the given vector (slower than LengthSquared())
 		/// </summary>
 		/// <param name="Vector2"></param>
 		/// <returns> float </returns>
-		static constexpr float Length(const Vector2& vector)
+		static inline float Length(const Vector2& vector)
 		{
 			return std::sqrt(LengthSquared(vector));
 		}
+
 
 		/// <summary>
 		///  Get the Squared length/Magnitude of the given vector (faster than Length())
@@ -107,27 +120,19 @@ namespace SaltnPepperEngine
 		/// </summary>
 		/// <param name="Vector4"></param>
 		/// <returns> float </returns>
-		static constexpr float Length(const Vector4& vector)
+		static inline float Length(const Vector4& vector)
 		{
 			return std::sqrt(LengthSquared(vector));
 		}
 
-		/// <summary>
-		///  Get the Squared length/Magnitude of the given vector (faster than Length())
-		/// </summary>
-		/// <param name="Vector4"></param>
-		/// <returns> float </returns>
-		static constexpr float LengthSquared(const Vector4& vector)
-		{
-			return (vector.x * vector.x + vector.y * vector.y + vector.z * vector.z + vector.w * vector.w);
-		}
+		
 
 		/// <summary>
 		///  Get the actual Length/Magnitude of the given vector (slower than LengthSquared())
 		/// </summary>
 		/// <param name="Vector3"></param>
 		/// <returns> float </returns>
-		static constexpr float Length(const Vector3& vector)
+		static inline float Length(const Vector3& vector)
 		{
 			return std::sqrt(LengthSquared(vector));
 		}
@@ -139,7 +144,7 @@ namespace SaltnPepperEngine
 		/// <param name="XMVECTOR"></param>
 		/// <param name="XMVECTOR"></param>
 		/// <returns> float </returns>
-		static constexpr float DistanceSquared(const XMVECTOR& vectorOne, const XMVECTOR& vectorTwo)
+		static const float DistanceSquared(const XMVECTOR& vectorOne, const XMVECTOR& vectorTwo)
 		{
 			return XMVectorGetX(XMVector2LengthSq(XMVectorSubtract(vectorOne, vectorTwo)));
 		}
@@ -150,9 +155,20 @@ namespace SaltnPepperEngine
 		/// <param name="XMVECTOR"></param>
 		/// <param name="XMVECTOR"></param>
 		/// <returns> float </returns>
-		static constexpr float Distance(const XMVECTOR& vectorOne, const XMVECTOR& vectorTwo)
+		static const float Distance(const XMVECTOR& vectorOne, const XMVECTOR& vectorTwo)
 		{
 			return XMVectorGetX(XMVector2Length(XMVectorSubtract(vectorOne, vectorTwo)));
+		}
+
+		/// <summary>
+		///  Get the estimated distance between two Vectors (faster but less accurate than Distance())
+		/// </summary>
+		/// <param name="XMVECTOR"></param>
+		/// <param name="XMVECTOR"></param>
+		/// <returns> float </returns>
+		static const float DistanceEstimated(const XMVECTOR& vectorOne, const XMVECTOR& vectorTwo)
+		{
+			return XMVectorGetX(XMVector3LengthEst(XMVectorSubtract(vectorOne, vectorTwo)));
 		}
 
 		/// <summary>
@@ -161,7 +177,7 @@ namespace SaltnPepperEngine
 		/// <param name="Vector2"></param>
 		/// <param name="Vector2"></param>
 		/// <returns> float </returns>
-		static constexpr float Distance(const Vector2& vectorOne, const Vector2& vectorTwo)
+		static const float Distance(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
 			const XMVECTOR vecOne = XMLoadFloat2(&vectorOne);
 			const XMVECTOR vecTwo = XMLoadFloat2(&vectorTwo);
@@ -169,13 +185,15 @@ namespace SaltnPepperEngine
 			return Distance(vecOne, vecTwo);
 		}
 
+		
+
 		/// <summary>
 		///  Get the Squared Distance between the two provided Vectors (faster than Distance())
 		/// </summary>
 		/// <param name="Vector2"></param>
 		/// <param name="Vector2"></param>
 		/// <returns> float </returns>
-		static constexpr float DistanceSquared(const Vector2& vectorOne, const Vector2& vectorTwo)
+		static const float DistanceSquared(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
 			const XMVECTOR vecOne = XMLoadFloat2(&vectorOne); 
 			const XMVECTOR vecTwo = XMLoadFloat2(&vectorTwo); 
@@ -184,12 +202,26 @@ namespace SaltnPepperEngine
 		}
 
 		/// <summary>
+		///  Get the estimated distance between two Vectors (faster but less accurate than Distance())
+		/// </summary>
+		/// <param name="Vector2"></param>
+		/// <param name="Vector2"></param>
+		/// <returns> float </returns>
+		static const float DistanceEstimated(const Vector2& vectorOne, const Vector2& vectorTwo)
+		{
+			XMVECTOR vecOne = XMLoadFloat2(&vectorOne);
+			XMVECTOR vecTwo = XMLoadFloat2(&vectorTwo);
+		
+			return XMVectorGetX(XMVector2LengthEst(vecTwo - vecOne));
+		}
+
+		/// <summary>
 		///  Get the actual Distance between the two provided Vectors (slower than DistanceSquared())
 		/// </summary>
 		/// <param name="Vector3"></param>
 		/// <param name="Vector3"></param>
 		/// <returns> float </returns>
-		static constexpr float Distance(const Vector3& vectorOne, const Vector3& vectorTwo)
+		static const float Distance(const Vector3& vectorOne, const Vector3& vectorTwo)
 		{
 			const XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
 			const XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
@@ -204,13 +236,57 @@ namespace SaltnPepperEngine
 		/// <param name="Vector3"></param>
 		/// <param name="Vector3"></param>
 		/// <returns> float </returns>
-		static constexpr float DistanceSquared(const Vector3& vectorOne, const Vector3& vectorTwo)
+		static const float DistanceSquared(const Vector3& vectorOne, const Vector3& vectorTwo)
 		{
 			const XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
 			const XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
 
 			return DistanceSquared(vecOne, vecTwo);
 		}
+
+		/// <summary>
+		///  Get the estimated distance between two Vectors (faster but less accurate than Distance())
+		/// </summary>
+		/// <param name="Vector3"></param>
+		/// <param name="Vector3"></param>
+		/// <returns> float </returns>
+		static const float DistanceEstimated(const Vector3& vectorOne, const Vector3& vectorTwo)
+		{
+			XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
+			XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
+
+			return DistanceEstimated(vecOne, vecTwo);
+		}
+
+		// ========================== TRANSFORM VECTORS =============
+
+		/// <summary>
+		/// Returns the Forward vector for a given Transform matrix
+		/// </summary>
+		/// <returns> Vector3 </returns>
+		inline static constexpr Vector3 GetForward(const Matrix4& matrix)
+		{
+			return Vector3{ matrix.m[2][0],matrix.m[2][1], matrix.m[2][2] };
+		}
+
+		/// <summary>
+		/// Returns the Up vector for a given Transform matrix
+		/// </summary>
+		/// <returns> Vector3 </returns>
+		inline static constexpr Vector3 GetUp(const Matrix4& matrix)
+		{
+			return Vector3{ matrix.m[1][0],matrix.m[1][1], matrix.m[1][2] };
+		}
+
+		/// <summary>
+		/// Returns the Right vector for a given Transform matrix
+		/// </summary>
+		/// <returns> Vector3 </returns>
+		inline static constexpr Vector3 GetRight(const Matrix4& matrix)
+		{
+			return Vector3{ matrix.m[0][0],matrix.m[0][1], matrix.m[0][2] };
+		}
+
 
 		// =========================== DOT and CROSS =========================================
 
@@ -221,7 +297,7 @@ namespace SaltnPepperEngine
 		/// <param name="Vector2"></param>
 		/// <param name="Vector2"></param>
 		/// <returns> float </returns>
-		static constexpr float Dot(const Vector2& vectorOne, const Vector2& vectorTwo)
+		static const float Dot(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
 			XMVECTOR vecOne = XMLoadFloat2(&vectorOne);
 			XMVECTOR vecTwo = XMLoadFloat2(&vectorTwo);
@@ -234,7 +310,7 @@ namespace SaltnPepperEngine
 		/// <param name="Vector3"></param>
 		/// <param name="Vector3"></param>
 		/// <returns> float </returns>
-		static constexpr float Dot(const Vector3& vectorOne, const Vector3& vectorTwo)
+		static const float Dot(const Vector3& vectorOne, const Vector3& vectorTwo)
 		{
 			XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
 			XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
@@ -246,16 +322,18 @@ namespace SaltnPepperEngine
 		/// <param name="Vector4"></param>
 		/// <param name="Vector4"></param>
 		/// <returns> float </returns>
-		static constexpr float Dot(const Vector4& vectorOne, const Vector4& vectorTwo)
+		static const float Dot(const Vector4& vectorOne, const Vector4& vectorTwo)
 		{
 			XMVECTOR vecOne = XMLoadFloat4(&vectorOne);
 			XMVECTOR vecTwo = XMLoadFloat4(&vectorTwo);
 			return XMVectorGetX(XMVector4Dot(vecOne,vecTwo));
 		}
 
-		static constexpr float GetAngle(const Vector2& vectorOne, const Vector2& vectorTwo)
+		static const float GetAngle(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
 			//float dot
+
+			return 1.0f;
 		}
 
 		//======================= LERPS and SLERPS ==============================
@@ -264,7 +342,7 @@ namespace SaltnPepperEngine
 		/// Lerps Between Two values according to the given Delta
 		/// </summary>
 		/// <returns> float</returns>
-		constexpr float Lerp(const float valueOne, const float valueTwo, const float delta)
+		constexpr float Lerp(const float valueOne, const float valueTwo, float delta)
 		{
 			return valueOne + (valueTwo - valueOne) * delta;
 		}
@@ -273,7 +351,7 @@ namespace SaltnPepperEngine
 		/// Lerps Between Two values according to the given Delta
 		/// </summary>
 		/// <returns> XMVECTOR </returns>
-		static constexpr XMVECTOR Lerp(XMVECTOR valueOne, XMVECTOR valueTwo, XMVECTOR delta)
+		static const XMVECTOR Lerp(XMVECTOR valueOne, XMVECTOR valueTwo, XMVECTOR delta)
 		{
 			return valueOne + (valueTwo - valueOne) * delta;;
 		}
@@ -282,7 +360,7 @@ namespace SaltnPepperEngine
 		/// Lerps Between Two values according to the given Delta
 		/// </summary>
 		/// <returns> Vector2 </returns>
-		static constexpr Vector2 Lerp(const Vector2& vectorOne, const Vector2& vectorTwo, const float delta)
+		static const Vector2 Lerp(const Vector2& vectorOne, const Vector2& vectorTwo, float delta)
 		{
 			return Vector2(Lerp(vectorOne.x, vectorTwo.x, delta), Lerp(vectorOne.y, vectorTwo.y, delta));
 		}
@@ -291,7 +369,7 @@ namespace SaltnPepperEngine
 		/// Lerps Between Two values according to the given Delta
 		/// </summary>
 		/// <returns> Vector3 </returns>
-		static constexpr Vector3 Lerp(const Vector3& vectorOne, const Vector3& vectorTwo, const float delta)
+		static const Vector3 Lerp(const Vector3& vectorOne, const Vector3& vectorTwo, float delta)
 		{
 			return Vector3(Lerp(vectorOne.x, vectorTwo.x, delta), Lerp(vectorOne.y, vectorTwo.y, delta), Lerp(vectorOne.z, vectorTwo.z, delta));
 		}
@@ -299,8 +377,8 @@ namespace SaltnPepperEngine
 		/// <summary>
 		/// Lerps Between Two values according to the given Delta
 		/// </summary>
-		/// <returns> Vecto42 </returns>
-		static constexpr Vector4 Lerp(const Vector4& vectorOne, const Vector4& vectorTwo, const float delta)
+		/// <returns> Vector2 </returns>
+		static const Vector4 Lerp(const Vector4& vectorOne, const Vector4& vectorTwo, float delta)
 		{
 			return Vector4(Lerp(vectorOne.x, vectorTwo.x, delta), Lerp(vectorOne.y, vectorTwo.y, delta), Lerp(vectorOne.z, vectorTwo.z, delta), Lerp(vectorOne.w, vectorTwo.w, delta));
 		}
@@ -309,25 +387,184 @@ namespace SaltnPepperEngine
 		/// Lerps Between Two values according to the given Delta
 		/// </summary>
 		/// <returns> Quaternion </returns>
-		static constexpr Quaternion Slerp(const Quaternion& rotOne, const Quaternion& rotTwo, const float delta)
+		static const Quaternion Slerp(const Quaternion& rotOne, const Quaternion& rotTwo, float delta)
 		{
+			// Load the Registers
 			XMVECTOR quatOne = XMLoadFloat4(&rotOne);
 			XMVECTOR quatTwo = XMLoadFloat4(&rotTwo);
-			XMVECTOR result = XMQuaternionSlerp(quatOne,quatTwo, delta);
 
-			XMFLOAT4 retVal = XMFLOAT4{};
-			XMStoreFloat4(&retVal, result); 
+			// Get the Slerp data
+			XMVECTOR slerpedQuat = XMQuaternionSlerp(quatOne,quatTwo, delta);
 
-			return retVal; 
+			XMFLOAT4 returnVal = XMFLOAT4{};
+
+			// Convert register data into a Quaternion (in out case a Float4)
+			XMStoreFloat4(&returnVal, slerpedQuat);
+
+			return returnVal; 
 		}
+
+		// ==================== MIN / MAX and CLAMP =========================
+
+		/// <summary>
+		/// Returns the Minimum values out of the two given values
+		/// </summary>
+		template <typename Type>
+		static constexpr Type Min(Type valueOne, Type valueTwo)
+		{
+			return std::min(valueOne, valueTwo);
+		}
+		
+		/// <summary>
+		/// Returns the Maximum value out of the two given values
+		/// </summary>
+		template <typename Type>
+		static constexpr float Max(Type valueOne, Type valueTwo)
+		{
+			return std::max(valueOne, valueTwo);
+		}
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>float</returns>
+		static constexpr float Clamp(float value, float min, float max)
+		{
+			return Min(max, Max(min, value));
+		}
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>Vector2</returns>
+		static constexpr Vector2 Clamp(Vector2 value, Vector2 min, Vector2 max)
+		{
+			Vector2 result = value;
+			result.x = Clamp(result.x, min.x, max.x);
+			result.y = Clamp(result.y, min.y, max.y);
+
+			return result;
+		}
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>Vector3</returns>
+		static constexpr Vector3 Clamp(Vector3 value, Vector3 min, Vector3 max)
+		{
+			Vector3 result = value;
+			result.x = Clamp(result.x, min.x, max.x);
+			result.y = Clamp(result.y, min.y, max.y);
+			result.z = Clamp(result.z, min.z, max.z);
+
+			return result;
+		}
+
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>Vector4</returns>
+		static constexpr Vector4 Clamp(Vector4 value, Vector4 min, Vector4 max)
+		{
+			Vector4 result = value;
+			result.x = Clamp(result.x, min.x, max.x);
+			result.y = Clamp(result.y, min.y, max.y);
+			result.z = Clamp(result.z, min.z, max.z);
+
+			return result;
+		}
+
+		// ===================== RADIANS and DEGREES ===============
+
+		/// <summary>
+		///  Converts degress into Radians
+		/// </summary>
+		
+		template <typename T>
+		static constexpr T ToRadians(T degrees)
+		{
+			return degrees / 180.0f * PI;
+		}
+
+		/// <summary>
+		///  Converts Radians into Degrees
+		/// </summary>
+		template <typename T>
+		static constexpr T ToDegrees(T radians)
+		{
+			return radians / PI * 180.0f;
+		}
+
+
+
 
 		// ===================== TRIGNOMETRY MATHS =========================
 
-		// Sine of the angle  (angle should be in degrees)
+		/// <summary>
+		///  Gets the Sine of the given angle in degrees (angle should be in degrees)
+		/// </summary>
+		/// <returns> float </returns>
 		static constexpr float Sin(float angle)
 		{
-			return std::sin(angle * DEGtoRAD);
+			return ToDegrees(std::sin(angle));
 		}
+
+
+		/// <summary>
+		///  Gets the CoSine of the given angle in degrees (angle should be in degrees)
+		/// </summary>
+		template <typename T>
+		static constexpr T Cos(T angle)
+		{
+			return ToDegrees(std::cos(angle));
+		}
+
+
+		/// <summary>
+		///  Gets the Tangent of the given angle in degrees (angle should be in degrees)
+		/// </summary>
+		
+		template <typename T>
+		static constexpr T Tan(T angle)
+		{
+			return ToDegrees(std::tan(angle));
+		}
+
+
+
+		/// <summary>
+		///  Gets the Arc Sine of the given angle in degrees (angle should be in degrees)
+		/// </summary>
+		/// <returns> float </returns>
+		template <typename T>
+		static constexpr T ASin(T angle)
+		{
+			return ToDegrees(std::asin(Clamp(angle,T(-1.0f),T(1.0f)))); 
+		}
+
+
+		/// <summary>
+		///  Gets the Arc CoSine of the given angle in degrees (angle should be in degrees)
+		/// </summary>
+		template <typename T>
+		static constexpr T ACos(T angle)
+		{
+			return ToDegrees(std::acos(Clamp(angle, T(-1.0f),T(1.0f)))); 
+			
+		}
+
+
+		/// <summary>
+		///  Gets the Arc Tangent of the given angle in degrees (angle should be in degrees)
+		/// </summary>
+		template <typename T>
+		static constexpr T ATan(T angle)
+		{
+			return ToDegrees(std::atan(Clamp(angle, T( - 1.0f), T(1.0f))));
+		}
+
+		
 
 		// ====================== ROOTS and LOGS =====================
 	
@@ -397,6 +634,8 @@ namespace SaltnPepperEngine
 		}
 
 	}
+
+	using namespace Math;
 }
 
 #endif // !MATHDEFINITIONS_H
