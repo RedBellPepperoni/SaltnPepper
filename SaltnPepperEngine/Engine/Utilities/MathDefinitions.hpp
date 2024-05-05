@@ -52,6 +52,7 @@ namespace SaltnPepperEngine
 																 0, 0, 0, 1);
 
 		inline static constexpr float PI = XM_PI;
+		inline static constexpr float TWOPI = XM_2PI;
 		inline static constexpr float HALFPI = XM_PIDIV2;
 		inline static constexpr float EPSILON = FLT_EPSILON;
 
@@ -299,9 +300,12 @@ namespace SaltnPepperEngine
 		/// <returns> float </returns>
 		static const float Dot(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
-			XMVECTOR vecOne = XMLoadFloat2(&vectorOne);
+			/*XMVECTOR vecOne = XMLoadFloat2(&vectorOne);
 			XMVECTOR vecTwo = XMLoadFloat2(&vectorTwo);
-			return XMVectorGetX(XMVector2Dot( vecOne, vecTwo));
+			return XMVectorGetX(XMVector2Dot( vecOne, vecTwo));*/
+
+			return vectorOne.x * vectorTwo.x + vectorOne.y * vectorTwo.y;
+
 		}
 
 		/// <summary>
@@ -312,10 +316,13 @@ namespace SaltnPepperEngine
 		/// <returns> float </returns>
 		static const float Dot(const Vector3& vectorOne, const Vector3& vectorTwo)
 		{
-			XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
+			/*XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
 			XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
-			return XMVectorGetX(XMVector3Dot(vecOne, vecTwo));
+			return XMVectorGetX(XMVector3Dot(vecOne, vecTwo));*/
+
+			return vectorOne.x * vectorTwo.x + vectorOne.y * vectorTwo.y + vectorOne.z * vectorTwo.z;
 		}
+
 		/// <summary>
 		/// Get the Dot Product of the given vectors
 		/// </summary>
@@ -324,16 +331,133 @@ namespace SaltnPepperEngine
 		/// <returns> float </returns>
 		static const float Dot(const Vector4& vectorOne, const Vector4& vectorTwo)
 		{
-			XMVECTOR vecOne = XMLoadFloat4(&vectorOne);
+		/*	XMVECTOR vecOne = XMLoadFloat4(&vectorOne);
 			XMVECTOR vecTwo = XMLoadFloat4(&vectorTwo);
-			return XMVectorGetX(XMVector4Dot(vecOne,vecTwo));
+			return XMVectorGetX(XMVector4Dot(vecOne,vecTwo));*/
+
+			return vectorOne.x * vectorTwo.x + vectorOne.y * vectorTwo.y + vectorOne.z * vectorTwo.z + vectorOne.w * vectorTwo.w;
 		}
 
+		/// <summary>
+		///  Returns teh Cross Product of two Vectors
+		/// </summary>
+		/// <returns> Vector2 </returns>
+		static const Vector2 Cross(const Vector2& vectorOne, const Vector2& vectorTwo)
+		{
+			XMVECTOR vecOne = XMLoadFloat2(&vectorOne);
+			XMVECTOR vecTwo = XMLoadFloat2(&vectorTwo);
+			
+			Vector2 result;
+			XMStoreFloat2( &result , XMVector2Cross(vecOne, vecTwo));	
+
+			return result;
+		}
+
+		/// <summary>
+		///  Returns teh Cross Product of two Vectors
+		/// </summary>
+		/// <returns> Vector3 </returns>
+		static const Vector3 Cross(const Vector3& vectorOne, const Vector3& vectorTwo)
+		{
+			XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
+			XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
+
+			Vector3 result;
+			XMStoreFloat3(&result, XMVector2Cross(vecOne, vecTwo));
+
+			return result;
+		}
+
+
+		/// <summary>
+		///  Returns teh Cross Product of two Vectors
+		/// </summary>
+		/// <returns> Vector3 </returns>
+		static const Vector4 Cross(const Vector4& vectorOne, const Vector4& vectorTwo)
+		{
+			XMVECTOR vecOne = XMLoadFloat4(&vectorOne);
+			XMVECTOR vecTwo = XMLoadFloat4(&vectorTwo);
+
+			Vector4 result;
+			XMStoreFloat4(&result, XMVector2Cross(vecOne, vecTwo));
+
+			return result;
+		}
+
+		/// <summary>
+		///  Warpper for the Max fucntion for Vector2
+		/// </summary>
+		/// <returns> Vector2 </returns>
+		static constexpr Vector2 Max(const Vector2& vectorOne, const Vector2& vectorTwo)
+		{
+			return Vector2 { Max(vectorOne.x,vectorTwo.x), Max(vectorOne.y, vectorTwo.y)};
+		}
+
+		/// <summary>
+		///  Warpper for the Max fucntion for Vector3
+		/// </summary>
+		/// <returns> Vector2 </returns>
+		static constexpr Vector3 Max(const Vector3& vectorOne, const Vector3& vectorTwo)
+		{
+			return Vector3{ Max(vectorOne.x,vectorTwo.x), Max(vectorOne.y, vectorTwo.y) , Max(vectorOne.z,vectorTwo.z)};
+		}
+
+		/// <summary>
+		///  Warpper for the Max fucntion for Vector4
+		/// </summary>
+		/// <returns> Vector2 </returns>
+		static constexpr Vector4 Max(const Vector4& vectorOne, const Vector4& vectorTwo)
+		{
+			return Vector4{ Max(vectorOne.x,vectorTwo.x), Max(vectorOne.y, vectorTwo.y) ,  Max(vectorOne.z,vectorTwo.z), Max(vectorOne.w,vectorTwo.w) };
+		}
+
+		/// <summary>
+		///  Returns angle (in Radians) between the two Vector2s
+		/// </summary>
+		/// <returns> float </returns>
 		static const float GetAngle(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
-			//float dot
+			
+			float dot = Dot(vectorOne, vectorTwo);  
+			float determinant = vectorOne.x * vectorTwo.x - vectorOne.y * vectorTwo.y;		
+			float angle = atan2f(determinant, dot);	
 
-			return 1.0f;
+			if (angle < 0)
+			{
+				angle += PI;
+			}
+
+			return angle;
+		}
+
+		/// <summary>
+		///  Returns angle (in Radians) between the two XMVECTORS
+		/// </summary>
+		/// <returns> float </returns>
+		static const float GetAngle(XMVECTOR vectorOne, XMVECTOR vectorTwo, XMVECTOR axis, float max) 
+		{
+			float angle = XMVectorGetX(XMVector3AngleBetweenVectors(vectorOne, vectorTwo));
+
+			angle = Min(angle, max);
+
+			if (XMVectorGetX(XMVector3Dot(XMVector3Cross(vectorOne, vectorTwo), axis)) < 0)
+			{
+				angle = TWOPI - angle;
+			}
+
+			return angle;
+		}
+
+		/// <summary>
+		///  Returns angle (in Radians) between the two Vector3s
+		/// </summary>
+		/// <returns> float </returns>
+		static const float GetAngle(const Vector3& vectorOne, const Vector3& vectorTwo, const Vector3& axis, float max)
+		{
+			XMVECTOR vecOne = XMLoadFloat3(&vectorOne);
+			XMVECTOR vecTwo = XMLoadFloat3(&vectorTwo);
+			XMVECTOR Axis = XMLoadFloat3(&axis);
+			return GetAngle(vecOne, vecTwo, Axis, max);
 		}
 
 		//======================= LERPS and SLERPS ==============================
@@ -564,7 +688,14 @@ namespace SaltnPepperEngine
 			return ToDegrees(std::atan(Clamp(angle, T( - 1.0f), T(1.0f))));
 		}
 
-		
+		/// <summary>
+		///  Gets the Arc Tangent of the given angle in y/x degrees (angle should be in degrees)
+		/// </summary>
+		template <typename T>
+		static constexpr T ATan(T angle)
+		{
+			return ToDegrees(std::atan(Clamp(angle, T(-1.0f), T(1.0f))));
+		}
 
 		// ====================== ROOTS and LOGS =====================
 	
@@ -573,10 +704,10 @@ namespace SaltnPepperEngine
 		/// </summary>
 		/// <typeparam name="Type"></typeparam>
 		/// <returns> Type </returns>
-		template <typename Type>
-		inline static constexpr Type RootTwo()
+		template <typename T>
+		inline static constexpr T RootTwo()
 		{
-			return Type{ 1.41421356237309504880168872420969808 };
+			return T{ 1.41421356237309504880168872420969808 };
 		}
 
 		/// <summary>
@@ -584,10 +715,10 @@ namespace SaltnPepperEngine
 		/// </summary>
 		/// <typeparam name="Type"></typeparam>
 		/// <returns> Type </returns>
-		template <typename Type>
-		inline static constexpr Type RootThree()
+		template <typename T>
+		inline static constexpr T RootThree()
 		{
-			return Type{ 1.73205080756887729352744634150587236 };
+			return T{ 1.73205080756887729352744634150587236 };
 		}
 
 		/// <summary>
@@ -595,10 +726,10 @@ namespace SaltnPepperEngine
 		/// </summary>
 		/// <typeparam name="Type"></typeparam>
 		/// <returns> Type </returns>
-		template <typename Type>
-		inline static constexpr Type RootFive()
+		template <typename T>
+		inline static constexpr T RootFive()
 		{
-			return Type{ 2.23606797749978969640917366873127623 };
+			return T{ 2.23606797749978969640917366873127623 };
 		}
 		/// <summary>
 		/// Return the type initialized with Log of Two
@@ -616,10 +747,10 @@ namespace SaltnPepperEngine
 		/// </summary>
 		/// <typeparam name="Type"></typeparam>
 		/// <returns> Type </returns>
-		template <typename Type>
-		inline static constexpr Type LogTen()
+		template <typename T>
+		inline static constexpr T LogTen()
 		{
-			return Type{ 2.30258509299404568401799145468436421 };
+			return T{ 2.30258509299404568401799145468436421 };
 		}
 
 		/// <summary>
@@ -627,10 +758,10 @@ namespace SaltnPepperEngine
 		/// </summary>
 		/// <typeparam name="Type"></typeparam>
 		/// <returns> Type </returns>
-		template <typename Type>
-		inline static constexpr Type GoldenRatio()
+		template <typename T>
+		inline static constexpr T GoldenRatio()
 		{
-			return Type{ 1.61803398874989484820458683436563811 };
+			return T{ 1.61803398874989484820458683436563811 };
 		}
 
 	}
