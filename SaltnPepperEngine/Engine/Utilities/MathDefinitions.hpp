@@ -69,6 +69,77 @@ namespace SaltnPepperEngine
 			return std::sqrt(value);
 		}
 
+		// ==================== MIN / MAX and CLAMP =========================
+
+		/// <summary>
+		/// Returns the Minimum values out of the two given values
+		/// </summary>
+		template <typename Type>
+		static constexpr const Type Min(Type valueOne, Type valueTwo)
+		{
+			return std::min(valueOne, valueTwo);
+		}
+
+		/// <summary>
+		/// Returns the Maximum value out of the two given values
+		/// </summary>
+		template <typename Type>
+		static constexpr const float Max(Type valueOne, Type valueTwo)
+		{
+			return std::max(valueOne, valueTwo);
+		}
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>float</returns>
+		static constexpr const float Clamp(float value, float min, float max)
+		{
+			return Min(max, Max(min, value));
+		}
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>Vector2</returns>
+		static constexpr const Vector2 Clamp(Vector2 value, Vector2 min, Vector2 max)
+		{
+			Vector2 result = value;
+			result.x = Clamp(result.x, min.x, max.x);
+			result.y = Clamp(result.y, min.y, max.y);
+
+			return result;
+		}
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>Vector3</returns>
+		static constexpr const Vector3 Clamp(Vector3 value, Vector3 min, Vector3 max)
+		{
+			Vector3 result = value;
+			result.x = Clamp(result.x, min.x, max.x);
+			result.y = Clamp(result.y, min.y, max.y);
+			result.z = Clamp(result.z, min.z, max.z);
+
+			return result;
+		}
+
+
+		/// <summary>
+		/// Returns the Clamped value between the provided min and Max values
+		/// </summary>
+		/// <returns>Vector4</returns>
+		static constexpr Vector4 Clamp(Vector4 value, Vector4 min, Vector4 max)
+		{
+			Vector4 result = value;
+			result.x = Clamp(result.x, min.x, max.x);
+			result.y = Clamp(result.y, min.y, max.y);
+			result.z = Clamp(result.z, min.z, max.z);
+
+			return result;
+		}
+
 
 		// ================ VECTOR FUNCTION ===============================
 
@@ -390,7 +461,9 @@ namespace SaltnPepperEngine
 		/// <returns> Vector2 </returns>
 		static constexpr Vector2 Max(const Vector2& vectorOne, const Vector2& vectorTwo)
 		{
-			return Vector2 { Max(vectorOne.x,vectorTwo.x), Max(vectorOne.y, vectorTwo.y)};
+			float maxX = std::max(vectorOne.x, vectorTwo.x);
+			float maxY = std::max(vectorOne.y, vectorTwo.y);
+			return Vector2 { maxX, maxY };
 		}
 
 		/// <summary>
@@ -399,7 +472,7 @@ namespace SaltnPepperEngine
 		/// <returns> Vector2 </returns>
 		static constexpr Vector3 Max(const Vector3& vectorOne, const Vector3& vectorTwo)
 		{
-			return Vector3{ Max(vectorOne.x,vectorTwo.x), Max(vectorOne.y, vectorTwo.y) , Max(vectorOne.z,vectorTwo.z)};
+			return Vector3{ std::max(vectorOne.x,vectorTwo.x), std::max(vectorOne.y, vectorTwo.y) , std::max(vectorOne.z,vectorTwo.z)};
 		}
 
 		/// <summary>
@@ -408,7 +481,7 @@ namespace SaltnPepperEngine
 		/// <returns> Vector2 </returns>
 		static constexpr Vector4 Max(const Vector4& vectorOne, const Vector4& vectorTwo)
 		{
-			return Vector4{ Max(vectorOne.x,vectorTwo.x), Max(vectorOne.y, vectorTwo.y) ,  Max(vectorOne.z,vectorTwo.z), Max(vectorOne.w,vectorTwo.w) };
+			return Vector4{ std::max(vectorOne.x,vectorTwo.x), std::max(vectorOne.y, vectorTwo.y) ,  std::max(vectorOne.z,vectorTwo.z), std::max(vectorOne.w,vectorTwo.w) };
 		}
 
 		/// <summary>
@@ -528,76 +601,7 @@ namespace SaltnPepperEngine
 			return returnVal; 
 		}
 
-		// ==================== MIN / MAX and CLAMP =========================
-
-		/// <summary>
-		/// Returns the Minimum values out of the two given values
-		/// </summary>
-		template <typename Type>
-		static constexpr Type Min(Type valueOne, Type valueTwo)
-		{
-			return std::min(valueOne, valueTwo);
-		}
 		
-		/// <summary>
-		/// Returns the Maximum value out of the two given values
-		/// </summary>
-		template <typename Type>
-		static constexpr float Max(Type valueOne, Type valueTwo)
-		{
-			return std::max(valueOne, valueTwo);
-		}
-
-		/// <summary>
-		/// Returns the Clamped value between the provided min and Max values
-		/// </summary>
-		/// <returns>float</returns>
-		static constexpr float Clamp(float value, float min, float max)
-		{
-			return Min(max, Max(min, value));
-		}
-
-		/// <summary>
-		/// Returns the Clamped value between the provided min and Max values
-		/// </summary>
-		/// <returns>Vector2</returns>
-		static constexpr Vector2 Clamp(Vector2 value, Vector2 min, Vector2 max)
-		{
-			Vector2 result = value;
-			result.x = Clamp(result.x, min.x, max.x);
-			result.y = Clamp(result.y, min.y, max.y);
-
-			return result;
-		}
-
-		/// <summary>
-		/// Returns the Clamped value between the provided min and Max values
-		/// </summary>
-		/// <returns>Vector3</returns>
-		static constexpr Vector3 Clamp(Vector3 value, Vector3 min, Vector3 max)
-		{
-			Vector3 result = value;
-			result.x = Clamp(result.x, min.x, max.x);
-			result.y = Clamp(result.y, min.y, max.y);
-			result.z = Clamp(result.z, min.z, max.z);
-
-			return result;
-		}
-
-
-		/// <summary>
-		/// Returns the Clamped value between the provided min and Max values
-		/// </summary>
-		/// <returns>Vector4</returns>
-		static constexpr Vector4 Clamp(Vector4 value, Vector4 min, Vector4 max)
-		{
-			Vector4 result = value;
-			result.x = Clamp(result.x, min.x, max.x);
-			result.y = Clamp(result.y, min.y, max.y);
-			result.z = Clamp(result.z, min.z, max.z);
-
-			return result;
-		}
 
 		// ===================== RADIANS and DEGREES ===============
 
@@ -692,9 +696,9 @@ namespace SaltnPepperEngine
 		///  Gets the Arc Tangent of the given angle in y/x degrees (angle should be in degrees)
 		/// </summary>
 		template <typename T>
-		static constexpr T ATan(T angle)
+		static constexpr T ATan2(T angle)
 		{
-			return ToDegrees(std::atan(Clamp(angle, T(-1.0f), T(1.0f))));
+			return ToDegrees(std::atan2(Clamp(angle, T(-1.0f), T(1.0f))));
 		}
 
 		// ====================== ROOTS and LOGS =====================

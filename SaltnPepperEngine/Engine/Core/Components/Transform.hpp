@@ -53,13 +53,26 @@ namespace SaltnPepperEngine
 			const Vector3 GetScale() const;
 			const Quaternion GetRotation() const;
 
-			// Editor utilities
-			const XMVECTOR GetPositionXM() const;
-			const XMVECTOR GetScaleXM() const;
-			const XMVECTOR GetRotationXM() const;
+			// RAW Editor utilities
+			const XMVECTOR GetPositionRaw() const;
+			const XMVECTOR GetScaleRaw() const;
+			const XMVECTOR GetRotationRaw() const;
+
+		
+			// Forward Right and Up Vectors
+			inline const Vector3 GetForward() const;
+			inline const Vector3 GetRight() const;
+			inline const Vector3 GetUp() const;
+
+			// RAW Forward Utils
+			const XMVECTOR GetForwardRaw() const;
+			const XMVECTOR GetRightRaw() const;
+			const XMVECTOR GetUpRaw() const;
 			
-
-
+			// Local Matrix (Gets the loacl matric defined by the location , scale and rotation)
+			const Matrix4 GetlocalMatrix() const;
+			// Raw local matirx values
+			const XMMATRIX GetlocalMatrixRaw() const;
 		};
 	}
 }
