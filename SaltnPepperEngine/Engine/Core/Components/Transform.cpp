@@ -97,5 +97,69 @@ namespace SaltnPepperEngine
 
 			return XMMatrixScalingFromVector(LocalScale) * XMMatrixRotationQuaternion(LocalRotation) * XMMatrixTranslationFromVector(LocalTranslation);
 		}
+
+		void Transform::Translate(const Vector3& translation)
+		{
+		}
+
+		void Transform::Translate(const XMVECTOR& translation)
+		{
+		}
+
+		void Transform::Rotate(const Quaternion& rotation)
+		{
+		}
+
+		void Transform::Rotate(const XMVECTOR& rotation)
+		{
+		}
+
+		void Transform::Scale(const Vector3& scale)
+		{
+		}
+
+		void Transform::Scale(const XMVECTOR& scale)
+		{
+		}
+
+		void Transform::ClearTransform()
+		{
+			SetDirty();
+			localPosition = Vector3{ 0.0f, 0.0f, 0.0f };
+			localScale = Vector3{ 1.0f ,1.0f, 1.0f};
+			localRotation = Quaternion{ 0.0f, 0.0f, 0.0f,1.0f };
+		}
+
+		void Transform::UpdateTransform()
+		{
+			if (!IsDirty()) return;
+
+			SetDirty(false);
+			XMStoreFloat4x4(&worldMatrix, GetlocalMatrixRaw());
+
+		}
+
+		void Transform::UpdateParentTransform(const Transform& parent)
+		{
+			// local matrix * parent's world matrix 
+			XMMATRIX World = GetlocalMatrixRaw() * XMLoadFloat4x4(&parent.worldMatrix);
+			XMStoreFloat4x4(&worldMatrix, World);
+		}
+
+		void Transform::ApplyTransform()
+		{
+			SetDirty();
+
+			XMVECTOR Scale;
+			XMVECTOR Rotation;
+			XMVECTOR Translation;
+
+			XMMatrixDecompose(&Scale, &Rotation, &Translation, XMLoadFloat4x4(&worldMatrix));
+
+			XMStoreFloat3(&localScale, Scale);
+			XMStoreFloat4(&localRotation, Rotation);
+			XMStoreFloat3(&localPosition, Translation);
+
+		}
 	}
 }

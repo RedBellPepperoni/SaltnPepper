@@ -41,6 +41,7 @@ namespace SaltnPepperEngine
 		using Matrix3X4 = XMFLOAT3X4;
 		using Matrix4X3 = XMFLOAT4X3;
 
+
 		// Defines for wrapping over Direct X vector
 		using Quaternion = XMFLOAT4;
 
@@ -689,16 +690,16 @@ namespace SaltnPepperEngine
 		template <typename T>
 		static constexpr T ATan(T angle)
 		{
-			return ToDegrees(std::atan(Clamp(angle, T( - 1.0f), T(1.0f))));
+			return ToDegrees(std::atan(angle));
 		}
 
 		/// <summary>
 		///  Gets the Arc Tangent of the given angle in y/x degrees (angle should be in degrees)
 		/// </summary>
 		template <typename T>
-		static constexpr T ATan2(T angle)
+		static constexpr T ATan2(T Yangle, T Xangle)
 		{
-			return ToDegrees(std::atan2(Clamp(angle, T(-1.0f), T(1.0f))));
+			return ToDegrees(std::atan2(Yangle,Xangle));
 		}
 
 		// ====================== ROOTS and LOGS =====================

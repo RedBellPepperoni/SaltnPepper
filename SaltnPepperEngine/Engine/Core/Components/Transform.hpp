@@ -1,12 +1,13 @@
 #ifndef TRANSFORM_H
 #define TRANSFORM_H
+#include "Core/EngineDefines.hpp"
 #include "Utilities/MathDefinitions.hpp"
 
 namespace SaltnPepperEngine
 {
 	namespace Components
 	{
-		struct Transform
+		struct SNP_API Transform
 		{
 			enum FLAGS : uint8_t
 			{
@@ -73,6 +74,36 @@ namespace SaltnPepperEngine
 			const Matrix4 GetlocalMatrix() const;
 			// Raw local matirx values
 			const XMMATRIX GetlocalMatrixRaw() const;
+
+			// ============= SETTERS ====================
+
+			void Translate(const Vector3& translation);
+			void Translate(const XMVECTOR& translation);
+
+			void Rotate(const Quaternion& rotation);
+			void Rotate(const XMVECTOR& rotation);
+
+			void Scale(const Vector3& scale);
+			void Scale(const XMVECTOR& scale);
+
+
+			// ======== TRANSFORM UPDATE ============
+
+			// clears local postion , scale and rotation values (Resets them to default)
+			void ClearTransform();
+
+			// Applies local transform to world space (Updates the World matrix)
+			void UpdateTransform();
+
+			// Applies a parent transform to the local transform  (Updates the World matrix)
+			void UpdateParentTransform(const Transform& parent);
+
+			// Updates the local transform with the world space transform (Updates local position, scale and rotation)
+			void ApplyTransform();
+	
+			
+
+
 		};
 	}
 }
