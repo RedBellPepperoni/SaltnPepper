@@ -50,10 +50,20 @@ namespace SaltnPepperEngine
         {
         public:
 
+            /// <summary>
+            /// Set up function to declare all bindings before the logger is created
+            /// </summary>
             static void OnInit();
+
+            /// <summary>
+            /// Clean up Function 
+            /// </summary>
             static void OnDestroy();
 
 #if SNP_ENABLE_LOGGING
+            /// <summary>
+            /// get a reference to the spd Core Logger
+            /// </summary>
             inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
             static void AddSink(std::shared_ptr<spdlog::sinks::sink>& sink);
 #endif

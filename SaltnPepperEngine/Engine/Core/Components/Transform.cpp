@@ -82,9 +82,9 @@ namespace SaltnPepperEngine
 			return XMLoadFloat3(&up);
 		}
 
-		const Matrix4 Transform::GetlocalMatrix() const
+		const Matrix Transform::GetlocalMatrix() const
 		{
-			Matrix4 matrix;
+			Matrix matrix;
 			XMStoreFloat4x4(&matrix, GetlocalMatrixRaw());
 			return matrix;
 		}
@@ -98,12 +98,34 @@ namespace SaltnPepperEngine
 			return XMMatrixScalingFromVector(LocalScale) * XMMatrixRotationQuaternion(LocalRotation) * XMMatrixTranslationFromVector(LocalTranslation);
 		}
 
+		void Transform::SetPosition(const Vector3& position)
+		{
+			localPosition = position;
+		}
+
+		void Transform::SetScale(const Vector3& scale)
+		{
+			localScale = scale;
+		}
+
+		void Transform::SetRotation(const Quaternion& rotation)
+		{
+			localRotation = rotation;
+		}
+
 		void Transform::Translate(const Vector3& translation)
 		{
+			SetDirty();
+			localPosition.x += translation.x;
+			localPosition.x += translation.y;
+			localPosition.x += translation.z;
 		}
 
 		void Transform::Translate(const XMVECTOR& translation)
 		{
+			Vector3 newTranslation;
+			XMStoreFloat3(&newTranslation, translation);
+			Translate(newTranslation);
 		}
 
 		void Transform::Rotate(const Quaternion& rotation)

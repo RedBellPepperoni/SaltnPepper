@@ -52,6 +52,12 @@
  }
 																		
 
+#define BYTES(n) (n)
+#define KILOBYTES(n) (n << 10)
+#define BEGABYTES(n) (n << 20)
+#define GIGABYTES(n) (((unsigned int)n) << 30)
+#define TERABYTES(n) (((unsigned int)n) << 40)
+
 
 #if defined(_MSC_VER)
 #define DISABLE_PUSH_WARN __pragma(warning(push))
@@ -63,6 +69,17 @@
 #define MemoryMove memmove
 #define MemorySet memset
 
+#define NONCOPYABLE(className)                       \
+    className(const className&)            = delete; \
+    className& operator=(const className&) = delete;
+
+#define NONCOPYABLEANDMOVE(className)                \
+    className(const className&)            = delete; \
+    className& operator=(const className&) = delete; \
+    className(className&&)                 = delete; \
+    className& operator=(className&&)      = delete;
+
+#define NODISCARD [[nodiscard]]
 
 
 #endif // !ENGINEDEFINES_H

@@ -1,7 +1,7 @@
 #ifndef TRANSFORM_H
 #define TRANSFORM_H
 #include "Core/EngineDefines.hpp"
-#include "Utilities/MathDefinitions.hpp"
+#include "Utilities/Math/MathDefinitions.hpp"
 
 namespace SaltnPepperEngine
 {
@@ -33,7 +33,7 @@ namespace SaltnPepperEngine
 			// ================= NON SERIALIZED VARIBALES ==============
 
 			// The world transformation matrix used to get the final tranformations on the given Object
-			Matrix4 worldMatrix = IDENTITYMATRIX;
+			Matrix worldMatrix = IDENTITYMATRIX;
 
 
 			constexpr inline void SetDirty(bool value = true)
@@ -71,11 +71,15 @@ namespace SaltnPepperEngine
 			const XMVECTOR GetUpRaw() const;
 			
 			// Local Matrix (Gets the loacl matric defined by the location , scale and rotation)
-			const Matrix4 GetlocalMatrix() const;
+			const Matrix GetlocalMatrix() const;
 			// Raw local matirx values
 			const XMMATRIX GetlocalMatrixRaw() const;
 
 			// ============= SETTERS ====================
+
+			void SetPosition(const Vector3& position);
+			void SetScale(const Vector3& scale);
+			void SetRotation(const Quaternion& rotation);
 
 			void Translate(const Vector3& translation);
 			void Translate(const XMVECTOR& translation);

@@ -8,46 +8,48 @@
 #include <DirectXCollision.h>
 #else
 
-#include "Utility/DirectXMath.h"
-#include "Utility/DirectXPackedVector.h"
-#include "Utility/DirectXCollision.h"
+#include "DirectXMath.h"
+#include "DirectXPackedVector.h"
+#include "DirectXCollision.h"
 #endif
 
 #include <cmath>
 #include <algorithm>
 #include <limits>
+#include <SimpleMath.h>
 
 
 using namespace DirectX;
 using namespace DirectX::PackedVector;
+using namespace DirectX::SimpleMath;
 
 namespace SaltnPepperEngine
 {
 	namespace Math
 	{
-		// Defines for wrapping over Direct X floating point vectors
-		using Vector2 = XMFLOAT2;
-		using Vector3 = XMFLOAT3;
-		using Vector4 = XMFLOAT4;
+		//// Defines for wrapping over Direct X floating point vectors
+		//using Vector2 = XMFLOAT2;
+		//using Vector3 = XMFLOAT3;
+		//using Vector4 = XMFLOAT4;
 
-		// Defines for wrapping over Direct X integer vectors
-		using Vector2Int = XMINT2;
-		using Vector3Int = XMINT3;
-		using Vector4Int = XMINT4;
+		//// Defines for wrapping over Direct X integer vectors
+		//using Vector2Int = XMINT2;
+		//using Vector3Int = XMINT3;
+		//using Vector4Int = XMINT4;
 
-		// Defines for wrapping over Direct X matrices
-		using Matrix3 = XMFLOAT3X3;
-		using Matrix4 = XMFLOAT4X4;
-		using Matrix3X4 = XMFLOAT3X4;
-		using Matrix4X3 = XMFLOAT4X3;
+		//// Defines for wrapping over Direct X matrices
+		//using Matrix3 = XMFLOAT3X3;
+		//using Matrix = XMFLOAT4X4;
+		//using Matrix3X4 = XMFLOAT3X4;
+		//using Matrix4X3 = XMFLOAT4X3;
 
 
-		// Defines for wrapping over Direct X vector
-		using Quaternion = XMFLOAT4;
+		//// Defines for wrapping over Direct X vector
+		//using Quaternion = XMFLOAT4;
 
 
 		// Identity Matrix
-		inline static constexpr Matrix4 IDENTITYMATRIX = Matrix4(1, 0, 0, 0,
+		inline static constexpr Matrix IDENTITYMATRIX = Matrix(1, 0, 0, 0,
 																 0, 1, 0, 0,
 																 0, 0, 1, 0,
 																 0, 0, 0, 1);
@@ -337,7 +339,7 @@ namespace SaltnPepperEngine
 		/// Returns the Forward vector for a given Transform matrix
 		/// </summary>
 		/// <returns> Vector3 </returns>
-		inline static constexpr Vector3 GetForward(const Matrix4& matrix)
+		inline static constexpr Vector3 GetForward(const Matrix& matrix)
 		{
 			return Vector3{ matrix.m[2][0],matrix.m[2][1], matrix.m[2][2] };
 		}
@@ -346,7 +348,7 @@ namespace SaltnPepperEngine
 		/// Returns the Up vector for a given Transform matrix
 		/// </summary>
 		/// <returns> Vector3 </returns>
-		inline static constexpr Vector3 GetUp(const Matrix4& matrix)
+		inline static constexpr Vector3 GetUp(const Matrix& matrix)
 		{
 			return Vector3{ matrix.m[1][0],matrix.m[1][1], matrix.m[1][2] };
 		}
@@ -355,7 +357,7 @@ namespace SaltnPepperEngine
 		/// Returns the Right vector for a given Transform matrix
 		/// </summary>
 		/// <returns> Vector3 </returns>
-		inline static constexpr Vector3 GetRight(const Matrix4& matrix)
+		inline static constexpr Vector3 GetRight(const Matrix& matrix)
 		{
 			return Vector3{ matrix.m[0][0],matrix.m[0][1], matrix.m[0][2] };
 		}
@@ -611,7 +613,7 @@ namespace SaltnPepperEngine
 		/// </summary>
 		
 		template <typename T>
-		static constexpr T ToRadians(T degrees)
+		static constexpr T ToRadians(T degrees) noexcept
 		{
 			return degrees / 180.0f * PI;
 		}
@@ -620,7 +622,7 @@ namespace SaltnPepperEngine
 		///  Converts Radians into Degrees
 		/// </summary>
 		template <typename T>
-		static constexpr T ToDegrees(T radians)
+		static constexpr T ToDegrees(T radians) noexcept
 		{
 			return radians / PI * 180.0f;
 		}
