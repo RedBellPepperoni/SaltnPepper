@@ -1,27 +1,24 @@
 #ifndef WINDOW_H
 #include "Core/EngineDefines.hpp"
 #include "Utilities/Math/Utils.hpp"
+#include <string>
+#include "Core/Memory/MemoryDefinitions.hpp"
 
 namespace SaltnPepperEngine
 {
+	using namespace Memory;
 
-	class WindowImpl;
+	class  WindowImpl;  
 
 	class SNP_API Window
 	{
-	private:
-
-		/// <summary>
-		///  The Pointer Implementaion of Window
-		/// </summary>
-		WindowImpl* m_windowImpl;
+	
 
 	public:
 
 		explicit Window();
 		~Window();
 		
-		NONCOPYABLE(Window)
 		NONCOPYABLEANDMOVE(Window)
 
 		/// <summary>
@@ -41,6 +38,17 @@ namespace SaltnPepperEngine
 		/// <param name="NewSize"></param>
 		void SetSize(Rect2D<int> NewSize) noexcept;
 
+
+		/// <summary>
+		/// Returns the Window title as a wtring view 
+		/// </summary>
+		NODISCARD std::string_view GetTitle() const noexcept;
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="NewTitle"></param>
+		void SetTitle(std::string_view NewTitle) noexcept;
 
 		/// <summary>
 		///  <para> Get whether the Window is Borderless or Fullscreen </para>
@@ -70,6 +78,13 @@ namespace SaltnPepperEngine
 		///  <para> false :  Visible </para>
 		/// </summary>
 		void SetCursorHidden() noexcept;
+
+	private:
+
+		/// <summary>
+		///  The Pointer Implementaion of Window
+		/// </summary>
+		UniquePtr<WindowImpl> m_windowImpl;
 
 	};
 }

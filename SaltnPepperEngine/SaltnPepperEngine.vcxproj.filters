@@ -46,6 +46,7 @@
     <ClCompile Include="Engine\Core\System\Application.cpp">
       <Filter>Engine\Core\System</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Core\System\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Utilities\Logging\Log.hpp">
@@ -70,7 +71,10 @@
       <Filter>Engine\Core\Memory</Filter>
     </ClInclude>
     <ClInclude Include="Engine\Utilities\Time\Timer.hpp" />
-    <ClInclude Include="Engine\Core\System\Window.hpp">
+    <ClInclude Include="Engine\Utilities\Math\Utils.hpp">
+      <Filter>Engine\Utilities\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\System\WindowImpl.hpp">
       <Filter>Engine\Core\System</Filter>
     </ClInclude>
   </ItemGroup>

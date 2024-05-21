@@ -1,5 +1,6 @@
 #ifndef MEMORYDEFINITIONS_H
 #define MEMORYDEFINITIONS_H
+#include <memory>
 
 namespace SaltnPepperEngine
 {

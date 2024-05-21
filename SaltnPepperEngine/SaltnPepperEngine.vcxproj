@@ -153,9 +153,11 @@
     <ClCompile Include="Engine\Core\Components\Transform.cpp" />
     <ClCompile Include="Engine\Utilities\Logging\Log.cpp" />
     <ClCompile Include="SaltnPepperEngine.hpp" />
+    <ClCompile Include="Engine\Core\System\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Core\System\Window.hpp" />
+    <ClInclude Include="Engine\Core\System\WindowImpl.hpp" />
+    <ClInclude Include="Engine\Utilities\Math\Utils.hpp" />
     <ClInclude Include="Engine\Utilities\Time\Timer.hpp" />
     <ClInclude Include="Engine\Core\System\Application.hpp" />
     <ClInclude Include="Engine\Core\Components\Transform.hpp" />
