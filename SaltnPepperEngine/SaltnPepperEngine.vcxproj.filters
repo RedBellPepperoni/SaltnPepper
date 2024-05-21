@@ -1,27 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{c627af81-e04e-45ed-aab1-6f9d4fb3d3e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{25f465ff-f664-403a-9455-ab68e6565ecd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utilities">
+      <UniqueIdentifier>{1cb2aa54-7e26-4dce-9b5c-09b4acc6d590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utilities\Logging">
+      <UniqueIdentifier>{8d7e2768-c17b-42dd-89ec-a43d07734330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Components">
+      <UniqueIdentifier>{1ba448e1-466e-4e89-9403-0fbe07d6e2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utilities\Math">
+      <UniqueIdentifier>{79004211-4b95-4a22-829a-e82c873dab70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utilities\Time">
+      <UniqueIdentifier>{91c28b14-a6cd-485b-9b70-36b5be46fbcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\System">
+      <UniqueIdentifier>{d9d45803-8088-407d-90e6-076e16323048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core\Memory">
+      <UniqueIdentifier>{40c9b9c2-1dd8-4243-85c0-5b00991da010}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SaltnPepperEngine.hpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Engine\Utilities\Logging\Log.cpp">
+      <Filter>Engine\Utilities\Logging</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Core\Components\Transform.cpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SaltnPepperEngine.hpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Core\System\Application.cpp">
+      <Filter>Engine\Core\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Core\System\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine\Utilities\MathDefinitions.hpp">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Engine\Utilities\Logging\Log.hpp">
+      <Filter>Engine\Utilities\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\Components\Transform.hpp">
+      <Filter>Engine\Core\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Utilities\Math\MathDefinitions.hpp">
+      <Filter>Engine\Utilities\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\EngineDefines.hpp">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\System\Application.hpp">
+      <Filter>Engine\Core\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\System\PlatformDefinitions.hpp">
+      <Filter>Engine\Core\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\Memory\MemoryDefinitions.hpp">
+      <Filter>Engine\Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Utilities\Time\Timer.hpp" />
+    <ClInclude Include="Engine\Utilities\Math\Utils.hpp">
+      <Filter>Engine\Utilities\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Core\System\WindowImpl.hpp">
+      <Filter>Engine\Core\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
