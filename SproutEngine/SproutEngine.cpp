@@ -37,15 +37,16 @@ int main()
 	Maths::Quaternion quat = Maths::Quaternion{};
 	
 
-
 	LOG_ERROR("Lerped Float value : [{0}]", lerpedFloat);
 	
 	LOG_WARN("VECTOR MUL : [{0} , {1}]", newVec2.x, newVec2.y);
 	LOG_WARN("VECTOR3 ADD : [{0} , {1} , {2}]", newvec3.x, newvec3.y , newvec3.z);
 	LOG_WARN("Quaternion : [{0} , {1} , {2} , {3}]", quat.x, quat.y, quat.z, quat.w);
 
-
+	
 
 
 	return 0;
 }
+
+

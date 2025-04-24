@@ -38,10 +38,12 @@ namespace SproutEngine
 		/// Pi values
 		static constexpr float PI = XM_PI;
 		static constexpr float TWOPI = XM_2PI;
-		static constexpr float ONEbyPI = XM_1DIVPI;
-		static constexpr float ONEbyTWOPI = XM_1DIV2PI;
-		static constexpr float PIbyTWO = XM_PIDIV2;
-		static constexpr float PIbyFOUR = XM_PIDIV4;
+		static constexpr float ONE_DIV_PI = XM_1DIVPI;
+		static constexpr float ONE_DIV_TWOPI = XM_1DIV2PI;
+		static constexpr float PI_DIV_2 = XM_PIDIV2;
+		static constexpr float PI_DIV_4 = XM_PIDIV4;
+		static constexpr float DEG_TO_RAD = PI / 180.0f;
+		static constexpr float RAD_TO_DEG = 180.0f / PI;
 
 		/// Int Values
 		static constexpr int MAX_INT = 0x7fffffff;

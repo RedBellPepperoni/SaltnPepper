@@ -151,7 +151,7 @@ namespace SproutEngine::Maths
 		return XMVectorGetX(finalVector);
 	}
 
-	float  Vector2::LengthSquared() const noexcept
+	float Vector2::LengthSquared() const noexcept
 	{
 		using namespace DirectX;
 		const XMVECTOR thisVector = XMLoadFloat2A(this);
@@ -225,13 +225,8 @@ namespace SproutEngine::Maths
 
 	inline Vector2 Vector2::Lerp(const Vector2& _vectorOne, const Vector2& _vectorTwo, float _lerpFactor) noexcept
 	{
-		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat2A(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat2A(&_vectorTwo);
-		const XMVECTOR lerpedVector = XMVectorLerp(vectorOne, vectorTwo, _lerpFactor);
-		
 		Vector2 result;
-		XMStoreFloat2A(&result, lerpedVector);
+		Lerp(_vectorOne,_vectorTwo,_lerpFactor,result);
 		return result;
 	}
 
@@ -247,14 +242,8 @@ namespace SproutEngine::Maths
 
 	inline Vector2 Vector2::Clamp(const Vector2& _vector, const Vector2& _vectorMin, const Vector2& _vectorMax) noexcept
 	{
-		using namespace DirectX;
-		const XMVECTOR vector = XMLoadFloat2A(&_vector);
-		const XMVECTOR vectorMin = XMLoadFloat2A(&_vectorMin);
-		const XMVECTOR vectorMax = XMLoadFloat2A(&_vectorMax);
-		const XMVECTOR clampedVector = XMVectorClamp(_vector, _vectorMin, _vectorMax);
-
 		Vector2 result;
-		XMStoreFloat2A(&result, clampedVector);
+		Clamp(_vector,_vectorMin,_vectorMax,result);
 		return result;
 	}
 
@@ -270,13 +259,8 @@ namespace SproutEngine::Maths
 
 	inline Vector2 Vector2::Min(const Vector2& _vectorOne, const Vector2& _vectorTwo) noexcept
 	{
-		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat2A(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat2A(&_vectorTwo);
-		const XMVECTOR minVector = XMVectorMin(vectorOne, vectorTwo);
-
 		Vector2 result;
-		XMStoreFloat2A(&result, minVector);
+		Min(_vectorOne,_vectorTwo,result);
 		return result;
 	}
 
@@ -291,20 +275,13 @@ namespace SproutEngine::Maths
 
 	inline Vector2 Vector2::Max(const Vector2& _vectorOne, const Vector2& _vectorTwo) noexcept
 	{
-		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat2A(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat2A(&_vectorTwo);
-		const XMVECTOR finalVector = XMVectorMax(vectorOne, vectorTwo);
 
 		Vector2 result;
-		XMStoreFloat2A(&result, finalVector);
-		
-
+		Max(_vectorOne,_vectorTwo,result);
 		return result;
 	}
 
 	
-
 	inline void Vector2::SmoothStep(const Vector2& _vectorOne, const Vector2& _vectorTwo, float _stepFactor, Vector2& _result) noexcept
 	{
 
@@ -320,17 +297,9 @@ namespace SproutEngine::Maths
 
 	inline Vector2 Vector2::SmoothStep(const Vector2& _vectorOne, const Vector2& _vectorTwo, float _stepFactor) noexcept
 	{
-		using namespace DirectX;
-		_stepFactor = (_stepFactor > 1.0f) ? 1.0f : ((_stepFactor < 0.0f) ? 0.0f : _stepFactor);
-		_stepFactor = _stepFactor * _stepFactor * (3.f - 2.f * _stepFactor);
-		const XMVECTOR vectorOne = XMLoadFloat2A(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat2A(&_vectorTwo);
-		const XMVECTOR finalVector = XMVectorLerp(vectorOne, vectorTwo, _stepFactor);
-		
 		Vector2 result;
-		XMStoreFloat2A(&result, finalVector);
+		SmoothStep(_vectorOne,_vectorTwo,_stepFactor,result);
 		return result;
-
 	}
 
 	void Vector2::Reflect(const Vector2& _incidentVector, const Vector2& _normalVector, Vector2& _result) noexcept
@@ -344,13 +313,8 @@ namespace SproutEngine::Maths
 
 	Vector2 Vector2::Reflect(const Vector2& _incidentVector, const Vector2& _normalVector) noexcept
 	{
-		using namespace DirectX;
-		const XMVECTOR incidentVector = XMLoadFloat2A(&_incidentVector);
-		const XMVECTOR normalVector = XMLoadFloat2A(&_normalVector);
-		const XMVECTOR reflectedVector = XMVector2Reflect(incidentVector, normalVector);
-
 		Vector2 result;
-		XMStoreFloat2A(&result, reflectedVector);
+		Reflect(_incidentVector,_normalVector,result);
 		return result;
 	}
 

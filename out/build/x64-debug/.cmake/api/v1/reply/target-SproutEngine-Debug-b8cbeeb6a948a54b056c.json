@@ -58,7 +58,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -ZI"
+					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi"
 				}
 			],
 			"includes" : 
@@ -98,7 +98,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -ZI",
+				"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -Zi",
 				"role" : "flags"
 			},
 			{

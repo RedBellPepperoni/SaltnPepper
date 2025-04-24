@@ -25,40 +25,40 @@ namespace SproutEngine::Maths
 	inline Vector3& Vector3::operator+=(const Vector3& _vector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector);
 		const XMVECTOR finalVector = XMVectorAdd(vectorOne, vectorTwo);
-		XMStoreFloat3(this, finalVector);
+		XMStoreFloat3A(this, finalVector);
 		return *this;
 	}
 
 	inline Vector3& Vector3::operator-=(const Vector3& _vector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector);
 		const XMVECTOR finalVector = XMVectorSubtract(vectorOne, vectorTwo);
-		XMStoreFloat3(this, finalVector);
+		XMStoreFloat3A(this, finalVector);
 		return *this;
 	}
 
 	inline Vector3& Vector3::operator*=(const Vector3& _vector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector);
 		const XMVECTOR finalVector = XMVectorMultiply(vectorOne, vectorTwo);
-		XMStoreFloat3(this, finalVector);
+		XMStoreFloat3A(this, finalVector);
 		return *this;
 	}
 
 	inline Vector3& Vector3::operator/=(const Vector3& _vector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector);
 		const XMVECTOR finalVector = XMVectorDivide(vectorOne, vectorTwo);
-		XMStoreFloat3(this, finalVector);
+		XMStoreFloat3A(this, finalVector);
 		return *this;
 	}
 
@@ -66,9 +66,9 @@ namespace SproutEngine::Maths
 	inline Vector3& Vector3::operator*=(float _scalar) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
 		const XMVECTOR finalVector = XMVectorScale(vectorOne, _scalar);
-		XMStoreFloat3(this, finalVector);
+		XMStoreFloat3A(this, finalVector);
 		return *this;
 	}
 
@@ -78,10 +78,10 @@ namespace SproutEngine::Maths
 		// Check Divide by Zero Edge Case
 		SPROUT_ASSERT(_scalar != 0.0f);
 
-		const XMVECTOR thisVector = XMLoadFloat3(this);
+		const XMVECTOR thisVector = XMLoadFloat3A(this);
 		const XMVECTOR finalVector = XMVectorScale(thisVector, 1.0f / _scalar);
 
-		XMStoreFloat3(this, finalVector);
+		XMStoreFloat3A(this, finalVector);
 		return *this;
 
 	}
@@ -89,26 +89,26 @@ namespace SproutEngine::Maths
 	inline bool Vector3::operator==(const Vector3& _vector) const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector);
 		return XMVector3Equal(vectorOne, vectorTwo);
 	}
 
 	inline bool Vector3::operator!=(const Vector3& _vector) const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector);
 		return XMVector3NotEqual(vectorOne, vectorTwo);
 	}
 
 	inline Vector3 Vector3::operator-() const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(this);
+		const XMVECTOR vectorOne = XMLoadFloat3A(this);
 		const XMVECTOR finalVector = XMVectorNegate(vectorOne);
 		Vector3 result;
-		XMStoreFloat3(&result, finalVector);
+		XMStoreFloat3A(&result, finalVector);
 		return result;
 	}
 
@@ -120,7 +120,7 @@ namespace SproutEngine::Maths
 	float Vector3::Length() const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR thisVector = XMLoadFloat3(this);
+		const XMVECTOR thisVector = XMLoadFloat3A(this);
 		const XMVECTOR finalVector = XMVector3LengthSq(thisVector);
 		return XMVectorGetX(finalVector);
 	}
@@ -128,7 +128,7 @@ namespace SproutEngine::Maths
 	float Vector3::LengthSquared() const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR thisVector = XMLoadFloat3(this);
+		const XMVECTOR thisVector = XMLoadFloat3A(this);
 		const XMVECTOR finalVector = XMVector3LengthSq(thisVector);
 		return XMVectorGetX(finalVector);
 	}
@@ -136,8 +136,8 @@ namespace SproutEngine::Maths
 	float Vector3::Distance(const Vector3& _firstVector, const Vector3& _secondVector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR minVector = XMLoadFloat3(&_firstVector);
-		const XMVECTOR maxVector = XMLoadFloat3(&_secondVector);
+		const XMVECTOR minVector = XMLoadFloat3A(&_firstVector);
+		const XMVECTOR maxVector = XMLoadFloat3A(&_secondVector);
 		const XMVECTOR vectorSubtract = XMVectorSubtract(maxVector, minVector);
 		const XMVECTOR finalVector = XMVector3Length(vectorSubtract);
 		return XMVectorGetX(finalVector);
@@ -146,8 +146,8 @@ namespace SproutEngine::Maths
 	float Vector3::DistanceSquared(const Vector3& _firstVector, const Vector3& _secondVector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR minVector = XMLoadFloat3(&_firstVector);
-		const XMVECTOR maxVector = XMLoadFloat3(&_secondVector);
+		const XMVECTOR minVector = XMLoadFloat3A(&_firstVector);
+		const XMVECTOR maxVector = XMLoadFloat3A(&_secondVector);
 		const XMVECTOR vectorSubtract = XMVectorSubtract(maxVector, minVector);
 		const XMVECTOR finalVector = XMVector3LengthSq(vectorSubtract);
 		return XMVectorGetX(finalVector);
@@ -156,24 +156,24 @@ namespace SproutEngine::Maths
 	void Vector3::Normalize() noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorThis = XMLoadFloat3(this);
+		const XMVECTOR vectorThis = XMLoadFloat3A(this);
 		const XMVECTOR normalizedVector = XMVector3Normalize(vectorThis);
-		XMStoreFloat3(this, normalizedVector);
+		XMStoreFloat3A(this, normalizedVector);
 	}
 
 	void Vector3::Normalize(Vector3& _result) const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorThis = XMLoadFloat3(this);
+		const XMVECTOR vectorThis = XMLoadFloat3A(this);
 		const XMVECTOR normalizedVector = XMVector2Normalize(vectorThis);
-		XMStoreFloat3(&_result, normalizedVector);
+		XMStoreFloat3A(&_result, normalizedVector);
 	}
 
 	float Vector3::Dot(const Vector3& _otherVector) const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR thisvector = XMLoadFloat3(this);
-		const XMVECTOR otherVector = XMLoadFloat3(&_otherVector);
+		const XMVECTOR thisvector = XMLoadFloat3A(this);
+		const XMVECTOR otherVector = XMLoadFloat3A(&_otherVector);
 		const XMVECTOR dotVector = XMVector3Dot(thisvector, otherVector);
 		return XMVectorGetX(dotVector);
 	}
@@ -181,8 +181,8 @@ namespace SproutEngine::Maths
 	float Vector3::Cross(const Vector3& _otherVector) const noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR thisvector = XMLoadFloat3(this);
-		const XMVECTOR otherVector = XMLoadFloat3(&_otherVector);
+		const XMVECTOR thisvector = XMLoadFloat3A(this);
+		const XMVECTOR otherVector = XMLoadFloat3A(&_otherVector);
 		const XMVECTOR crossVector = XMVector3Cross(thisvector, otherVector);
 		return XMVectorGetX(crossVector);
 	}
@@ -190,150 +190,171 @@ namespace SproutEngine::Maths
 	void Vector3::Lerp(const Vector3& _vectorOne, const Vector3& _vectorTwo, float _lerpFactor, Vector3& _result) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vectorTwo);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
 		const XMVECTOR lerpedVector = XMVectorLerp(vectorOne, vectorTwo, _lerpFactor);
-		XMStoreFloat3(&_result, lerpedVector);
+		XMStoreFloat3A(&_result, lerpedVector);
 	}
 
 	Vector3 Vector3::Lerp(const Vector3& _vectorOne, const Vector3& _vectorTwo, float _lerpFactor) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vectorTwo);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
 		const XMVECTOR lerpedVector = XMVectorLerp(vectorOne, vectorTwo, _lerpFactor);
 
 		Vector3 result;
-		XMStoreFloat3(&result, lerpedVector);
+		XMStoreFloat3A(&result, lerpedVector);
 		return result;
 	}
 
 	void Vector3::Clamp(const Vector3& _vector, const Vector3& _vectorMin, const Vector3& _vectorMax, Vector3& _result) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vector = XMLoadFloat3(&_vector);
-		const XMVECTOR vectorMin = XMLoadFloat3(&_vectorMin);
-		const XMVECTOR vectorMax = XMLoadFloat3(&_vectorMax);
+		const XMVECTOR vector = XMLoadFloat3A(&_vector);
+		const XMVECTOR vectorMin = XMLoadFloat3A(&_vectorMin);
+		const XMVECTOR vectorMax = XMLoadFloat3A(&_vectorMax);
 		const XMVECTOR clampedVector = XMVectorClamp(_vector, _vectorMin, _vectorMax);
-		XMStoreFloat3(&_result, clampedVector);
+		XMStoreFloat3A(&_result, clampedVector);
 	}
 
 	Vector3 Vector3::Clamp(const Vector3& _vector, const Vector3& _vectorMin, const Vector3& _vectorMax) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vector = XMLoadFloat3(&_vector);
-		const XMVECTOR vectorMin = XMLoadFloat3(&_vectorMin);
-		const XMVECTOR vectorMax = XMLoadFloat3(&_vectorMax);
+		const XMVECTOR vector = XMLoadFloat3A(&_vector);
+		const XMVECTOR vectorMin = XMLoadFloat3A(&_vectorMin);
+		const XMVECTOR vectorMax = XMLoadFloat3A(&_vectorMax);
 		const XMVECTOR clampedVector = XMVectorClamp(_vector, _vectorMin, _vectorMax);
 
 		Vector3 result;
-		XMStoreFloat3(&result, clampedVector);
+		XMStoreFloat3A(&result, clampedVector);
 		return result;
 	}
 
 	void Vector3::Min(const Vector3& _vectorOne, const Vector3& _vectorTwo, Vector3& _result) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vectorTwo);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
 		const XMVECTOR minVector = XMVectorMin(vectorOne, vectorTwo);
-		XMStoreFloat3(&_result, minVector);
+		XMStoreFloat3A(&_result, minVector);
 	}
 
 	Vector3 Vector3::Min(const Vector3& _vectorOne, const Vector3& _vectorTwo) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_vectorOne);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_vectorTwo);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
 		const XMVECTOR minVector = XMVectorMin(vectorOne, vectorTwo);
 
 		Vector3 result;
-		XMStoreFloat3(&result, minVector);
+		XMStoreFloat3A(&result, minVector);
 		return result;
 	}
 
 	void Vector3::Max(const Vector3& _vectorOne, const Vector3& _vectorTwo, Vector3& _result) noexcept
 	{
+		using namespace DirectX;
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
+		const XMVECTOR maxVector = XMVectorMax(vectorOne, vectorTwo);
+		XMStoreFloat3A(&_result, maxVector);
 	}
 
 	Vector3 Vector3::Max(const Vector3& _vectorOne, const Vector3& _vectorTwo) noexcept
 	{
-		return Vector3();
+		using namespace DirectX;
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
+		const XMVECTOR maxVector = XMVectorMax(vectorOne, vectorTwo);
+
+		Vector3 result;
+		XMStoreFloat3A(&result, maxVector);
+		return result;
 	}
 
 	void Vector3::SmoothStep(const Vector3& _vectorOne, const Vector3& _vectorTwo, float _stepFactor, Vector3& _result) noexcept
 	{
+		using namespace DirectX;
+		_stepFactor = (_stepFactor > 1.0f) ? 1.0f : ((_stepFactor < 0.0f) ? 0.0f : _stepFactor);
+		_stepFactor = _stepFactor * _stepFactor * (3.f - 2.f * _stepFactor);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_vectorOne);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_vectorTwo);
+		const XMVECTOR finalVector = XMVectorLerp(vectorOne, vectorTwo, _stepFactor);
+		XMStoreFloat3A(&_result, finalVector);
 	}
 
 	Vector3 Vector3::SmoothStep(const Vector3& _vectorOne, const Vector3& _vectorTwo, float _stepFactor) noexcept
 	{
-		return Vector3();
+		Vector3 result;
+		SmoothStep(_vectorOne, _vectorTwo, _stepFactor, result);
+		return result;
 	}
 
 
 	Vector3 operator+(const Vector3& _firstVector, const Vector3& _secondVector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_firstVector);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_secondVector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_firstVector);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_secondVector);
 		const XMVECTOR addedVector = XMVectorAdd(vectorOne, vectorTwo);
 		Vector3 finalVector;
-		XMStoreFloat3(&finalVector, addedVector);
+		XMStoreFloat3A(&finalVector, addedVector);
 		return finalVector;
 	}
 
 	Vector3 operator-(const Vector3& _firstVector, const Vector3& _secondVector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_firstVector);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_secondVector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_firstVector);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_secondVector);
 		const XMVECTOR subtractedVector = XMVectorSubtract(vectorOne, vectorTwo);
 		Vector3 finalVector;
-		XMStoreFloat3(&finalVector, subtractedVector);
+		XMStoreFloat3A(&finalVector, subtractedVector);
 		return finalVector;
 	}
 
 	Vector3 operator*(const Vector3& _firstVector, const Vector3& _secondVector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_firstVector);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_secondVector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_firstVector);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_secondVector);
 		const XMVECTOR multipliedVector = XMVectorMultiply(vectorOne, vectorTwo);
 		Vector3 finalVector;
-		XMStoreFloat3(&finalVector, multipliedVector);
+		XMStoreFloat3A(&finalVector, multipliedVector);
 		return finalVector;
 	}
 
 	Vector3 operator*(const Vector3& _firstVector, const float _float) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_firstVector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_firstVector);
 		const XMVECTOR multipliedVector = XMVectorScale(vectorOne, _float);
 
 		Vector3 finalVector;
-		XMStoreFloat3(&finalVector, multipliedVector);
+		XMStoreFloat3A(&finalVector, multipliedVector);
 		return finalVector;
 	}
 
 	Vector3 operator/(const Vector3& _firstVector, const Vector3& _secondVector) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_firstVector);
-		const XMVECTOR vectorTwo = XMLoadFloat3(&_secondVector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_firstVector);
+		const XMVECTOR vectorTwo = XMLoadFloat3A(&_secondVector);
 		const XMVECTOR dividedVector = XMVectorDivide(vectorOne, vectorTwo);
 		Vector3 finalVector;
-		XMStoreFloat3(&finalVector, dividedVector);
+		XMStoreFloat3A(&finalVector, dividedVector);
 		return finalVector;
 	}
 
 	Vector3 operator/(const Vector3& _firstVector, const float _float) noexcept
 	{
 		using namespace DirectX;
-		const XMVECTOR vectorOne = XMLoadFloat3(&_firstVector);
+		const XMVECTOR vectorOne = XMLoadFloat3A(&_firstVector);
 		const XMVECTOR multipliedVector = XMVectorScale(vectorOne, 1.0f / _float);
 
 		Vector3 finalVector;
-		XMStoreFloat3(&finalVector, multipliedVector);
+		XMStoreFloat3A(&finalVector, multipliedVector);
 		return finalVector;
 	}
 }

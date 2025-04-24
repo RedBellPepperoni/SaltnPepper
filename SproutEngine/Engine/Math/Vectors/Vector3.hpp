@@ -28,14 +28,14 @@ namespace SproutEngine
 {
 	namespace Maths
 	{
-		struct Vector3 : public XMFLOAT3
+		struct Vector3 : public XMFLOAT3A
 		{
 
 
 			/// Declarations for Vector3
-			Vector3() noexcept : XMFLOAT3(0.0f, 0.0f, 0.0f) {}
-			constexpr explicit Vector3(float _singleValue) noexcept : XMFLOAT3(_singleValue, _singleValue, _singleValue) {}
-			constexpr Vector3(float _valueX, float _valueY, float _valueZ) noexcept : XMFLOAT3(_valueX, _valueY, _valueZ) {}
+			Vector3() noexcept : XMFLOAT3A(0.0f, 0.0f, 0.0f) {}
+			constexpr explicit Vector3(float _singleValue) noexcept : XMFLOAT3A(_singleValue, _singleValue, _singleValue) {}
+			constexpr Vector3(float _valueX, float _valueY, float _valueZ) noexcept : XMFLOAT3A(_valueX, _valueY, _valueZ) {}
 
 
 			Vector3(const Vector3&) = default;

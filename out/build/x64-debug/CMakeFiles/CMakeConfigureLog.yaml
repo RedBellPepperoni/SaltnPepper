@@ -18,7 +18,7 @@ events:
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe 
-      Build flags: 
+      Build flags: /fsanitize=address
       Id flags:  
       
       The output was:
@@ -27,14 +27,22 @@ events:
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       CMakeCCompilerId.c
+      D:\\GameEngineStuff\\SproutGameEngine\\out\\build\\x64-debug\\CMakeFiles\\3.29.5-msvc4\\CompilerIdC\\CMakeCCompilerId.c : warning C5072: ASAN enabled without debug information emission. Enable debug info for better ASAN error reporting
       Microsoft (R) Incremental Linker Version 14.36.32546.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       /out:CMakeCCompilerId.exe 
+      /InferAsanLibs 
       CMakeCCompilerId.obj 
+         Creating library CMakeCCompilerId.lib and object CMakeCCompilerId.exp
+      LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exp"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.lib"
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
       
@@ -52,6 +60,7 @@ events:
       Detecting C compiler /showIncludes prefix:
         main.c
         Note: including file: D:\\GameEngineStuff\\SproutGameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\foo.h
+        D:\\GameEngineStuff\\SproutGameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\main.c : warning C5072: ASAN enabled without debug information emission. Enable debug info for better ASAN error reporting
         
       Found prefix "Note: including file: "
   -
@@ -64,7 +73,7 @@ events:
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe 
-      Build flags: 
+      Build flags: /fsanitize=address
       Id flags:  
       
       The output was:
@@ -73,14 +82,22 @@ events:
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       CMakeCXXCompilerId.cpp
+      D:\\GameEngineStuff\\SproutGameEngine\\out\\build\\x64-debug\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CMakeCXXCompilerId.cpp : warning C5072: ASAN enabled without debug information emission. Enable debug info for better ASAN error reporting
       Microsoft (R) Incremental Linker Version 14.36.32546.0
       Copyright (C) Microsoft Corporation.  All rights reserved.
       
       /out:CMakeCXXCompilerId.exe 
+      /InferAsanLibs 
       CMakeCXXCompilerId.obj 
+         Creating library CMakeCXXCompilerId.lib and object CMakeCXXCompilerId.exp
+      LINK : warning LNK4302: please add '/DEBUG' to the link command line for better ASAN error reporting
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exp"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.lib"
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
       
@@ -98,6 +115,7 @@ events:
       Detecting CXX compiler /showIncludes prefix:
         main.c
         Note: including file: D:\\GameEngineStuff\\SproutGameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\foo.h
+        D:\\GameEngineStuff\\SproutGameEngine\\out\\build\\x64-debug\\CMakeFiles\\ShowIncludes\\main.c : warning C5072: ASAN enabled without debug information emission. Enable debug info for better ASAN error reporting
         
       Found prefix "Note: including file: "
   -
@@ -109,22 +127,21 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-21jh1y"
-      binary: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-21jh1y"
+      source: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-efqsx6"
+      binary: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-efqsx6"
     cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS: "/fsanitize=address  /DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-21jh1y'
+        Change Dir: 'D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-efqsx6'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_8e5e8
-        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_8e5e8.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_8e5e8.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_8e5e8.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8e5e8.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_8e5e8.exe /implib:cmTC_8e5e8.lib /pdb:cmTC_8e5e8.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_0ecc8
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /fsanitize=address  /DWIN32 /D_WINDOWS /W3  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_0ecc8.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_0ecc8.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_0ecc8.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0ecc8.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_0ecc8.exe /implib:cmTC_0ecc8.lib /pdb:cmTC_0ecc8.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -164,23 +181,22 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-o34v41"
-      binary: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-o34v41"
+      source: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-7ssr6l"
+      binary: "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-7ssr6l"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS: "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Ob0 /Od /RTC1"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-      CMAKE_MSVC_DEBUG_INFORMATION_FORMAT: "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-o34v41'
+        Change Dir: 'D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/CMakeScratch/TryCompile-7ssr6l'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_08308
-        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_08308.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_08308.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_08308.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_08308.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_08308.exe /implib:cmTC_08308.lib /pdb:cmTC_08308.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe" -v cmTC_fd051
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Ob0 /Od /RTC1 -Zi /showIncludes /FoCMakeFiles\\cmTC_fd051.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_fd051.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_fd051.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_fd051.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_fd051.exe /implib:cmTC_fd051.lib /pdb:cmTC_fd051.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -

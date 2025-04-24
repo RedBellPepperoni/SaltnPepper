@@ -36,17 +36,29 @@ namespace SproutEngine
 		/// </summary>
 		struct Vector2 : public XMFLOAT2A
 		{
-			
+			// Zero Valued Vector : Vector2 {0.0f , 0.0f}
 			static const Vector2 Zero;
+			// One Valued Vector : Vector2 {1.0f , 1.0f}
 			static const Vector2 One;
+			// Unit Vector with X component as One : Vector2 {1.0f , 0.0f}
 			static const Vector2 UnitX;
+			// Unit Vector with Y component as One : Vector2 {0.0f , 1.0f}
 			static const Vector2 UnitY;
 
 
-			/// Declarations for Vector2
+
+			/// -----------------------------------------------   Declarations for Vector2  --------------------------------------------
+
+			// Default Constructor : Always constructed as a Vector2{0.0f}
 			Vector2() noexcept : XMFLOAT2A{ 0.0f, 0.0f } {}
+
+			// Single Value Constructor : Sets both (X, Y) components as the given Value
 			constexpr explicit Vector2(float _singleValue) noexcept : XMFLOAT2A(_singleValue, _singleValue) {}
+
+			// Multi Value Constructor : Sets components according to the given Values
 			constexpr explicit Vector2(float _xValue, float _yValue) noexcept : XMFLOAT2A(_xValue, _yValue) {}
+
+
 
 			Vector2(const Vector2&) = default;
 			Vector2& operator=(const Vector2&) = default;
@@ -54,14 +66,18 @@ namespace SproutEngine
 			Vector2(Vector2&&) = default;
 			Vector2& operator=(Vector2&&) = default;
 
+
+
 			operator XMVECTOR() const noexcept { return XMLoadFloat2A(this); }
 
+			// Constructor ALIGNED : Sets both (X, Y) components as the given XMFFLOAT2A's Components
 			Vector2(const XMFLOAT2A& _xmFloat) noexcept 
 			{ 
 				this->x = _xmFloat.x;  
 				this->y = _xmFloat.y;
 			}
 
+			// Constructor UNALIGHNED: Sets both (X, Y) components as the given XMFFLOAT2's Components
 			Vector2(const XMFLOAT2& _xmFloat) noexcept
 			{
 				this->x = _xmFloat.x;
@@ -80,7 +96,7 @@ namespace SproutEngine
 			}
 
 			
-			/// Arithmatic
+			/// --------------------------------------- Arithmatic Operation ----------------------------------------------------------
 			Vector2& operator+= (const Vector2& _vector) noexcept;
 			Vector2& operator-= (const Vector2& _vector) noexcept;
 			Vector2& operator*= (const Vector2& _vector) noexcept;
@@ -100,7 +116,7 @@ namespace SproutEngine
 
 	
 			/// Free-Standing Operators for Left Handeded Operations
-			friend Vector2 operator+ (const Vector2& _firstVector, const Vector2& _secondVector) noexcept;
+			friend Vector2 operator+ (const Vector2& _firstVector, const Vector2& _secondVector)  noexcept;
 			friend Vector2 operator- (const Vector2& _firstVector, const Vector2& _secondVector) noexcept;
 			friend Vector2 operator* (const Vector2& _firstVector, const Vector2& _secondVector) noexcept;
 			friend Vector2 operator* (const Vector2& _firstVector, const float _float) noexcept;
@@ -154,6 +170,9 @@ namespace SproutEngine
 			static Vector2 Transform(const Vector2& _vector, const Quaternion& _quaternion) noexcept;
 
 			
+			/// ------------------------------------- String Functions --------------------------------------------------
+
+			//static std::string& GetString();
 
 		};
 
