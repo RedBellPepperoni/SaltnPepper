@@ -13,7 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"TARGET_LINK_LIBRARIES"
 		],
 		"files" : 
 		[
@@ -27,7 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 1,
+				"line" : 3,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 4,
 				"parent" : 0
 			}
 		]
@@ -41,11 +48,45 @@
 					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi"
 				}
 			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Math"
+				}
+			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
 				0
 			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "SproutEngine::@156ddb54d96f11bfeff5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Math::@765af3a8d2eed00d5c2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Utilities::@f05820a1571604f85d25"
 		}
 	],
 	"id" : "SproutRuntime::@efc6388da9400bd319f9",
@@ -60,6 +101,11 @@
 			{
 				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "SproutEngine\\SproutEngine.lib",
+				"role" : "libraries"
 			},
 			{
 				"fragment" : "kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
@@ -102,7 +148,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "SproutRuntime/SproutRuntime.h",
+			"path" : "SproutRuntime/SproutRuntime.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

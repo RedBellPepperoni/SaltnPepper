@@ -63,86 +63,66 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles\install.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles\install\local.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install\local: phony CMakeFiles\install\local.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # D:/GameEngineStuff/SproutGameEngine/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target SproutEngine
+# Object build statements for STATIC_LIBRARY target SproutEngine
 
 
 #############################################
 # Order-only phony target for SproutEngine
 
-build cmake_object_order_depends_target_SproutEngine: phony || .
-
-build SproutEngine\CMakeFiles\SproutEngine.dir\SproutEngine.cpp.obj: CXX_COMPILER__SproutEngine_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\SproutEngine.cpp || cmake_object_order_depends_target_SproutEngine
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine
-  OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  OBJECT_FILE_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_PDB = SproutEngine\SproutEngine.pdb
-
-build SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Utilities\Logging\Log.cpp.obj: CXX_COMPILER__SproutEngine_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\Logging\Log.cpp || cmake_object_order_depends_target_SproutEngine
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine
-  OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  OBJECT_FILE_DIR = SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Utilities\Logging
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_PDB = SproutEngine\SproutEngine.pdb
-
-build SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Vectors\Vector2.cpp.obj: CXX_COMPILER__SproutEngine_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Vectors\Vector2.cpp || cmake_object_order_depends_target_SproutEngine
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine
-  OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  OBJECT_FILE_DIR = SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Vectors
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_PDB = SproutEngine\SproutEngine.pdb
-
-build SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Vectors\Vector3.cpp.obj: CXX_COMPILER__SproutEngine_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Vectors\Vector3.cpp || cmake_object_order_depends_target_SproutEngine
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine
-  OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  OBJECT_FILE_DIR = SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Vectors
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_PDB = SproutEngine\SproutEngine.pdb
-
-build SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Quaternion.cpp.obj: CXX_COMPILER__SproutEngine_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Quaternion.cpp || cmake_object_order_depends_target_SproutEngine
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine
-  OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  OBJECT_FILE_DIR = SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_PDB = SproutEngine\SproutEngine.pdb
-
-build SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Matrix4.cpp.obj: CXX_COMPILER__SproutEngine_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Matrix4.cpp || cmake_object_order_depends_target_SproutEngine
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine
-  OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
-  OBJECT_FILE_DIR = SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_PDB = SproutEngine\SproutEngine.pdb
+build cmake_object_order_depends_target_SproutEngine: phony || cmake_object_order_depends_target_Math cmake_object_order_depends_target_Utilities
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target SproutEngine
+# Link build statements for STATIC_LIBRARY target SproutEngine
 
 
 #############################################
-# Link the executable SproutEngine\SproutEngine.exe
+# Link the static library SproutEngine\SproutEngine.lib
 
-build SproutEngine\SproutEngine.exe: CXX_EXECUTABLE_LINKER__SproutEngine_Debug SproutEngine\CMakeFiles\SproutEngine.dir\SproutEngine.cpp.obj SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Utilities\Logging\Log.cpp.obj SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Vectors\Vector2.cpp.obj SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Vectors\Vector3.cpp.obj SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Quaternion.cpp.obj SproutEngine\CMakeFiles\SproutEngine.dir\Engine\Math\Matrix4.cpp.obj
-  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -Zi
-  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+build SproutEngine\SproutEngine.lib: CXX_STATIC_LIBRARY_LINKER__SproutEngine_Debug SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Matrix4.cpp.obj SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities
+  LANGUAGE_COMPILE_FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -Zi
+  LINK_FLAGS = /machine:x64
   OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\
-  TARGET_FILE = SproutEngine\SproutEngine.exe
-  TARGET_IMPLIB = SproutEngine\SproutEngine.lib
+  TARGET_COMPILE_PDB = SproutEngine\CMakeFiles\SproutEngine.dir\SproutEngine.pdb
+  TARGET_FILE = SproutEngine\SproutEngine.lib
   TARGET_PDB = SproutEngine\SproutEngine.pdb
 
 
@@ -167,6 +147,36 @@ build SproutEngine\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build SproutEngine\rebuild_cache: phony SproutEngine\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\install: phony SproutEngine\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\install\local: phony SproutEngine\CMakeFiles\install\local.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -196,10 +206,64 @@ build SproutEngine\Engine\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build SproutEngine\Engine\rebuild_cache: phony SproutEngine\Engine\CMakeFiles\rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Engine\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Engine\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Engine\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Engine\install: phony SproutEngine\Engine\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Engine\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Engine\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Engine\install\local: phony SproutEngine\Engine\CMakeFiles\install\local.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/CMakeLists.txt
 # =============================================================================
+
+# =============================================================================
+# Object build statements for OBJECT_LIBRARY target Utilities
+
+
+#############################################
+# Order-only phony target for Utilities
+
+build cmake_object_order_depends_target_Utilities: phony || .
+
+build SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj: CXX_COMPILER__Utilities_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\Logging\Log.cpp || cmake_object_order_depends_target_Utilities
+  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities
+  OBJECT_DIR = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir
+  OBJECT_FILE_DIR = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging
+  TARGET_COMPILE_PDB = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\
+  TARGET_PDB = ""
+
+
+
+#############################################
+# Object library Utilities
+
+build SproutEngine\Engine\Utilities\Utilities: phony SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj
 
 
 #############################################
@@ -224,10 +288,88 @@ build SproutEngine\Engine\Utilities\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAN
 
 build SproutEngine\Engine\Utilities\rebuild_cache: phony SproutEngine\Engine\Utilities\CMakeFiles\rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Engine\Utilities\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Engine\Utilities\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Engine\Utilities\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Engine\Utilities && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Engine\Utilities\install: phony SproutEngine\Engine\Utilities\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Engine\Utilities\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Engine\Utilities\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Engine\Utilities && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Engine\Utilities\install\local: phony SproutEngine\Engine\Utilities\CMakeFiles\install\local.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/CMakeLists.txt
 # =============================================================================
+
+# =============================================================================
+# Object build statements for OBJECT_LIBRARY target Math
+
+
+#############################################
+# Order-only phony target for Math
+
+build cmake_object_order_depends_target_Math: phony || .
+
+build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Vectors\Vector2.cpp || cmake_object_order_depends_target_Math
+  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
+  OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
+  OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors
+  TARGET_COMPILE_PDB = SproutEngine\Engine\Math\CMakeFiles\Math.dir\
+  TARGET_PDB = ""
+
+build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Vectors\Vector3.cpp || cmake_object_order_depends_target_Math
+  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
+  OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
+  OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors
+  TARGET_COMPILE_PDB = SproutEngine\Engine\Math\CMakeFiles\Math.dir\
+  TARGET_PDB = ""
+
+build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Quaternion.cpp || cmake_object_order_depends_target_Math
+  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
+  OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
+  OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
+  TARGET_COMPILE_PDB = SproutEngine\Engine\Math\CMakeFiles\Math.dir\
+  TARGET_PDB = ""
+
+build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Matrix4.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Matrix4.cpp || cmake_object_order_depends_target_Math
+  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
+  OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
+  OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
+  TARGET_COMPILE_PDB = SproutEngine\Engine\Math\CMakeFiles\Math.dir\
+  TARGET_PDB = ""
+
+
+
+#############################################
+# Object library Math
+
+build SproutEngine\Engine\Math\Math: phony SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Matrix4.cpp.obj
 
 
 #############################################
@@ -251,6 +393,36 @@ build SproutEngine\Engine\Math\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build SproutEngine\Engine\Math\rebuild_cache: phony SproutEngine\Engine\Math\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Engine\Math\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Engine\Math\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Engine\Math\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Engine\Math && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Engine\Math\install: phony SproutEngine\Engine\Math\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Engine\Math\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Engine\Math\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Engine\Math && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Engine\Math\install\local: phony SproutEngine\Engine\Math\CMakeFiles\install\local.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -280,6 +452,470 @@ build SproutEngine\Externals\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build SproutEngine\Externals\rebuild_cache: phony SproutEngine\Externals\CMakeFiles\rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Externals\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Externals\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Externals\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\install: phony SproutEngine\Externals\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Externals\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Externals\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\install\local: phony SproutEngine\Externals\CMakeFiles\install\local.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/GameEngineStuff/SproutGameEngine/SproutEngine/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build SproutEngine\Externals\googletest\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build SproutEngine\Externals\googletest\edit_cache: phony SproutEngine\Externals\googletest\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build SproutEngine\Externals\googletest\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\GameEngineStuff\SproutGameEngine -BD:\GameEngineStuff\SproutGameEngine\out\build\x64-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\rebuild_cache: phony SproutEngine\Externals\googletest\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Externals\googletest\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Externals\googletest\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Externals\googletest\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\install: phony SproutEngine\Externals\googletest\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Externals\googletest\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Externals\googletest\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\install\local: phony SproutEngine\Externals\googletest\CMakeFiles\install\local.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals/googletest/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || .
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir\__\googletest\src\gtest-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gmock
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir\__\googletest\src
+  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\src\gmock-all.cc || cmake_object_order_depends_target_gmock
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir\src
+  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib\gmock.lib
+
+build lib\gmock.lib: CXX_STATIC_LIBRARY_LINKER__gmock_Debug SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir\__\googletest\src\gtest-all.cc.obj SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -Zi
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = lib\gmockpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib\gmock.lib
+  TARGET_PDB = bin\gmockpdb_debug_postfix-NOTFOUND.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || .
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src\gtest-all.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gmock_main
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src
+  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock-all.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\src\gmock-all.cc || cmake_object_order_depends_target_gmock_main
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\src
+  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\src\gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\src
+  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib\gmock_main.lib
+
+build lib\gmock_main.lib: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\__\googletest\src\gtest-all.cc.obj SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock-all.cc.obj SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj
+  LANGUAGE_COMPILE_FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -Zi
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = SproutEngine\Externals\googletest\googlemock\CMakeFiles\gmock_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = lib\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib\gmock_main.lib
+  TARGET_PDB = bin\gmock_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build SproutEngine\Externals\googletest\googlemock\edit_cache: phony SproutEngine\Externals\googletest\googlemock\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\GameEngineStuff\SproutGameEngine -BD:\GameEngineStuff\SproutGameEngine\out\build\x64-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\googlemock\rebuild_cache: phony SproutEngine\Externals\googletest\googlemock\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Externals\googletest\googlemock\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Externals\googletest\googlemock\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\googlemock\install: phony SproutEngine\Externals\googletest\googlemock\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Externals\googletest\googlemock\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Externals\googletest\googlemock\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googlemock && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\googlemock\install\local: phony SproutEngine\Externals\googletest\googlemock\CMakeFiles\install\local.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || .
+
+build SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\src\gtest-all.cc || cmake_object_order_depends_target_gtest
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest
+  OBJECT_DIR = SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest.dir\src
+  TARGET_COMPILE_PDB = lib\gtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gtestpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib\gtest.lib
+
+build lib\gtest.lib: CXX_STATIC_LIBRARY_LINKER__gtest_Debug SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -Zi
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = lib\gtestpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib\gtest.lib
+  TARGET_PDB = bin\gtestpdb_debug_postfix-NOTFOUND.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\src\gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -std:c++17 -Zi -GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1
+  INCLUDES = -external:ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -external:ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest -external:W0
+  OBJECT_DIR = SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest_main.dir\src
+  TARGET_COMPILE_PDB = lib\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_PDB = bin\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib\gtest_main.lib
+
+build lib\gtest_main.lib: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj || lib\gtest.lib
+  LANGUAGE_COMPILE_FLAGS = /utf-8 -MTd /Ob0 /Od /RTC1 -Zi
+  LINK_FLAGS = /machine:x64
+  OBJECT_DIR = SproutEngine\Externals\googletest\googletest\CMakeFiles\gtest_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = lib\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+  TARGET_FILE = lib\gtest_main.lib
+  TARGET_PDB = bin\gtest_mainpdb_debug_postfix-NOTFOUND.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build SproutEngine\Externals\googletest\googletest\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build SproutEngine\Externals\googletest\googletest\edit_cache: phony SproutEngine\Externals\googletest\googletest\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build SproutEngine\Externals\googletest\googletest\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\GameEngineStuff\SproutGameEngine -BD:\GameEngineStuff\SproutGameEngine\out\build\x64-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\googletest\rebuild_cache: phony SproutEngine\Externals\googletest\googletest\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Externals\googletest\googletest\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Externals\googletest\googletest\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Externals\googletest\googletest\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\googletest\install: phony SproutEngine\Externals\googletest\googletest\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Externals\googletest\googletest\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Externals\googletest\googletest\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Externals\googletest\googletest && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Externals\googletest\googletest\install\local: phony SproutEngine\Externals\googletest\googletest\CMakeFiles\install\local.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# D:/GameEngineStuff/SproutGameEngine/SproutEngine/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target SproutEngineTests
+
+
+#############################################
+# Order-only phony target for SproutEngineTests
+
+build cmake_object_order_depends_target_SproutEngineTests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector2.cpp.obj: CXX_COMPILER__SproutEngineTests_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Tests\Test_Vector2.cpp || cmake_object_order_depends_target_SproutEngineTests
+  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -std:c++17 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Tests\..\Engine -external:ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -external:ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest -external:W0
+  OBJECT_DIR = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir
+  OBJECT_FILE_DIR = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir
+  TARGET_COMPILE_PDB = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\
+  TARGET_PDB = SproutEngine\Tests\SproutEngineTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target SproutEngineTests
+
+
+#############################################
+# Link the executable SproutEngine\Tests\SproutEngineTests.exe
+
+build SproutEngine\Tests\SproutEngineTests.exe SproutEngine\Tests\SproutEngineTests[1]_tests.cmake | ${cmake_ninja_workdir}SproutEngine\Tests\SproutEngineTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__SproutEngineTests_Debug SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector2.cpp.obj | lib\gtest.lib lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib
+  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -Zi
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = lib\gtest.lib  lib\gtest_main.lib  SproutEngine_Engine.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Tests && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -D TEST_TARGET=SproutEngineTests -D TEST_EXECUTABLE=D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Tests/SproutEngineTests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=SproutEngineTests_TESTS -D CTEST_FILE=D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Tests/SproutEngineTests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/GoogleTestAddTests.cmake""
+  PRE_LINK = cd .
+  RESTAT = 1
+  TARGET_COMPILE_PDB = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\
+  TARGET_FILE = SproutEngine\Tests\SproutEngineTests.exe
+  TARGET_IMPLIB = SproutEngine\Tests\SproutEngineTests.lib
+  TARGET_PDB = SproutEngine\Tests\SproutEngineTests.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build SproutEngine\Tests\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Tests && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build SproutEngine\Tests\edit_cache: phony SproutEngine\Tests\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build SproutEngine\Tests\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Tests && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SD:\GameEngineStuff\SproutGameEngine -BD:\GameEngineStuff\SproutGameEngine\out\build\x64-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build SproutEngine\Tests\rebuild_cache: phony SproutEngine\Tests\CMakeFiles\rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build SproutEngine\Tests\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutEngine\Tests\CMakeFiles\install.util: CUSTOM_COMMAND SproutEngine\Tests\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Tests && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutEngine\Tests\install: phony SproutEngine\Tests\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutEngine\Tests\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutEngine\Tests\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutEngine\Tests && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutEngine\Tests\install\local: phony SproutEngine\Tests\CMakeFiles\install\local.util
+
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
 # D:/GameEngineStuff/SproutGameEngine/CMakeLists.txt
@@ -292,10 +928,11 @@ build SproutEngine\Externals\rebuild_cache: phony SproutEngine\Externals\CMakeFi
 #############################################
 # Order-only phony target for SproutRuntime
 
-build cmake_object_order_depends_target_SproutRuntime: phony || .
+build cmake_object_order_depends_target_SproutRuntime: phony || cmake_object_order_depends_target_Math cmake_object_order_depends_target_SproutEngine cmake_object_order_depends_target_Utilities
 
 build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMPILER__SproutRuntime_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\SproutRuntime.cpp || cmake_object_order_depends_target_SproutRuntime
   FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
   OBJECT_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
   OBJECT_FILE_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
   TARGET_COMPILE_PDB = SproutRuntime\CMakeFiles\SproutRuntime.dir\
@@ -309,10 +946,10 @@ build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMP
 #############################################
 # Link the executable SproutRuntime\SproutRuntime.exe
 
-build SproutRuntime\SproutRuntime.exe: CXX_EXECUTABLE_LINKER__SproutRuntime_Debug SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj
+build SproutRuntime\SproutRuntime.exe: CXX_EXECUTABLE_LINKER__SproutRuntime_Debug SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj | SproutEngine\SproutEngine.lib || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\SproutEngine.lib
   FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = SproutEngine\SproutEngine.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -344,16 +981,70 @@ build SproutRuntime\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build SproutRuntime\rebuild_cache: phony SproutRuntime\CMakeFiles\rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build SproutRuntime\list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build SproutRuntime\CMakeFiles\install.util: CUSTOM_COMMAND SproutRuntime\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutRuntime && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build SproutRuntime\install: phony SproutRuntime\CMakeFiles\install.util
+
+
+#############################################
+# Utility command for install/local
+
+build SproutRuntime\CMakeFiles\install\local.util: CUSTOM_COMMAND SproutRuntime\all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\GameEngineStuff\SproutGameEngine\out\build\x64-debug\SproutRuntime && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build SproutRuntime\install\local: phony SproutRuntime\CMakeFiles\install\local.util
+
 # =============================================================================
 # Target aliases.
 
-build SproutEngine: phony SproutEngine\SproutEngine.exe
+build Math: phony SproutEngine\Engine\Math\Math
 
-build SproutEngine.exe: phony SproutEngine\SproutEngine.exe
+build SproutEngine: phony SproutEngine\SproutEngine.lib
+
+build SproutEngine.lib: phony SproutEngine\SproutEngine.lib
+
+build SproutEngineTests: phony SproutEngine\Tests\SproutEngineTests.exe
+
+build SproutEngineTests.exe: phony SproutEngine\Tests\SproutEngineTests.exe
 
 build SproutRuntime: phony SproutRuntime\SproutRuntime.exe
 
 build SproutRuntime.exe: phony SproutRuntime\SproutRuntime.exe
+
+build Utilities: phony SproutEngine\Engine\Utilities\Utilities
+
+build gmock: phony lib\gmock.lib
+
+build gmock.lib: phony lib\gmock.lib
+
+build gmock_main: phony lib\gmock_main.lib
+
+build gmock_main.lib: phony lib\gmock_main.lib
+
+build gtest: phony lib\gtest.lib
+
+build gtest.lib: phony lib\gtest.lib
+
+build gtest_main: phony lib\gtest_main.lib
+
+build gtest_main.lib: phony lib\gtest_main.lib
 
 # =============================================================================
 # Folder targets.
@@ -370,7 +1061,7 @@ build all: phony SproutEngine\all SproutRuntime\all
 #############################################
 # Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine
 
-build SproutEngine\all: phony SproutEngine\SproutEngine.exe SproutEngine\Engine\all SproutEngine\Externals\all
+build SproutEngine\all: phony SproutEngine\SproutEngine.lib SproutEngine\Engine\all SproutEngine\Externals\all SproutEngine\Externals\googletest\all SproutEngine\Tests\all
 
 # =============================================================================
 
@@ -384,14 +1075,14 @@ build SproutEngine\Engine\all: phony SproutEngine\Engine\Utilities\all SproutEng
 #############################################
 # Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Math
 
-build SproutEngine\Engine\Math\all: phony
+build SproutEngine\Engine\Math\all: phony SproutEngine\Engine\Math\Math
 
 # =============================================================================
 
 #############################################
 # Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Utilities
 
-build SproutEngine\Engine\Utilities\all: phony
+build SproutEngine\Engine\Utilities\all: phony SproutEngine\Engine\Utilities\Utilities
 
 # =============================================================================
 
@@ -399,6 +1090,34 @@ build SproutEngine\Engine\Utilities\all: phony
 # Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals
 
 build SproutEngine\Externals\all: phony
+
+# =============================================================================
+
+#############################################
+# Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest
+
+build SproutEngine\Externals\googletest\all: phony SproutEngine\Externals\googletest\googlemock\all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest/googlemock
+
+build SproutEngine\Externals\googletest\googlemock\all: phony lib\gmock.lib lib\gmock_main.lib SproutEngine\Externals\googletest\googletest\all
+
+# =============================================================================
+
+#############################################
+# Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest/googletest
+
+build SproutEngine\Externals\googletest\googletest\all: phony lib\gtest.lib lib\gtest_main.lib
+
+# =============================================================================
+
+#############################################
+# Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Tests
+
+build SproutEngine\Tests\all: phony SproutEngine\Tests\SproutEngineTests.exe
 
 # =============================================================================
 
@@ -414,14 +1133,14 @@ build SproutRuntime\all: phony SproutRuntime\SproutRuntime.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\GameEngineStuff\SproutGameEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\CMakeLists.txt
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindThreads.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GoogleTest.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\GameEngineStuff\SproutGameEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\cmake\gmock.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\cmake\gmock_main.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\Config.cmake.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\gtest.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\gtest_main.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\internal_utils.cmake D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Tests\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\GameEngineStuff\SproutGameEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\CMakeLists.txt: phony
+build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckIncludeFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\CheckLibraryExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\FindThreads.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\GoogleTest.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.29\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.29.5-msvc4\CMakeCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.29.5-msvc4\CMakeSystem.cmake D$:\GameEngineStuff\SproutGameEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\cmake\gmock.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googlemock\cmake\gmock_main.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\Config.cmake.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\gtest.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\gtest_main.pc.in D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\cmake\internal_utils.cmake D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Tests\CMakeLists.txt D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\CMakeLists.txt: phony
 
 
 #############################################

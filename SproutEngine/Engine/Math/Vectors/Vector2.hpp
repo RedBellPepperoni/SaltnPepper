@@ -20,6 +20,7 @@
 
 
 #include <DirectXMath.h>
+#include <string>
 
 using namespace DirectX;
 
@@ -34,7 +35,7 @@ namespace SproutEngine
 		/// <summary>
 		///  Structure defining a 16 bit aligned 2 dimentional floating point vector (a Vector 2)
 		/// </summary>
-		struct Vector2 : public XMFLOAT2A
+		struct Vector2
 		{
 			// Zero Valued Vector : Vector2 {0.0f , 0.0f}
 			static const Vector2 Zero;
@@ -46,17 +47,24 @@ namespace SproutEngine
 			static const Vector2 UnitY;
 
 
+			union
+			{
+				struct { float x, y; };
+				struct { float u, v; };
+				DirectX::XMFLOAT2A xmvector;
+			};
+
 
 			/// -----------------------------------------------   Declarations for Vector2  --------------------------------------------
 
 			// Default Constructor : Always constructed as a Vector2{0.0f}
-			Vector2() noexcept : XMFLOAT2A{ 0.0f, 0.0f } {}
+			Vector2() noexcept :  xmvector{ 0.0f, 0.0f } {}
 
 			// Single Value Constructor : Sets both (X, Y) components as the given Value
-			constexpr explicit Vector2(float _singleValue) noexcept : XMFLOAT2A(_singleValue, _singleValue) {}
+			constexpr explicit Vector2(float _singleValue) noexcept : xmvector(_singleValue, _singleValue) {}
 
 			// Multi Value Constructor : Sets components according to the given Values
-			constexpr explicit Vector2(float _xValue, float _yValue) noexcept : XMFLOAT2A(_xValue, _yValue) {}
+			constexpr explicit Vector2(float _xValue, float _yValue) noexcept : xmvector(_xValue, _yValue) {}
 
 
 
@@ -68,31 +76,20 @@ namespace SproutEngine
 
 
 
-			operator XMVECTOR() const noexcept { return XMLoadFloat2A(this); }
+			operator XMVECTOR() const noexcept { return XMLoadFloat2A(&xmvector); }
 
 			// Constructor ALIGNED : Sets both (X, Y) components as the given XMFFLOAT2A's Components
-			Vector2(const XMFLOAT2A& _xmFloat) noexcept 
-			{ 
-				this->x = _xmFloat.x;  
-				this->y = _xmFloat.y;
-			}
-
+			Vector2(const XMFLOAT2A& _xmFloat) noexcept : xmvector(_xmFloat.x, _xmFloat.y){ }
+			
 			// Constructor UNALIGHNED: Sets both (X, Y) components as the given XMFFLOAT2's Components
-			Vector2(const XMFLOAT2& _xmFloat) noexcept
-			{
-				this->x = _xmFloat.x;
-				this->y = _xmFloat.y;
-			}
+			Vector2(const XMFLOAT2& _xmFloat) noexcept : xmvector(_xmFloat.x, _xmFloat.y) {}
 
-			Vector2(const XMVECTORF32& _xmVector32) noexcept
-			{
-				this->x = _xmVector32.f[0];
-				this->y = _xmVector32.f[1];
-			}
+			Vector2(const XMVECTORF32& _xmVector32) noexcept : xmvector(_xmVector32.f[0], _xmVector32.f[1]) {}
+			
 
 			Vector2(FXMVECTOR _xmVector) noexcept
 			{
-				XMStoreFloat2A(this, _xmVector);
+				XMStoreFloat2A(&xmvector, _xmVector);
 			}
 
 			
@@ -172,7 +169,7 @@ namespace SproutEngine
 			
 			/// ------------------------------------- String Functions --------------------------------------------------
 
-			//static std::string& GetString();
+			std::string ToString() const;
 
 		};
 

@@ -1,0 +1,3 @@
+[submodule "SproutEngine/Externals/googletest"]
+	path = SproutEngine/Externals/googletest
+	url = https://github.com/google/googletest.git

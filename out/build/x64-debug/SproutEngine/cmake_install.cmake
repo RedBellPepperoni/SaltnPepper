@@ -36,6 +36,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/cmake_install.cmake")
   include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/cmake_install.cmake")
+  include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest/cmake_install.cmake")
+  include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Tests/cmake_install.cmake")
 
 endif()
 

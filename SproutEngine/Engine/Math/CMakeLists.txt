@@ -21,5 +21,13 @@ LIST(
 	"${CURRENT_DIR}/MathDefinitions.hpp"
 )
 
-SET (SRC_FILES ${SRC_FILES} PARENT_SCOPE )
-SET (INC_FILES ${INC_FILES} PARENT_SCOPE )
+
+#Define Math as an OBJECT library
+add_library(Math OBJECT ${SRC_FILES} ${INC_FILES})
+
+# Set C++ standard
+set_property(TARGET Math PROPERTY CXX_STANDARD 20)
+
+# Set public include directory
+target_include_directories(Math PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+

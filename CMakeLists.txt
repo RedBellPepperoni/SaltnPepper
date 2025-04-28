@@ -18,13 +18,14 @@ PROJECT ("SproutEngine")
 # Include sub-projects.
 ADD_SUBDIRECTORY ("SproutEngine")
 
-ADD_SUBDIRECTORY("SproutRuntime")
+ADD_SUBDIRECTORY ("SproutRuntime")
 
 
-#SUBDIRS("Externals")
+# --- End Testing Setup ---
 
 
 SET (EXTERNAL_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/SproutEngine/Externals/)
 SET (ENGINE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/SproutEngine/Engine/)
-
+SET (SPROUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/SproutEngine/)
+SET (RUNTIME_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/SproutRuntime/)
 #MESSAGE ([<WARNING>]"Binary path: ${ENGINE_DIRECTORY}")
