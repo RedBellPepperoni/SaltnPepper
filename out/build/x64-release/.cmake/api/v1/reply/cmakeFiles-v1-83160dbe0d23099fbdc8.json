@@ -6,7 +6,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CMakeSystem.cmake"
+			"path" : "out/build/x64-release/CMakeFiles/3.29.5-msvc4/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -20,11 +20,11 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CMakeCCompiler.cmake"
+			"path" : "out/build/x64-release/CMakeFiles/3.29.5-msvc4/CMakeCCompiler.cmake"
 		},
 		{
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CMakeCXXCompiler.cmake"
+			"path" : "out/build/x64-release/CMakeFiles/3.29.5-msvc4/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -88,7 +88,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "out/build/x64-debug/CMakeFiles/3.29.5-msvc4/CMakeRCCompiler.cmake"
+			"path" : "out/build/x64-release/CMakeFiles/3.29.5-msvc4/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -151,6 +151,9 @@
 		},
 		{
 			"path" : "SproutEngine/Engine/Math/CMakeLists.txt"
+		},
+		{
+			"path" : "SproutEngine/Engine/Core/CMakeLists.txt"
 		},
 		{
 			"path" : "SproutEngine/Externals/CMakeLists.txt"
@@ -287,7 +290,7 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug",
+		"build" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release",
 		"source" : "D:/GameEngineStuff/SproutGameEngine"
 	},
 	"version" : 

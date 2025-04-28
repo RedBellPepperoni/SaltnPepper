@@ -1,11 +1,5 @@
-﻿# CMakeList.txt : CMake project for SaltnPepperEngine, include source and define
+﻿# CMakeList.txt : CMake project for SproutEngine, include source and define
 # project specific logic here.
-#
-
-# Add source to this project's executable.
-#add_library (SaltnPepperEngine "SaltnPepperEngine.cpp" "SaltnPepperEngine.h")
-
-
 
 
 
@@ -27,8 +21,10 @@ ADD_SUBDIRECTORY(${EXTERNAL_DIRECTORY})
 
 
 
+
 ADD_LIBRARY(SproutEngine STATIC $<TARGET_OBJECTS:Math> $<TARGET_OBJECTS:Utilities>)
-TARGET_LINK_LIBRARIES(SproutEngine PRIVATE SproutEngineCore) # Link against the Engine interface library
+TARGET_LINK_LIBRARIES(SproutEngine PUBLIC SproutEngineCore)
+TARGET_LINK_LIBRARIES(SproutEngine PUBLIC spdlog)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   SET_PROPERTY(TARGET SproutEngine PROPERTY CXX_STANDARD 20)
@@ -51,6 +47,8 @@ TARGET_INCLUDE_DIRECTORIES(SproutEngine PUBLIC ${EXTERNAL_DIRECTORY})
 # include Paths for Engine Headers
 TARGET_INCLUDE_DIRECTORIES(SproutEngine PUBLIC ${ENGINE_DIRECTORY})
 
+# include Paths for SproutEngine Headers
+TARGET_INCLUDE_DIRECTORIES(SproutEngine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 # --- Testing Setup ---

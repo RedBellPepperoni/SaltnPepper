@@ -1,0 +1,5 @@
+if(EXISTS "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/SproutEngine/Tests/SproutEngineTests[1]_tests.cmake")
+  include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/SproutEngine/Tests/SproutEngineTests[1]_tests.cmake")
+else()
+  add_test(SproutEngineTests_NOT_BUILT SproutEngineTests_NOT_BUILT)
+endif()

@@ -45,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi"
+					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG"
 				}
 			],
 			"includes" : 
@@ -60,11 +60,23 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities"
 				},
 				{
 					"backtrace" : 2,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Math"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Core"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals/spdlog"
 				}
 			],
 			"language" : "CXX",
@@ -95,11 +107,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi",
+				"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{

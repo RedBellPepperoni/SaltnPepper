@@ -16,10 +16,10 @@
 **************************************************************************/
 
 
-#include <Math/Vectors/Vector2.hpp>
-#include <Math/Quaternion.hpp>
-#include <Core/EngineDefines.hpp>
-#include <Utilities/Logging/Log.hpp>
+#include <Vectors/Vector2.hpp>
+#include <Quaternion.hpp>
+#include <../Core/EngineDefines.hpp>
+#include <../Utilities/Logging/Log.hpp>
 
 #include <sstream> 
 

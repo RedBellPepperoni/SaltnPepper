@@ -28,6 +28,7 @@
 #include <cmath>
 #include <limits>
 
+
 using namespace DirectX;
 
 namespace SproutEngine
@@ -98,8 +99,8 @@ namespace SproutEngine
 		static inline  double ASin	(double _value) { return (_value < -1) ? (-PI / 2) : ((_value > 1) ? (PI / 2) : std::asin(_value));}
 		static inline  double ACos	(double _value) { return (_value < -1) ? PI : ((_value > 1) ? 0 : std::acos(_value)); }
 
-		static inline  double ATan	(double _value) { return std::atanf(_value); }
-		static inline  double ATan2 (double _valueY, double _valueX) { return std::atan2f(_valueY, _valueX); }
+		static inline  double ATan	(double _value) { return std::atan(_value); }
+		static inline  double ATan2 (double _valueY, double _valueX) { return std::atan2(_valueY, _valueX); }
 
 
 		static inline  double SquareRoot(double _value) { return std::sqrt(_value); }

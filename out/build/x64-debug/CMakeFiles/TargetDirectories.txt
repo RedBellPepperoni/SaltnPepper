@@ -26,6 +26,11 @@ D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Math
 D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Math/CMakeFiles/list_install_components.dir
 D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Math/CMakeFiles/install.dir
 D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Math/CMakeFiles/install/local.dir
+D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Core/CMakeFiles/edit_cache.dir
+D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Core/CMakeFiles/rebuild_cache.dir
+D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Core/CMakeFiles/list_install_components.dir
+D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Core/CMakeFiles/install.dir
+D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Core/CMakeFiles/install/local.dir
 D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/CMakeFiles/edit_cache.dir
 D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/CMakeFiles/rebuild_cache.dir
 D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/CMakeFiles/list_install_components.dir

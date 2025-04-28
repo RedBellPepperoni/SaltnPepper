@@ -1,0 +1,352 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						11
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "SproutEngine",
+					"childIndexes" : 
+					[
+						2,
+						6,
+						7,
+						10
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SproutEngine-Release-dcfe3e5c38846eb7370c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SproutEngine",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "SproutEngine/Engine",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						5
+					],
+					"jsonFile" : "directory-SproutEngine.Engine-Release-a83f704d498921a39c50.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "SproutEngine/Engine"
+				},
+				{
+					"build" : "SproutEngine/Engine/Utilities",
+					"jsonFile" : "directory-SproutEngine.Engine.Utilities-Release-392dd8177c5ccfa6d8c2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "SproutEngine/Engine/Utilities",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "SproutEngine/Engine/Math",
+					"jsonFile" : "directory-SproutEngine.Engine.Math-Release-fcd31c4c4c5c0019e5ab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "SproutEngine/Engine/Math",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "SproutEngine/Engine/Core",
+					"jsonFile" : "directory-SproutEngine.Engine.Core-Release-498973f51c7a9c56c4e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "SproutEngine/Engine/Core"
+				},
+				{
+					"build" : "SproutEngine/Externals",
+					"jsonFile" : "directory-SproutEngine.Externals-Release-c85e8e2c93d14aa5caa8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "SproutEngine/Externals"
+				},
+				{
+					"build" : "SproutEngine/Externals/googletest",
+					"childIndexes" : 
+					[
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SproutEngine.Externals.googletest-Release-9449b2a88bfc9a9734b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "SproutEngine/Externals/googletest"
+				},
+				{
+					"build" : "SproutEngine/Externals/googletest/googlemock",
+					"childIndexes" : 
+					[
+						9
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SproutEngine.Externals.googletest.googlemock-Release-32193d4440fe29382ca2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 7,
+					"projectIndex" : 2,
+					"source" : "SproutEngine/Externals/googletest/googlemock",
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"build" : "SproutEngine/Externals/googletest/googletest",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-SproutEngine.Externals.googletest.googletest-Release-8b48d83cac1378edbc1d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 8,
+					"projectIndex" : 3,
+					"source" : "SproutEngine/Externals/googletest/googletest",
+					"targetIndexes" : 
+					[
+						7,
+						8
+					]
+				},
+				{
+					"build" : "SproutEngine/Tests",
+					"jsonFile" : "directory-SproutEngine.Tests-Release-761273bd0557894e2506.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "SproutEngine/Tests",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "SproutRuntime",
+					"jsonFile" : "directory-SproutRuntime-Release-87f4ccd932bf2b1292e5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SproutRuntime",
+					"targetIndexes" : 
+					[
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						10,
+						11
+					],
+					"name" : "SproutEngine",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						7
+					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						3
+					],
+					"directoryIndexes" : 
+					[
+						8
+					],
+					"name" : "gmock",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						5,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						9
+					],
+					"name" : "gtest",
+					"parentIndex" : 2,
+					"targetIndexes" : 
+					[
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "Math::@765af3a8d2eed00d5c2f",
+					"jsonFile" : "target-Math-Release-cfe41a97642e7072e09e.json",
+					"name" : "Math",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "SproutEngine::@156ddb54d96f11bfeff5",
+					"jsonFile" : "target-SproutEngine-Release-62ca8e700e8b24e0216d.json",
+					"name" : "SproutEngine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "SproutEngineTests::@3fc46f0add1ea863dd8a",
+					"jsonFile" : "target-SproutEngineTests-Release-f0dbc566dbb265be0bc9.json",
+					"name" : "SproutEngineTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "SproutRuntime::@efc6388da9400bd319f9",
+					"jsonFile" : "target-SproutRuntime-Release-21fc0f9a00e067f8af55.json",
+					"name" : "SproutRuntime",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "Utilities::@f05820a1571604f85d25",
+					"jsonFile" : "target-Utilities-Release-3026e85dc692b96950d6.json",
+					"name" : "Utilities",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "gmock::@904b280b67a7b82e571c",
+					"jsonFile" : "target-gmock-Release-1624b94ca30147c4ecf3.json",
+					"name" : "gmock",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "gmock_main::@904b280b67a7b82e571c",
+					"jsonFile" : "target-gmock_main-Release-be992becec45bb28cb4c.json",
+					"name" : "gmock_main",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "gtest::@c8bb0a9a222660f4aeab",
+					"jsonFile" : "target-gtest-Release-4882b57b596a2e96c9c6.json",
+					"name" : "gtest",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "gtest_main::@c8bb0a9a222660f4aeab",
+					"jsonFile" : "target-gtest_main-Release-ebd9463d59bc13e22655.json",
+					"name" : "gtest_main",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release",
+		"source" : "D:/GameEngineStuff/SproutGameEngine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

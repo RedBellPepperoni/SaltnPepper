@@ -1,0 +1,4 @@
+# ninja log v6
+35	259	7675208148423649	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Matrix4.cpp.obj	46287fe89803de6d
+26	262	7675208148322509	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Vectors/Vector3.cpp.obj	821e7e652adb9035
+40	469	7675208739374798	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Quaternion.cpp.obj	cc3a734cdd9e84a5

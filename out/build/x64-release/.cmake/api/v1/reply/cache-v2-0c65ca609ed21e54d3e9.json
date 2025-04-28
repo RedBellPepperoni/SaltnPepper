@@ -39,7 +39,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : "Release"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -51,7 +51,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/GameEngineStuff/SproutGameEngine/out/build/x64-debug"
+			"value" : "d:/GameEngineStuff/SproutGameEngine/out/build/x64-release"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -779,7 +779,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-debug"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-release"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -979,7 +979,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "11"
+			"value" : "12"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1442,70 +1442,6 @@
 			"value" : "[TRUE][v()]"
 		},
 		{
-			"name" : "GMOCK_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GMOCK_LIBRARY-NOTFOUND"
-		},
-		{
-			"name" : "GMOCK_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GMOCK_LIBRARY_DEBUG-NOTFOUND"
-		},
-		{
-			"name" : "GMOCK_MAIN_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GMOCK_MAIN_LIBRARY-NOTFOUND"
-		},
-		{
-			"name" : "GMOCK_MAIN_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GMOCK_MAIN_LIBRARY_DEBUG-NOTFOUND"
-		},
-		{
 			"name" : "GTEST_HAS_ABSL",
 			"properties" : 
 			[
@@ -1516,98 +1452,6 @@
 			],
 			"type" : "BOOL",
 			"value" : "OFF"
-		},
-		{
-			"name" : "GTEST_INCLUDE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a file."
-				}
-			],
-			"type" : "PATH",
-			"value" : "GTEST_INCLUDE_DIR-NOTFOUND"
-		},
-		{
-			"name" : "GTEST_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GTEST_LIBRARY-NOTFOUND"
-		},
-		{
-			"name" : "GTEST_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GTEST_LIBRARY_DEBUG-NOTFOUND"
-		},
-		{
-			"name" : "GTEST_MAIN_LIBRARY",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GTEST_MAIN_LIBRARY-NOTFOUND"
-		},
-		{
-			"name" : "GTEST_MAIN_LIBRARY_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a library."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND"
-		},
-		{
-			"name" : "GTest_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for GTest."
-				}
-			],
-			"type" : "PATH",
-			"value" : "GTest_DIR-NOTFOUND"
 		},
 		{
 			"name" : "INSTALL_GTEST",
@@ -1631,7 +1475,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release"
 		},
 		{
 			"name" : "SproutEngine_IS_TOP_LEVEL",
@@ -1667,7 +1511,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-debug"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-release"
 		},
 		{
 			"name" : "cmake_package_name",
@@ -1691,7 +1535,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest/googletest/generated"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/SproutEngine/Externals/googletest/googletest/generated"
 		},
 		{
 			"name" : "gmock_BINARY_DIR",
@@ -1703,7 +1547,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest/googlemock"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/SproutEngine/Externals/googletest/googlemock"
 		},
 		{
 			"name" : "gmock_IS_TOP_LEVEL",
@@ -1755,7 +1599,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/SproutEngine/Externals/googletest"
 		},
 		{
 			"name" : "googletest-distribution_IS_TOP_LEVEL",
@@ -1791,7 +1635,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals/googletest/googletest"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/build/x64-release/SproutEngine/Externals/googletest/googletest"
 		},
 		{
 			"name" : "gtest_IS_TOP_LEVEL",

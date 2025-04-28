@@ -52,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -std:c++17 -Zi"
+					"fragment" : "/utf-8 /MD /O2 /Ob2 /DNDEBUG -std:c++17"
 				}
 			],
 			"includes" : 
@@ -104,11 +104,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -Zi",
+				"fragment" : "/utf-8 /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{

@@ -1,7 +1,7 @@
 ﻿# CMakeList.txt : Top-level CMake project file, do global configuration
 # and include sub-projects here.
 #
-CMAKE_MINIMUM_REQUIRED (VERSION 3.8)
+CMAKE_MINIMUM_REQUIRED (VERSION 3.12)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
