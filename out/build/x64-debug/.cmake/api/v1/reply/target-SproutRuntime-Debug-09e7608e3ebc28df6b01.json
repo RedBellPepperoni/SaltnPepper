@@ -14,7 +14,8 @@
 		"commands" : 
 		[
 			"add_executable",
-			"TARGET_LINK_LIBRARIES"
+			"TARGET_LINK_LIBRARIES",
+			"SET_PROPERTY"
 		],
 		"files" : 
 		[
@@ -28,13 +29,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 3,
+				"line" : 4,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 4,
+				"line" : 5,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 10,
 				"parent" : 0
 			}
 		]
@@ -45,7 +52,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi"
+					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi"
 				}
 			],
 			"includes" : 
@@ -73,13 +80,17 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Core"
-				},
-				{
-					"backtrace" : 2,
-					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals/spdlog"
 				}
 			],
 			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					3
+				],
+				"standard" : "20"
+			},
 			"sourceIndexes" : 
 			[
 				0
@@ -94,11 +105,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Math::@765af3a8d2eed00d5c2f"
+			"id" : "Utilities::@f05820a1571604f85d25"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Utilities::@f05820a1571604f85d25"
+			"id" : "Math::@765af3a8d2eed00d5c2f"
 		}
 	],
 	"id" : "SproutRuntime::@efc6388da9400bd319f9",

@@ -65,12 +65,6 @@
 				"parent" : 0
 			},
 			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 27,
-				"parent" : 0
-			},
-			{
 				"command" : 3,
 				"file" : 0,
 				"line" : 30,
@@ -82,11 +76,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "Math::@765af3a8d2eed00d5c2f"
+			"id" : "Utilities::@f05820a1571604f85d25"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Utilities::@f05820a1571604f85d25"
+			"id" : "Math::@765af3a8d2eed00d5c2f"
 		}
 	],
 	"id" : "SproutEngine::@156ddb54d96f11bfeff5",

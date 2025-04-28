@@ -15,7 +15,7 @@
 39	1682	7674994203872959	SproutEngine/Externals/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.obj	798067e2d43bdf40
 14	2277	7674994203621189	SproutEngine/Externals/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	b427733a8d2f91f8
 26	2289	7674994203733180	SproutEngine/Externals/googletest/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.obj	5aac64e49469a684
-27	488	7675048261761420	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Quaternion.cpp.obj	5dcf2a430e749f3c
+25	760	7675215455064983	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Quaternion.cpp.obj	5dcf2a430e749f3c
 34	2692	7674994203818163	SproutEngine/Externals/googletest/googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.obj	a1e2d91f62f7ad97
 2277	2701	7674994226251645	lib/gtest.lib	285bbbfd38b01179
 2289	2711	7674994226374516	lib/gmock.lib	f8de4843566407ad
@@ -23,4 +23,3 @@
 10	842	7675008976002234	SproutEngine/Tests/CMakeFiles/SproutEngineTests.dir/Test_Vector2.cpp.obj	c9c48caa247fd9ad
 33	533	7675028584203738	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Matrix4.cpp.obj	ba129493e03797bf
 26	264	7675207167949754	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Vectors/Vector3.cpp.obj	8db5d2cdb1881a76
-30	502	7675207167989780	SproutEngine/Engine/Math/CMakeFiles/Math.dir/Quaternion.cpp.obj	5dcf2a430e749f3c

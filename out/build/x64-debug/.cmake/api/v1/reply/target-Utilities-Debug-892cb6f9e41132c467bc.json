@@ -12,6 +12,7 @@
 		[
 			"add_library",
 			"target_include_directories",
+			"target_link_libraries",
 			"set_property"
 		],
 		"files" : 
@@ -32,13 +33,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 23,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 20,
+				"line" : 19,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 22,
 				"parent" : 0
 			}
 		]
@@ -57,6 +64,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals"
 				}
 			],
 			"language" : "CXX",
@@ -64,7 +75,7 @@
 			{
 				"backtraces" : 
 				[
-					3
+					4
 				],
 				"standard" : "20"
 			},

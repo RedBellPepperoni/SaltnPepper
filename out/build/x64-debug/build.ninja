@@ -252,7 +252,7 @@ build cmake_object_order_depends_target_Utilities: phony || .
 
 build SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj: CXX_COMPILER__Utilities_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\Logging\Log.cpp || cmake_object_order_depends_target_Utilities
   FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals
   OBJECT_DIR = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir
   OBJECT_FILE_DIR = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging
   TARGET_COMPILE_PDB = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\
@@ -989,8 +989,8 @@ build SproutEngine\Tests\install\local: phony SproutEngine\Tests\CMakeFiles\inst
 build cmake_object_order_depends_target_SproutRuntime: phony || cmake_object_order_depends_target_Math cmake_object_order_depends_target_SproutEngine cmake_object_order_depends_target_Utilities
 
 build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMPILER__SproutRuntime_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\SproutRuntime.cpp || cmake_object_order_depends_target_SproutRuntime
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi
-  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Core -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog
+  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Core
   OBJECT_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
   OBJECT_FILE_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
   TARGET_COMPILE_PDB = SproutRuntime\CMakeFiles\SproutRuntime.dir\

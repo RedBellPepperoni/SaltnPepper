@@ -15,7 +15,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"projectIndex" : 0,
 					"source" : "."
@@ -33,7 +33,7 @@
 					"jsonFile" : "directory-SproutEngine-Debug-dcfe3e5c38846eb7370c.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -54,7 +54,7 @@
 					"jsonFile" : "directory-SproutEngine.Engine-Debug-a83f704d498921a39c50.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 1,
 					"projectIndex" : 0,
@@ -65,7 +65,7 @@
 					"jsonFile" : "directory-SproutEngine.Engine.Utilities-Debug-392dd8177c5ccfa6d8c2.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 2,
 					"projectIndex" : 0,
@@ -80,7 +80,7 @@
 					"jsonFile" : "directory-SproutEngine.Engine.Math-Debug-fcd31c4c4c5c0019e5ab.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 2,
 					"projectIndex" : 0,
@@ -95,7 +95,7 @@
 					"jsonFile" : "directory-SproutEngine.Engine.Core-Debug-498973f51c7a9c56c4e3.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 2,
 					"projectIndex" : 0,
@@ -106,7 +106,7 @@
 					"jsonFile" : "directory-SproutEngine.Externals-Debug-c85e8e2c93d14aa5caa8.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 1,
 					"projectIndex" : 0,
@@ -186,7 +186,7 @@
 					"jsonFile" : "directory-SproutRuntime-Debug-87f4ccd932bf2b1292e5.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.8"
+						"string" : "3.12"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
@@ -282,7 +282,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "SproutEngine::@156ddb54d96f11bfeff5",
-					"jsonFile" : "target-SproutEngine-Debug-979abbd71de9737cfdab.json",
+					"jsonFile" : "target-SproutEngine-Debug-0e7b579dc07ef285f652.json",
 					"name" : "SproutEngine",
 					"projectIndex" : 0
 				},
@@ -296,14 +296,14 @@
 				{
 					"directoryIndex" : 11,
 					"id" : "SproutRuntime::@efc6388da9400bd319f9",
-					"jsonFile" : "target-SproutRuntime-Debug-7e1f5eadf1671813c053.json",
+					"jsonFile" : "target-SproutRuntime-Debug-09e7608e3ebc28df6b01.json",
 					"name" : "SproutRuntime",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "Utilities::@f05820a1571604f85d25",
-					"jsonFile" : "target-Utilities-Debug-b432541f1dc63dd5a84e.json",
+					"jsonFile" : "target-Utilities-Debug-892cb6f9e41132c467bc.json",
 					"name" : "Utilities",
 					"projectIndex" : 0
 				},
