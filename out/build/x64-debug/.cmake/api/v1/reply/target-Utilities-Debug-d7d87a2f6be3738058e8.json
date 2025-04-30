@@ -11,8 +11,8 @@
 		"commands" : 
 		[
 			"add_library",
-			"target_include_directories",
 			"target_link_libraries",
+			"target_include_directories",
 			"set_property"
 		],
 		"files" : 
@@ -33,13 +33,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 19,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
@@ -62,11 +62,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 2,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals"
 				}
 			],
@@ -83,6 +83,13 @@
 			[
 				0
 			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "spdlog::@ab25d232b1fcb0183a4e"
 		}
 	],
 	"id" : "Utilities::@f05820a1571604f85d25",

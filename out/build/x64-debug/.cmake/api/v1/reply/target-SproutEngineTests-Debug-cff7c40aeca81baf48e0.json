@@ -91,11 +91,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@c8bb0a9a222660f4aeab"
+			"id" : "gtest::@c8bb0a9a222660f4aeab"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@c8bb0a9a222660f4aeab"
+			"id" : "gtest_main::@c8bb0a9a222660f4aeab"
 		}
 	],
 	"id" : "SproutEngineTests::@3fc46f0add1ea863dd8a",

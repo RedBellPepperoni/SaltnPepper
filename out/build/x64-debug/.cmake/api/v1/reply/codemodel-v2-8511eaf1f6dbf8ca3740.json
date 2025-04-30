@@ -110,7 +110,11 @@
 					},
 					"parentIndex" : 1,
 					"projectIndex" : 0,
-					"source" : "SproutEngine/Externals"
+					"source" : "SproutEngine/Externals",
+					"targetIndexes" : 
+					[
+						9
+					]
 				},
 				{
 					"build" : "SproutEngine/Externals/googletest",
@@ -224,7 +228,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						9
 					]
 				},
 				{
@@ -282,28 +287,28 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "SproutEngine::@156ddb54d96f11bfeff5",
-					"jsonFile" : "target-SproutEngine-Debug-0e7b579dc07ef285f652.json",
+					"jsonFile" : "target-SproutEngine-Debug-be1941b479c0b3b44e54.json",
 					"name" : "SproutEngine",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 10,
 					"id" : "SproutEngineTests::@3fc46f0add1ea863dd8a",
-					"jsonFile" : "target-SproutEngineTests-Debug-339709a14952f59d1927.json",
+					"jsonFile" : "target-SproutEngineTests-Debug-cff7c40aeca81baf48e0.json",
 					"name" : "SproutEngineTests",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 11,
 					"id" : "SproutRuntime::@efc6388da9400bd319f9",
-					"jsonFile" : "target-SproutRuntime-Debug-bc7944e9ddc93804b9df.json",
+					"jsonFile" : "target-SproutRuntime-Debug-ceadf4532883919ce943.json",
 					"name" : "SproutRuntime",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "Utilities::@f05820a1571604f85d25",
-					"jsonFile" : "target-Utilities-Debug-892cb6f9e41132c467bc.json",
+					"jsonFile" : "target-Utilities-Debug-d7d87a2f6be3738058e8.json",
 					"name" : "Utilities",
 					"projectIndex" : 0
 				},
@@ -334,6 +339,13 @@
 					"jsonFile" : "target-gtest_main-Debug-a832743fbae9525066b1.json",
 					"name" : "gtest_main",
 					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "spdlog::@ab25d232b1fcb0183a4e",
+					"jsonFile" : "target-spdlog-Debug-ffb0ef24a872b1bc1874.json",
+					"name" : "spdlog",
+					"projectIndex" : 0
 				}
 			]
 		}

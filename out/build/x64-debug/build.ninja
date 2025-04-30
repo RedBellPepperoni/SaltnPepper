@@ -105,7 +105,7 @@ build install\local: phony CMakeFiles\install\local.util
 #############################################
 # Order-only phony target for SproutEngine
 
-build cmake_object_order_depends_target_SproutEngine: phony || cmake_object_order_depends_target_Math cmake_object_order_depends_target_Utilities
+build cmake_object_order_depends_target_SproutEngine: phony || SproutEngine\Externals\spdlog cmake_object_order_depends_target_Math cmake_object_order_depends_target_Utilities
 
 
 # =============================================================================
@@ -115,7 +115,7 @@ build cmake_object_order_depends_target_SproutEngine: phony || cmake_object_orde
 #############################################
 # Link the static library SproutEngine\SproutEngine.lib
 
-build SproutEngine\SproutEngine.lib: CXX_STATIC_LIBRARY_LINKER__SproutEngine_Debug SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Matrix4.cpp.obj SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities
+build SproutEngine\SproutEngine.lib: CXX_STATIC_LIBRARY_LINKER__SproutEngine_Debug SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj SproutEngine\Engine\Math\CMakeFiles\Math.dir\Matrix4.cpp.obj SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\Externals\spdlog
   LANGUAGE_COMPILE_FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 -Zi
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = SproutEngine\CMakeFiles\SproutEngine.dir
@@ -248,7 +248,7 @@ build SproutEngine\Engine\install\local: phony SproutEngine\Engine\CMakeFiles\in
 #############################################
 # Order-only phony target for Utilities
 
-build cmake_object_order_depends_target_Utilities: phony || .
+build cmake_object_order_depends_target_Utilities: phony || SproutEngine\Externals\spdlog
 
 build SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj: CXX_COMPILER__Utilities_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\Logging\Log.cpp || cmake_object_order_depends_target_Utilities
   FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
@@ -486,6 +486,12 @@ build SproutEngine\Engine\Core\install\local: phony SproutEngine\Engine\Core\CMa
 # Write statements declared in CMakeLists.txt:
 # D:/GameEngineStuff/SproutGameEngine/SproutEngine/CMakeLists.txt
 # =============================================================================
+
+
+#############################################
+# Utility command for spdlog
+
+build SproutEngine\Externals\spdlog: phony
 
 
 #############################################
@@ -986,7 +992,7 @@ build SproutEngine\Tests\install\local: phony SproutEngine\Tests\CMakeFiles\inst
 #############################################
 # Order-only phony target for SproutRuntime
 
-build cmake_object_order_depends_target_SproutRuntime: phony || cmake_object_order_depends_target_Math cmake_object_order_depends_target_SproutEngine cmake_object_order_depends_target_Utilities
+build cmake_object_order_depends_target_SproutRuntime: phony || SproutEngine\Externals\spdlog cmake_object_order_depends_target_Math cmake_object_order_depends_target_SproutEngine cmake_object_order_depends_target_Utilities
 
 build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMPILER__SproutRuntime_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\SproutRuntime.cpp || cmake_object_order_depends_target_SproutRuntime
   FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi
@@ -1004,7 +1010,7 @@ build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMP
 #############################################
 # Link the executable SproutRuntime\SproutRuntime.exe
 
-build SproutRuntime\SproutRuntime.exe: CXX_EXECUTABLE_LINKER__SproutRuntime_Debug SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj | SproutEngine\SproutEngine.lib || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\SproutEngine.lib
+build SproutRuntime\SproutRuntime.exe: CXX_EXECUTABLE_LINKER__SproutRuntime_Debug SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj | SproutEngine\SproutEngine.lib || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\Externals\spdlog SproutEngine\SproutEngine.lib
   FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = SproutEngine\SproutEngine.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -1104,6 +1110,8 @@ build gtest_main: phony lib\gtest_main.lib
 
 build gtest_main.lib: phony lib\gtest_main.lib
 
+build spdlog: phony SproutEngine\Externals\spdlog
+
 # =============================================================================
 # Folder targets.
 
@@ -1154,7 +1162,7 @@ build SproutEngine\Engine\Utilities\all: phony SproutEngine\Engine\Utilities\Uti
 #############################################
 # Folder: D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Externals
 
-build SproutEngine\Externals\all: phony
+build SproutEngine\Externals\all: phony SproutEngine\Externals\spdlog
 
 # =============================================================================
 
