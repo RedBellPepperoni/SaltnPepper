@@ -19,7 +19,7 @@
 #include <Vectors/Vector2.hpp>
 #include <Quaternion.hpp>
 #include <../Core/EngineDefines.hpp>
-#include <../Utilities/Logging/Log.hpp>
+//#include <../Utilities/Logging/Log.hpp>
 
 #include <sstream> 
 

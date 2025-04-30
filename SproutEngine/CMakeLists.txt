@@ -54,6 +54,8 @@ TARGET_INCLUDE_DIRECTORIES(SproutEngine PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 # --- Testing Setup ---
 ENABLE_TESTING() 
 
+set(gtest_force_shared_crt OFF CACHE BOOL "" FORCE) # Force static CRT for Google Test
+
 # Add Google Test from local source
 ADD_SUBDIRECTORY(${EXTERNAL_DIRECTORY}googletest/)
 

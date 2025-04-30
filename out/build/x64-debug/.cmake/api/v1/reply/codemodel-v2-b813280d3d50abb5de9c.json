@@ -9,7 +9,7 @@
 					"childIndexes" : 
 					[
 						1,
-						11
+						12
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
@@ -26,8 +26,8 @@
 					[
 						2,
 						6,
-						7,
-						10
+						8,
+						11
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-SproutEngine-Debug-dcfe3e5c38846eb7370c.json",
@@ -103,6 +103,10 @@
 				},
 				{
 					"build" : "SproutEngine/Externals",
+					"childIndexes" : 
+					[
+						7
+					],
 					"jsonFile" : "directory-SproutEngine.Externals-Debug-c85e8e2c93d14aa5caa8.json",
 					"minimumCMakeVersion" : 
 					{
@@ -110,7 +114,18 @@
 					},
 					"parentIndex" : 1,
 					"projectIndex" : 0,
-					"source" : "SproutEngine/Externals",
+					"source" : "SproutEngine/Externals"
+				},
+				{
+					"build" : "SproutEngine/Externals/spdlog",
+					"jsonFile" : "directory-SproutEngine.Externals.spdlog-Debug-5630ba67242eabd4aa79.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 1,
+					"source" : "SproutEngine/Externals/spdlog",
 					"targetIndexes" : 
 					[
 						9
@@ -120,7 +135,7 @@
 					"build" : "SproutEngine/Externals/googletest",
 					"childIndexes" : 
 					[
-						8
+						9
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-SproutEngine.Externals.googletest-Debug-9449b2a88bfc9a9734b7.json",
@@ -129,14 +144,14 @@
 						"string" : "3.16"
 					},
 					"parentIndex" : 1,
-					"projectIndex" : 1,
+					"projectIndex" : 2,
 					"source" : "SproutEngine/Externals/googletest"
 				},
 				{
 					"build" : "SproutEngine/Externals/googletest/googlemock",
 					"childIndexes" : 
 					[
-						9
+						10
 					],
 					"hasInstallRule" : true,
 					"jsonFile" : "directory-SproutEngine.Externals.googletest.googlemock-Debug-e4f505ce221788073b36.json",
@@ -144,8 +159,8 @@
 					{
 						"string" : "3.13"
 					},
-					"parentIndex" : 7,
-					"projectIndex" : 2,
+					"parentIndex" : 8,
+					"projectIndex" : 3,
 					"source" : "SproutEngine/Externals/googletest/googlemock",
 					"targetIndexes" : 
 					[
@@ -161,8 +176,8 @@
 					{
 						"string" : "3.13"
 					},
-					"parentIndex" : 8,
-					"projectIndex" : 3,
+					"parentIndex" : 9,
+					"projectIndex" : 4,
 					"source" : "SproutEngine/Externals/googletest/googletest",
 					"targetIndexes" : 
 					[
@@ -207,7 +222,8 @@
 				{
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"directoryIndexes" : 
 					[
@@ -218,8 +234,8 @@
 						4,
 						5,
 						6,
-						10,
-						11
+						11,
+						12
 					],
 					"name" : "SproutEngine",
 					"targetIndexes" : 
@@ -228,21 +244,20 @@
 						1,
 						2,
 						3,
-						4,
-						9
+						4
 					]
 				},
 				{
-					"childIndexes" : 
-					[
-						2
-					],
 					"directoryIndexes" : 
 					[
 						7
 					],
-					"name" : "googletest-distribution",
-					"parentIndex" : 0
+					"name" : "spdlog",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						9
+					]
 				},
 				{
 					"childIndexes" : 
@@ -253,8 +268,20 @@
 					[
 						8
 					],
+					"name" : "googletest-distribution",
+					"parentIndex" : 0
+				},
+				{
+					"childIndexes" : 
+					[
+						4
+					],
+					"directoryIndexes" : 
+					[
+						9
+					],
 					"name" : "gmock",
-					"parentIndex" : 1,
+					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
 						5,
@@ -264,10 +291,10 @@
 				{
 					"directoryIndexes" : 
 					[
-						9
+						10
 					],
 					"name" : "gtest",
-					"parentIndex" : 2,
+					"parentIndex" : 3,
 					"targetIndexes" : 
 					[
 						7,
@@ -287,65 +314,65 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "SproutEngine::@156ddb54d96f11bfeff5",
-					"jsonFile" : "target-SproutEngine-Debug-be1941b479c0b3b44e54.json",
+					"jsonFile" : "target-SproutEngine-Debug-e3e0ecf249c467cc0b7f.json",
 					"name" : "SproutEngine",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 10,
+					"directoryIndex" : 11,
 					"id" : "SproutEngineTests::@3fc46f0add1ea863dd8a",
-					"jsonFile" : "target-SproutEngineTests-Debug-cff7c40aeca81baf48e0.json",
+					"jsonFile" : "target-SproutEngineTests-Debug-b9e86e97088cce1bff41.json",
 					"name" : "SproutEngineTests",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 11,
+					"directoryIndex" : 12,
 					"id" : "SproutRuntime::@efc6388da9400bd319f9",
-					"jsonFile" : "target-SproutRuntime-Debug-ceadf4532883919ce943.json",
+					"jsonFile" : "target-SproutRuntime-Debug-15423072f91cac3f8b90.json",
 					"name" : "SproutRuntime",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "Utilities::@f05820a1571604f85d25",
-					"jsonFile" : "target-Utilities-Debug-d7d87a2f6be3738058e8.json",
+					"jsonFile" : "target-Utilities-Debug-0abbceb7c60acbd517ba.json",
 					"name" : "Utilities",
 					"projectIndex" : 0
 				},
 				{
-					"directoryIndex" : 8,
+					"directoryIndex" : 9,
 					"id" : "gmock::@904b280b67a7b82e571c",
 					"jsonFile" : "target-gmock-Debug-f2cf7c98e7c8c0d71697.json",
 					"name" : "gmock",
-					"projectIndex" : 2
+					"projectIndex" : 3
 				},
 				{
-					"directoryIndex" : 8,
+					"directoryIndex" : 9,
 					"id" : "gmock_main::@904b280b67a7b82e571c",
 					"jsonFile" : "target-gmock_main-Debug-8c507e938ab26cf64e2d.json",
 					"name" : "gmock_main",
-					"projectIndex" : 2
+					"projectIndex" : 3
 				},
 				{
-					"directoryIndex" : 9,
+					"directoryIndex" : 10,
 					"id" : "gtest::@c8bb0a9a222660f4aeab",
 					"jsonFile" : "target-gtest-Debug-dce89f3caa0a15acc40e.json",
 					"name" : "gtest",
-					"projectIndex" : 3
+					"projectIndex" : 4
 				},
 				{
-					"directoryIndex" : 9,
+					"directoryIndex" : 10,
 					"id" : "gtest_main::@c8bb0a9a222660f4aeab",
 					"jsonFile" : "target-gtest_main-Debug-a832743fbae9525066b1.json",
 					"name" : "gtest_main",
-					"projectIndex" : 3
+					"projectIndex" : 4
 				},
 				{
-					"directoryIndex" : 6,
-					"id" : "spdlog::@ab25d232b1fcb0183a4e",
-					"jsonFile" : "target-spdlog-Debug-ffb0ef24a872b1bc1874.json",
+					"directoryIndex" : 7,
+					"id" : "spdlog::@6f25637bd400195ec3cc",
+					"jsonFile" : "target-spdlog-Debug-a8b08362f6422eb1050c.json",
 					"name" : "spdlog",
-					"projectIndex" : 0
+					"projectIndex" : 1
 				}
 			]
 		}

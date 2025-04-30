@@ -43,6 +43,12 @@
 				"parent" : 0
 			},
 			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
 				"command" : 3,
 				"file" : 0,
 				"line" : 22,
@@ -57,6 +63,17 @@
 			[
 				{
 					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "/utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "SPDLOG_COMPILED_LIB"
 				}
 			],
 			"includes" : 
@@ -66,8 +83,12 @@
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities"
 				},
 				{
+					"backtrace" : 4,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities/../Externals/spdlog/include"
+				},
+				{
 					"backtrace" : 2,
-					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals"
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals/spdlog/include"
 				}
 			],
 			"language" : "CXX",
@@ -75,7 +96,7 @@
 			{
 				"backtraces" : 
 				[
-					4
+					5
 				],
 				"standard" : "20"
 			},
@@ -89,7 +110,7 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "spdlog::@ab25d232b1fcb0183a4e"
+			"id" : "spdlog::@6f25637bd400195ec3cc"
 		}
 	],
 	"id" : "Utilities::@f05820a1571604f85d25",

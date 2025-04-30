@@ -15,11 +15,13 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"TARGET_LINK_LIBRARIES",
 			"target_include_directories"
 		],
 		"files" : 
 		[
-			"SproutEngine/Tests/CMakeLists.txt"
+			"SproutEngine/Tests/CMakeLists.txt",
+			"SproutEngine/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -35,13 +37,22 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 13,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
+				"file" : 1
+			},
+			{
 				"command" : 2,
+				"file" : 1,
+				"line" : 27,
+				"parent" : 3
+			},
+			{
+				"command" : 3,
 				"file" : 0,
-				"line" : 20,
+				"line" : 27,
 				"parent" : 0
 			}
 		]
@@ -53,13 +64,52 @@
 			[
 				{
 					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -std:c++17 -Zi"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "/utf-8"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "SPDLOG_COMPILED_LIB"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 5,
 					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Tests/../Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Utilities"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Externals/spdlog/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Math"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "D:/GameEngineStuff/SproutGameEngine/SproutEngine/Engine/Core"
 				},
 				{
 					"backtrace" : 2,
@@ -89,6 +139,22 @@
 	],
 	"dependencies" : 
 	[
+		{
+			"backtrace" : 2,
+			"id" : "SproutEngine::@156ddb54d96f11bfeff5"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Math::@765af3a8d2eed00d5c2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Utilities::@f05820a1571604f85d25"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "spdlog::@6f25637bd400195ec3cc"
+		},
 		{
 			"backtrace" : 2,
 			"id" : "gtest::@c8bb0a9a222660f4aeab"
@@ -123,12 +189,17 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "SproutEngine_Engine.lib",
+				"fragment" : "SproutEngine\\SproutEngine.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
 				"fragment" : "lib\\gtest.lib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "SproutEngine\\Externals\\spdlog\\spdlogd.lib",
 				"role" : "libraries"
 			},
 			{

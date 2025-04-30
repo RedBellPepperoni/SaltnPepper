@@ -9,11 +9,18 @@ add_executable(SproutEngineTests
     
 )
 
+
+# Set MSVC runtime library for debug builds
+if(MSVC)
+    set_property(TARGET SproutEngineTests PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreadedDebug")
+endif()
+
+
 # Link libraries
 target_link_libraries(SproutEngineTests PRIVATE 
     gtest         # Link gtest library
     gtest_main    # Link gtest_main library (provides main())
-    SproutEngine_Engine 
+    SproutEngine
 )
 
 # Include directories for the tests
