@@ -10,10 +10,6 @@ add_executable(SproutEngineTests
 )
 
 
-# Set MSVC runtime library for debug builds
-if(MSVC)
-    set_property(TARGET SproutEngineTests PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreadedDebug")
-endif()
 
 
 # Link libraries

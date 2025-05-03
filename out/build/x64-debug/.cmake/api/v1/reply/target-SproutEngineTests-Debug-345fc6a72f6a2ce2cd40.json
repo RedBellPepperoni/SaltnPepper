@@ -37,7 +37,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
@@ -52,7 +52,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 27,
+				"line" : 23,
 				"parent" : 0
 			}
 		]
@@ -157,11 +157,11 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@c8bb0a9a222660f4aeab"
+			"id" : "gtest_main::@c8bb0a9a222660f4aeab"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@c8bb0a9a222660f4aeab"
+			"id" : "gtest::@c8bb0a9a222660f4aeab"
 		}
 	],
 	"id" : "SproutEngineTests::@3fc46f0add1ea863dd8a",
