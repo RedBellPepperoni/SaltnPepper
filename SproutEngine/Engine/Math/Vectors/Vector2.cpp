@@ -114,7 +114,7 @@ namespace SproutEngine::Maths
 
 
 	
-	inline bool Vector2::operator==(const Vector2& _vector) const noexcept
+	/*inline bool Vector2::operator==(const Vector2& _vector) const noexcept
 	{
 		using namespace DirectX;
 
@@ -130,7 +130,7 @@ namespace SproutEngine::Maths
 		const XMVECTOR thisVector = XMLoadFloat2A(&this->xmvector);
 		const XMVECTOR inVector = XMLoadFloat2A(&_vector.xmvector);
 		return XMVector2NotEqual(thisVector, inVector);
-	}
+	}*/
 
 	
 	 
@@ -182,13 +182,13 @@ namespace SproutEngine::Maths
 		
 	}
 
-	inline void Vector2::Normalize() noexcept
-	{
-		using namespace DirectX;
-		const XMVECTOR vectorThis = XMLoadFloat2A(&this->xmvector);
-		const XMVECTOR normalizedVector = XMVector2Normalize(vectorThis);
-		XMStoreFloat2A(&this->xmvector, normalizedVector);
-	}
+	//inline void Vector2::Normalize() noexcept
+	//{
+	//	using namespace DirectX;
+	//	const XMVECTOR vectorThis = XMLoadFloat2A(&this->xmvector);
+	//	const XMVECTOR normalizedVector = XMVector2Normalize(vectorThis);
+	//	XMStoreFloat2A(&this->xmvector, normalizedVector);
+	//}
 
 	inline void Vector2::Normalize(Vector2& _result) const noexcept
 	{
@@ -198,14 +198,14 @@ namespace SproutEngine::Maths
 		XMStoreFloat2A(&_result.xmvector, normalizedVector);
 	}
 
-	inline float Vector2::Dot(const Vector2& _otherVector) const noexcept
+	/*inline float Vector2::Dot(const Vector2& _otherVector) const noexcept
 	{
 		using namespace DirectX;
 		const XMVECTOR thisvector = XMLoadFloat2A(&this->xmvector);
 		const XMVECTOR otherVector = XMLoadFloat2A(&_otherVector.xmvector);
 		const XMVECTOR dotVector = XMVector2Dot(thisvector, otherVector);
 		return XMVectorGetX(dotVector);
-	}
+	}*/
 
 	inline float Vector2::Cross(const Vector2& _otherVector) const noexcept
 	{

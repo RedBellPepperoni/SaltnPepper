@@ -104,8 +104,23 @@ namespace SproutEngine
 			Vector2& operator/= (const float _scalar) noexcept;
 
 			/// Comparisons
-			bool operator== (const Vector2& _vector) const noexcept;
-			bool operator!= (const Vector2& _vector) const noexcept;
+			inline bool operator== (const Vector2& _vector) const noexcept
+			{
+				using namespace DirectX;
+
+				const XMVECTOR thisVector = XMLoadFloat2A(&this->xmvector);
+				const XMVECTOR inVector = XMLoadFloat2A(&_vector.xmvector);
+				return XMVector2Equal(thisVector, inVector);
+			}
+
+			bool operator!= (const Vector2& _vector) const noexcept
+			{
+				using namespace DirectX;
+
+				const XMVECTOR thisVector = XMLoadFloat2A(&this->xmvector);
+				const XMVECTOR inVector = XMLoadFloat2A(&_vector.xmvector);
+				return XMVector2NotEqual(thisVector, inVector);
+			}
 
 			/// Negative Value
 			Vector2 operator- () const noexcept;
@@ -129,13 +144,28 @@ namespace SproutEngine
 			static float DistanceSquared(const Vector2& _firstVector, const Vector2& _secondVector) noexcept;
 
 
-			void Normalize() noexcept;
+			inline void Normalize() noexcept
+			{
+				using namespace DirectX;
+				const XMVECTOR vectorThis = XMLoadFloat2A(&this->xmvector);
+				const XMVECTOR normalizedVector = XMVector2Normalize(vectorThis);
+				XMStoreFloat2A(&this->xmvector, normalizedVector);
+			}
+
 			void Normalize(Vector2& _result) const noexcept;
 			
 
 			/// Vector Algebra
 
-			float Dot(const Vector2& _otherVector) const noexcept;
+			inline float Dot(const Vector2& _otherVector) const noexcept
+			{
+				using namespace DirectX;
+				const XMVECTOR thisvector = XMLoadFloat2A(&this->xmvector);
+				const XMVECTOR otherVector = XMLoadFloat2A(&_otherVector.xmvector);
+				const XMVECTOR dotVector = XMVector2Dot(thisvector, otherVector);
+				return XMVectorGetX(dotVector);
+			}
+
 			float Cross(const Vector2& _otherVector) const noexcept;
 			
 

@@ -18,8 +18,7 @@
         },
 
         "environment": {
-          "CFLAGS": "/fsanitize=address",
-          "CXXFLAGS": "/fsanitize=address"
+         
         }
       },
         {

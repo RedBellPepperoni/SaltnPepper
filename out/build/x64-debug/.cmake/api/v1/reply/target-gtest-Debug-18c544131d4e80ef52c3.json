@@ -88,7 +88,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -std:c++17 -Zi"
+					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++17 -Zi"
 				},
 				{
 					"fragment" : "-GS -W4 -WX -wd4251 -wd4275 -nologo -J -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -wd4702 -utf-8 -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1 "
@@ -132,7 +132,7 @@
 		],
 		"prefix" : 
 		{
-			"path" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-debug"
+			"path" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-Debug"
 		}
 	},
 	"name" : "gtest",

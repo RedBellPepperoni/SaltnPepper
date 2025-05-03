@@ -138,8 +138,8 @@
 					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
-			"value" : "cl.exe"
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -250,8 +250,8 @@
 					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
-			"value" : "cl.exe"
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/cl.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -779,7 +779,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-debug"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -1883,7 +1883,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-debug"
+			"value" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-Debug"
 		},
 		{
 			"name" : "cmake_package_name",

@@ -63,7 +63,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -std:c++17 -Zi"
+					"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++17 -Zi"
 				},
 				{
 					"backtrace" : 2,
@@ -141,6 +141,10 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "Utilities::@f05820a1571604f85d25"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "SproutEngine::@156ddb54d96f11bfeff5"
 		},
 		{
@@ -149,19 +153,15 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Utilities::@f05820a1571604f85d25"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "spdlog::@6f25637bd400195ec3cc"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@c8bb0a9a222660f4aeab"
+			"id" : "gtest::@c8bb0a9a222660f4aeab"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@c8bb0a9a222660f4aeab"
+			"id" : "gtest_main::@c8bb0a9a222660f4aeab"
 		}
 	],
 	"id" : "SproutEngineTests::@3fc46f0add1ea863dd8a",
@@ -170,7 +170,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 -Zi",
+				"fragment" : "/utf-8 /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi",
 				"role" : "flags"
 			},
 			{

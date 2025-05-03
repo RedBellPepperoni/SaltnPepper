@@ -62,7 +62,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20 -Zi"
+					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi"
 				},
 				{
 					"backtrace" : 2,
@@ -126,15 +126,15 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "Utilities::@f05820a1571604f85d25"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "SproutEngine::@156ddb54d96f11bfeff5"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "Math::@765af3a8d2eed00d5c2f"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "Utilities::@f05820a1571604f85d25"
 		},
 		{
 			"backtrace" : 2,
@@ -147,7 +147,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -Zi",
+				"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi",
 				"role" : "flags"
 			},
 			{
