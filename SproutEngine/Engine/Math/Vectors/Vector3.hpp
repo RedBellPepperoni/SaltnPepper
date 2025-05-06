@@ -28,14 +28,43 @@ namespace SproutEngine
 {
 	namespace Maths
 	{
-		struct Vector3 : public XMFLOAT3A
+
+
+
+
+		struct Vector3Int;
+		struct Quaternion;
+
+		/// <summary>
+		///  Structure defining a 16 bit aligned 3 dimentional floating point vector (a Vector 3)
+		/// </summary>
+		struct Vector3 
 		{
+
+			// Zero Valued Vector : Vector3 {0.0f , 0.0f, 0.0f}
+			static const Vector3 Zero;
+			// One Valued Vector : Vector3 {1.0f , 1.0f, 1,0f}
+			static const Vector3 One;
+			// Unit Vector with X component as One : Vector3 {1.0f , 0.0f, 0.0f}
+			static const Vector3 UnitX;
+			// Unit Vector with Y component as One : Vector3 {0.0f , 1.0f, 0.0f}
+			static const Vector3 UnitY;
+			// Unit Vector with Y component as One : Vector3 {0.0f , 0.0f, 1.0f}
+			static const Vector3 UnitZ;
+
+			union
+			{
+				struct { float x, y, z; };
+				struct { float u, v, w; };
+				struct { float r, g, b; };
+				DirectX::XMFLOAT3A xmvector;
+			};
 
 
 			/// Declarations for Vector3
-			Vector3() noexcept : XMFLOAT3A(0.0f, 0.0f, 0.0f) {}
-			constexpr explicit Vector3(float _singleValue) noexcept : XMFLOAT3A(_singleValue, _singleValue, _singleValue) {}
-			constexpr Vector3(float _valueX, float _valueY, float _valueZ) noexcept : XMFLOAT3A(_valueX, _valueY, _valueZ) {}
+			Vector3() noexcept : xmvector(0.0f, 0.0f, 0.0f) {}
+			constexpr explicit Vector3(float _singleValue) noexcept : xmvector(_singleValue, _singleValue, _singleValue) {}
+			constexpr Vector3(float _valueX, float _valueY, float _valueZ) noexcept : xmvector(_valueX, _valueY, _valueZ) {}
 
 
 			Vector3(const Vector3&) = default;
@@ -47,36 +76,25 @@ namespace SproutEngine
 			/*
 				Gets this value as a XMVECTOR
 			*/
-			operator XMVECTOR() const noexcept { return XMLoadFloat3(this); }
+			operator XMVECTOR() const noexcept { return XMLoadFloat3(&xmvector); }
 
 			/*
 				Creates a new Vector3 from an FXMVector
 			*/
 			Vector3(FXMVECTOR _vector) noexcept 
 			{ 
-				XMStoreFloat3(this, _vector); 
+				XMStoreFloat3A(&xmvector, _vector); 
 			}
 
 
-			/*
-				Creates a new Vector3 from an XMFLOT3
-			*/
-			Vector3(const XMFLOAT3& _vector) noexcept 
-			{ 
-				this->x = _vector.x; 
-				this->y = _vector.y; 
-				this->z = _vector.z; 
-			}
-			
-			/*
-				Creates a Vector3 from a XMVECTORF32
-			*/
-			explicit Vector3(const XMVECTORF32& _vector) noexcept 
-			{ 
-				this->x = _vector.f[0]; 
-				this->y = _vector.f[1]; 
-				this->z = _vector.f[2]; 
-			}
+			// Constructor ALIGNED : Sets both (X, Y) components as the given XMFFLOAT2A's Components
+			Vector3(const XMFLOAT3A& _xmFloat) noexcept : xmvector(_xmFloat.x, _xmFloat.y, _xmFloat.z) {}
+
+			// Constructor UNALIGHNED: Sets both (X, Y) components as the given XMFFLOAT2's Components
+			Vector3(const XMFLOAT3& _xmFloat) noexcept : xmvector(_xmFloat.x, _xmFloat.y, _xmFloat.z) {}
+
+			Vector3(const XMVECTORF32& _xmVector32) noexcept : xmvector(_xmVector32.f[0], _xmVector32.f[1], _xmVector32.f[2]) {}
+
 			
 			Vector3& operator= (const XMVECTORF32& _vector) noexcept { x = _vector.f[0]; y = _vector.f[1]; z = _vector.f[2]; return *this; }
 
@@ -90,12 +108,33 @@ namespace SproutEngine
 			Vector3& operator/= (float _scalar) noexcept;
 
 			/// Comparisons
-			bool operator == (const Vector3& _vector) const noexcept;
-			bool operator != (const Vector3& _vector) const noexcept;
+			inline bool operator == (const Vector3& _vector) const noexcept
+			{
+				using namespace DirectX;
+				const XMVECTOR vectorOne = XMLoadFloat3A(&this->xmvector);
+				const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector.xmvector);
+				return XMVector3Equal(vectorOne, vectorTwo);
+			}
+
+			inline bool operator != (const Vector3& _vector) const noexcept
+			{
+				using namespace DirectX;
+				const XMVECTOR vectorOne = XMLoadFloat3A(&this->xmvector);
+				const XMVECTOR vectorTwo = XMLoadFloat3A(&_vector.xmvector);
+				return XMVector3NotEqual(vectorOne, vectorTwo);
+			}
 
 
 			/// Negative Value
-			Vector3 operator- () const noexcept;
+			inline Vector3 operator- () const noexcept
+			{
+				using namespace DirectX;
+				const XMVECTOR vectorOne = XMLoadFloat3A(&this->xmvector);
+				const XMVECTOR finalVector = XMVectorNegate(vectorOne);
+				Vector3 result;
+				XMStoreFloat3A(&result.xmvector, finalVector);
+				return result;
+			}
 			Vector3 operator+ () const noexcept;
 
 

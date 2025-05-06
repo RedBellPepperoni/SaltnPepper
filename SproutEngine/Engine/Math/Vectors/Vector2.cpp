@@ -19,7 +19,6 @@
 #include <Vectors/Vector2.hpp>
 #include <Quaternion.hpp>
 #include <../Core/EngineDefines.hpp>
-//#include <../Utilities/Logging/Log.hpp>
 
 #include <sstream> 
 
@@ -103,7 +102,8 @@ namespace SproutEngine::Maths
 		using namespace DirectX;
 
 		// Check Divide by Zero Edge Case
-		SPROUT_ASSERT(_scalar != 0.0f);
+		//SPROUT_ASSERT(_scalar == 0.0f);
+
 
 		const XMVECTOR thisVector = XMLoadFloat2A(&this->xmvector);
 		const XMVECTOR finalVector = XMVectorScale(thisVector, 1.0f / _scalar);

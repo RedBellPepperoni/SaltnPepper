@@ -1050,6 +1050,15 @@ build SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector2.cpp.obj: 
   TARGET_COMPILE_PDB = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\
   TARGET_PDB = SproutEngine\Tests\SproutEngineTests.pdb
 
+build SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector3.cpp.obj: CXX_COMPILER__SproutEngineTests_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Tests\Test_Vector3.cpp || cmake_object_order_depends_target_SproutEngineTests
+  DEFINES = -DSPDLOG_COMPILED_LIB
+  FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++17 -Zi /utf-8
+  INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Tests\..\Engine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Core -external:ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest\include -external:ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\googletest\googletest -external:W0
+  OBJECT_DIR = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir
+  OBJECT_FILE_DIR = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir
+  TARGET_COMPILE_PDB = SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\
+  TARGET_PDB = SproutEngine\Tests\SproutEngineTests.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SproutEngineTests
@@ -1058,7 +1067,7 @@ build SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector2.cpp.obj: 
 #############################################
 # Link the executable SproutEngine\Tests\SproutEngineTests.exe
 
-build SproutEngine\Tests\SproutEngineTests.exe SproutEngine\Tests\SproutEngineTests[1]_tests.cmake | ${cmake_ninja_workdir}SproutEngine\Tests\SproutEngineTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__SproutEngineTests_Debug SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector2.cpp.obj | lib\gtest.lib lib\gtest_main.lib SproutEngine\SproutEngine.lib lib\gtest.lib SproutEngine\Externals\spdlog\spdlogd.lib || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\Externals\spdlog\spdlogd.lib SproutEngine\SproutEngine.lib lib\gtest.lib lib\gtest_main.lib
+build SproutEngine\Tests\SproutEngineTests.exe SproutEngine\Tests\SproutEngineTests[1]_tests.cmake | ${cmake_ninja_workdir}SproutEngine\Tests\SproutEngineTests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__SproutEngineTests_Debug SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector2.cpp.obj SproutEngine\Tests\CMakeFiles\SproutEngineTests.dir\Test_Vector3.cpp.obj | lib\gtest.lib lib\gtest_main.lib SproutEngine\SproutEngine.lib lib\gtest.lib SproutEngine\Externals\spdlog\spdlogd.lib || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\Externals\spdlog\spdlogd.lib SproutEngine\SproutEngine.lib lib\gtest.lib lib\gtest_main.lib
   FLAGS = /utf-8 /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = lib\gtest.lib  lib\gtest_main.lib  SproutEngine\SproutEngine.lib  lib\gtest.lib  SproutEngine\Externals\spdlog\spdlogd.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

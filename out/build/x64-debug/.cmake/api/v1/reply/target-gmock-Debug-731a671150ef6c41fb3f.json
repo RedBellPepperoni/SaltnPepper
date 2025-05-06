@@ -141,7 +141,7 @@
 		],
 		"prefix" : 
 		{
-			"path" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-Debug"
+			"path" : "D:/GameEngineStuff/SproutGameEngine/out/install/x64-debug"
 		}
 	},
 	"name" : "gmock",

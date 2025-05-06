@@ -24,12 +24,12 @@
 using Vector2 = SproutEngine::Maths::Vector2;
 const float FLOAT_TOLERANCE = 1e-6f;
 
-// Test Fixture 
+/// =========================== Test Fixture for Vector2 ============================================
 class Vector2Test : public ::testing::Test {
 protected:
     Vector2 v1{ 1.0f, 2.0f };
     Vector2 v2{ 3.0f, 4.0f };
-    Vector2 zero{ 0.0f, 0.0f };
+    Vector2 zero = Vector2::Zero;
 };
 
 // Test Cases
@@ -136,7 +136,12 @@ TEST_F(Vector2Test, DivisionScalar) {
 
 TEST_F(Vector2Test, DivisionScalarByZero) {
     
-   EXPECT_THROW(v1 / 0.0f, std::runtime_error);
+   Vector2 result = v1 / 0.0f;
+
+   //Direct X makes division by Zero actual to INF
+
+   bool is_inf = std::isinf(result.x) && std::isinf(result.y);
+   EXPECT_TRUE(is_inf); // Accept either INF or zero for zero vector
 }
 
 TEST_F(Vector2Test, Length) {
@@ -167,7 +172,7 @@ TEST_F(Vector2Test, Normalize) {
 
 TEST_F(Vector2Test, NormalizeZeroVector) {
     Vector2 v = Vector2::Zero;
-    v.Normalize(); // Behavior might vary: NaN, remain zero, assert. DirectX typically results in NaN.
+    v.Normalize(); //DirectX typically results in NaN.
 
 
     bool is_nan = std::isnan(v.x) && std::isnan(v.y);

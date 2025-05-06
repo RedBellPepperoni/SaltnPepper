@@ -15,8 +15,8 @@
 |  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                |
 **************************************************************************/
 
-#ifndef VECTOR_2_H
-#define VECTTOR_2_H
+#ifndef VECTOR2_H
+#define VECTOR2_H
 
 
 #include <DirectXMath.h>
@@ -211,5 +211,5 @@ namespace SproutEngine
 
 
 
-#endif //!VECTOR_2_H
+#endif //!VECTOR2_H
 

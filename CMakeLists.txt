@@ -17,12 +17,21 @@ PROJECT ("SproutEngine")
 
 
 # Enable AddressSanitizer only for Debug builds
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+#if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+   # string(APPEND CMAKE_C_FLAGS_DEBUG " /fsanitize=address")
+    #string(APPEND CMAKE_CXX_FLAGS_DEBUG " /fsanitize=address")
+   # message(STATUS "AddressSanitizer enabled for Debug build.")
+#endif()
+
+
+# Enable AddressSanitizer for MSVC builds (Debug and Release)
+if(MSVC)
     string(APPEND CMAKE_C_FLAGS_DEBUG " /fsanitize=address")
     string(APPEND CMAKE_CXX_FLAGS_DEBUG " /fsanitize=address")
-    message(STATUS "AddressSanitizer enabled for Debug build.")
+    string(APPEND CMAKE_C_FLAGS_RELEASE " /fsanitize=address")
+    string(APPEND CMAKE_CXX_FLAGS_RELEASE " /fsanitize=address")
+    message(STATUS "AddressSanitizer flags applied for MSVC build (Debug and Release).")
 endif()
-
 
 # Include sub-projects.
 ADD_SUBDIRECTORY ("SproutEngine")

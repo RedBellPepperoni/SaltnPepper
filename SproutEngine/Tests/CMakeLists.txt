@@ -6,7 +6,7 @@ SET (TEST_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/)
 # Define the test executable
 add_executable(SproutEngineTests 
     ${TEST_DIRECTORY}Test_Vector2.cpp
-    
+    ${TEST_DIRECTORY}Test_Vector3.cpp
 )
 
 
