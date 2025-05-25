@@ -32,6 +32,8 @@ namespace SproutEngine
 		struct Vector2Int;
 		struct Quaternion;
 
+		
+
 		/// <summary>
 		///  Structure defining a 16 bit aligned 2 dimentional floating point vector (a Vector 2)
 		/// </summary>

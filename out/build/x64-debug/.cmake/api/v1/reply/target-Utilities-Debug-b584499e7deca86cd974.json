@@ -62,7 +62,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi"
 				},
 				{
 					"backtrace" : 2,

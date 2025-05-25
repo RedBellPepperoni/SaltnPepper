@@ -94,6 +94,8 @@ namespace SproutEngine::Maths
 
 	}
 
+	/// Moved to the .hpp file 
+
 	/*inline bool Vector3::operator==(const Vector3& _vector) const noexcept
 	{
 		using namespace DirectX;
@@ -366,4 +368,6 @@ namespace SproutEngine::Maths
 		XMStoreFloat3A(&finalVector.xmvector, multipliedVector);
 		return finalVector;
 	}
+
+
 }

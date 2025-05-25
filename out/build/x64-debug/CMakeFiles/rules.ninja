@@ -29,7 +29,7 @@ rule CUSTOM_COMMAND
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__SproutEngine_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -39,7 +39,7 @@ rule CXX_STATIC_LIBRARY_LINKER__SproutEngine_Debug
 
 rule CXX_SCAN__Utilities_Debug
   deps = msvc
-  command = C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
+  command = C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
   description = Scanning $in for CXX dependencies
 
 
@@ -59,7 +59,7 @@ rule CXX_DYNDEP__Utilities_Debug
 
 rule CXX_COMPILER__Utilities_scanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -68,7 +68,7 @@ rule CXX_COMPILER__Utilities_scanned_Debug
 
 rule CXX_COMPILER__Utilities_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -77,7 +77,7 @@ rule CXX_COMPILER__Utilities_unscanned_Debug
 
 rule CXX_SCAN__Math_Debug
   deps = msvc
-  command = C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
+  command = C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
   description = Scanning $in for CXX dependencies
 
 
@@ -97,7 +97,7 @@ rule CXX_DYNDEP__Math_Debug
 
 rule CXX_COMPILER__Math_scanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -106,7 +106,7 @@ rule CXX_COMPILER__Math_scanned_Debug
 
 rule CXX_COMPILER__Math_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -115,7 +115,7 @@ rule CXX_COMPILER__Math_unscanned_Debug
 
 rule CXX_COMPILER__spdlog_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -123,7 +123,7 @@ rule CXX_COMPILER__spdlog_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__spdlog_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -133,7 +133,7 @@ rule CXX_STATIC_LIBRARY_LINKER__spdlog_Debug
 
 rule CXX_COMPILER__gmock_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -141,7 +141,7 @@ rule CXX_COMPILER__gmock_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__gmock_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -151,7 +151,7 @@ rule CXX_STATIC_LIBRARY_LINKER__gmock_Debug
 
 rule CXX_COMPILER__gmock_main_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -159,7 +159,7 @@ rule CXX_COMPILER__gmock_main_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -169,7 +169,7 @@ rule CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug
 
 rule CXX_COMPILER__gtest_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -177,7 +177,7 @@ rule CXX_COMPILER__gtest_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__gtest_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -187,7 +187,7 @@ rule CXX_STATIC_LIBRARY_LINKER__gtest_Debug
 
 rule CXX_COMPILER__gtest_main_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -195,7 +195,7 @@ rule CXX_COMPILER__gtest_main_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -205,7 +205,7 @@ rule CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug
 
 rule CXX_COMPILER__SproutEngineTests_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -213,7 +213,7 @@ rule CXX_COMPILER__SproutEngineTests_unscanned_Debug
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__SproutEngineTests_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests $MANIFESTS -- C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests $MANIFESTS -- C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -223,7 +223,7 @@ rule CXX_EXECUTABLE_LINKER__SproutEngineTests_Debug
 
 rule CXX_SCAN__SproutRuntime_Debug
   deps = msvc
-  command = C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
+  command = C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe $DEFINES $INCLUDES $FLAGS $in -nologo -TP -showIncludes -scanDependencies $DYNDEP_INTERMEDIATE_FILE -Fo$OBJ_FILE
   description = Scanning $in for CXX dependencies
 
 
@@ -243,7 +243,7 @@ rule CXX_DYNDEP__SproutRuntime_Debug
 
 rule CXX_COMPILER__SproutRuntime_scanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes @$DYNDEP_MODULE_MAP_FILE /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -252,7 +252,7 @@ rule CXX_COMPILER__SproutRuntime_scanned_Debug
 
 rule CXX_COMPILER__SproutRuntime_unscanned_Debug
   deps = msvc
-  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -260,7 +260,7 @@ rule CXX_COMPILER__SproutRuntime_unscanned_Debug
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__SproutRuntime_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests $MANIFESTS -- C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1436~1.325\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests $MANIFESTS -- C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 

@@ -252,7 +252,7 @@ build cmake_object_order_depends_target_Utilities: phony || cmake_object_order_d
 
 build SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging\Log.cpp.obj: CXX_COMPILER__Utilities_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\Logging\Log.cpp || cmake_object_order_depends_target_Utilities
   DEFINES = -DSPDLOG_COMPILED_LIB
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities\..\Externals\spdlog\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir
   OBJECT_FILE_DIR = SproutEngine\Engine\Utilities\CMakeFiles\Utilities.dir\Logging
@@ -334,7 +334,7 @@ build SproutEngine\Engine\Utilities\install\local: phony SproutEngine\Engine\Uti
 build cmake_object_order_depends_target_Math: phony || .
 
 build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Vectors\Vector2.cpp || cmake_object_order_depends_target_Math
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
   OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
   OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors
@@ -342,7 +342,7 @@ build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector2.cpp.obj: CXX_
   TARGET_PDB = ""
 
 build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Vectors\Vector3.cpp || cmake_object_order_depends_target_Math
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
   OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
   OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors
@@ -350,7 +350,7 @@ build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Vectors\Vector3.cpp.obj: CXX_
   TARGET_PDB = ""
 
 build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Quaternion.cpp || cmake_object_order_depends_target_Math
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
   OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
   OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
@@ -358,7 +358,7 @@ build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Quaternion.cpp.obj: CXX_COMPI
   TARGET_PDB = ""
 
 build SproutEngine\Engine\Math\CMakeFiles\Math.dir\Matrix4.cpp.obj: CXX_COMPILER__Math_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math\Matrix4.cpp || cmake_object_order_depends_target_Math
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math
   OBJECT_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
   OBJECT_FILE_DIR = SproutEngine\Engine\Math\CMakeFiles\Math.dir
@@ -557,7 +557,7 @@ build cmake_object_order_depends_target_spdlog: phony || .
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\spdlog.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\spdlog.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -566,7 +566,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\spdlog.cpp.obj: CX
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\stdout_sinks.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\stdout_sinks.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -575,7 +575,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\stdout_sinks.cpp.o
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\color_sinks.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\color_sinks.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -584,7 +584,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\color_sinks.cpp.ob
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\file_sinks.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\file_sinks.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -593,7 +593,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\file_sinks.cpp.obj
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\async.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\async.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -602,7 +602,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\async.cpp.obj: CXX
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\cfg.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\cfg.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -611,7 +611,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\cfg.cpp.obj: CXX_C
 
 build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\bundled_fmtlib_format.cpp.obj: CXX_COMPILER__spdlog_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\src\bundled_fmtlib_format.cpp || cmake_object_order_depends_target_spdlog
   DEFINES = -DSPDLOG_COMPILED_LIB -DSPDLOG_FWRITE_UNLOCKED
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi /Zc:__cplusplus /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   OBJECT_FILE_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src
@@ -627,7 +627,7 @@ build SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\bundled_fmtlib_for
 # Link the static library SproutEngine\Externals\spdlog\spdlogd.lib
 
 build SproutEngine\Externals\spdlog\spdlogd.lib: CXX_STATIC_LIBRARY_LINKER__spdlog_Debug SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\spdlog.cpp.obj SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\stdout_sinks.cpp.obj SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\color_sinks.cpp.obj SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\file_sinks.cpp.obj SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\async.cpp.obj SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\cfg.cpp.obj SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir\src\bundled_fmtlib_format.cpp.obj
-  LANGUAGE_COMPILE_FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi
+  LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = SproutEngine\Externals\spdlog\CMakeFiles\spdlog.dir
   POST_BUILD = cd .
@@ -1149,7 +1149,7 @@ build cmake_object_order_depends_target_SproutRuntime: phony || cmake_object_ord
 
 build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMPILER__SproutRuntime_unscanned_Debug D$:\GameEngineStuff\SproutGameEngine\SproutRuntime\SproutRuntime.cpp || cmake_object_order_depends_target_SproutRuntime
   DEFINES = -DSPDLOG_COMPILED_LIB
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi /utf-8
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -std:c++20 -Zi /utf-8
   INCLUDES = -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Utilities -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Externals\spdlog\include -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Math -ID:\GameEngineStuff\SproutGameEngine\SproutEngine\Engine\Core
   OBJECT_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
   OBJECT_FILE_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
@@ -1165,7 +1165,7 @@ build SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj: CXX_COMP
 # Link the executable SproutRuntime\SproutRuntime.exe
 
 build SproutRuntime\SproutRuntime.exe: CXX_EXECUTABLE_LINKER__SproutRuntime_Debug SproutRuntime\CMakeFiles\SproutRuntime.dir\SproutRuntime.cpp.obj | SproutEngine\SproutEngine.lib SproutEngine\Externals\spdlog\spdlogd.lib || SproutEngine\Engine\Math\Math SproutEngine\Engine\Utilities\Utilities SproutEngine\Externals\spdlog\spdlogd.lib SproutEngine\SproutEngine.lib
-  FLAGS = /fsanitize=address  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 /fsanitize=address -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = SproutEngine\SproutEngine.lib  SproutEngine\Externals\spdlog\spdlogd.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = SproutRuntime\CMakeFiles\SproutRuntime.dir
