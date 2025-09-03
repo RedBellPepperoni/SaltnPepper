@@ -30,6 +30,7 @@
 
 
 
+
 using namespace DirectX;
 
 namespace SproutEngine
@@ -118,20 +119,22 @@ namespace SproutEngine
 		static inline void Lerp(const float& _valueOne, const float& _valueTwo, const float& _lerpFactor, float& _result)
 		{
 			//_result = (_valueOne + (_valueTwo - _valueOne) * _lerpFactor);
-			_result = std::lerp(_valueOne, _valueTwo, _lerpFactor);
+			_result = _valueOne * (1.0f - _lerpFactor) + _valueTwo * _lerpFactor;
 		}
 
 		static inline float Lerp(const float& _valueOne, const float& _valueTwo, const float& _lerpFactor)
 		{
-			return std::lerp(_valueOne, _valueTwo, _lerpFactor);
+
+			//https://stackoverflow.com/questions/4353525/floating-point-linear-interpolationt
+			return _valueOne* (1.0f - _lerpFactor) + _valueTwo* _lerpFactor;
 		}
 
 		/// Minimum
 		template <typename Type>
 		static inline float Min(Type _firstValue, Type _secondValue)
 		{
-			//return _firstValue < _secondValue ? _firstValue : _secondValue;
-			return std::min(_firstValue, _secondValue);
+			return _firstValue < _secondValue ? _firstValue : _secondValue;
+		
 		}
 
 		/*static inline double Min(double _firstValue, double _secondValue) noexcept{ return std::min(_firstValue, _secondValue);}
@@ -144,8 +147,8 @@ namespace SproutEngine
 		template <typename Type>
 		static inline float Max(Type _firstValue, Type _secondValue) noexcept
 		{
-			//return _firstValue > _secondValue ? _firstValue : _secondValue;
-			return std::max(_firstValue, _secondValue);
+			return _firstValue > _secondValue ? _firstValue : _secondValue;
+			//return std::max(_firstValue, _secondValue);
 		}
 
 		/*static inline double Max(double _firstValue, double _secondValue) noexcept{ return std::max(_firstValue, _secondValue);}
@@ -157,7 +160,8 @@ namespace SproutEngine
 		template <typename Type>
 		static inline Type Abs(Type _value)
 		{
-			return std::abs(_value);
+			//return std::abs(_value);
+			return _value >= 0.0 ? _value : -_value;
 		}
 
 		template <typename Type>

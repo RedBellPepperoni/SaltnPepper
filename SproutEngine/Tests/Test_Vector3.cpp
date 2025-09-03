@@ -16,12 +16,11 @@
 **************************************************************************/
 
 #include <gtest/gtest.h>
-#include "Math/Vectors/Vector3.hpp" 
+#include "Math/MathDefinitions.h" 
 #include <string>
 #include <sstream> // For string comparison if needed
 #include <cmath>
 
-using Vector3 = SproutEngine::Maths::Vector3;
 const float FLOAT_TOLERANCE = 1e-6f;
 
 /// =========================== Test Fixture for Vector3 ============================================
@@ -99,10 +98,10 @@ TEST_F(Vector3Test, UnionXYZ_UVW_RGB_Access) {
  
     v.z = 50.0f;
     EXPECT_FLOAT_EQ(v.b, 50.0f); // Check z reflects b change
-    v.w = 60.0f;
+    v.s = 60.0f;
     EXPECT_FLOAT_EQ(v.z, 60.0f); // Check 2 reflects z change
     v.b = 60.0f;
-    EXPECT_FLOAT_EQ(v.w, 60.0f); // Check b reflects w change
+    EXPECT_FLOAT_EQ(v.s, 60.0f); // Check b reflects w change
 
     // Also check DirectX SIMD implementation access
     v.xmvector.x = 70.0f;
@@ -117,7 +116,7 @@ TEST_F(Vector3Test, UnionXYZ_UVW_RGB_Access) {
 
     v.xmvector.z = 90.0f;
     EXPECT_FLOAT_EQ(v.z, 90.0f);
-    EXPECT_FLOAT_EQ(v.w, 90.0f);
+    EXPECT_FLOAT_EQ(v.s, 90.0f);
     EXPECT_FLOAT_EQ(v.b, 90.0f);
 }
 

@@ -1,7 +1,7 @@
 ﻿
 
 
-add_executable(SproutRuntime "SproutRuntime.cpp" "SproutRuntime.hpp")
+add_executable(SproutRuntime "SproutRuntime.cpp" "SproutRuntime.h")
 TARGET_LINK_LIBRARIES(SproutRuntime PRIVATE SproutEngine)
 
 

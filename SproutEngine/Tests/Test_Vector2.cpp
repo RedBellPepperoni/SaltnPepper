@@ -16,12 +16,12 @@
 **************************************************************************/
 
 #include <gtest/gtest.h>
-#include "Math/Vectors/Vector2.hpp" 
+#include "Math/MathDefinitions.h" 
 #include <string>
 #include <sstream> // For string comparison if needed
 #include <cmath>
 
-using Vector2 = SproutEngine::Maths::Vector2;
+//using Vector2 = SproutEngine::Maths::Vector2;
 const float FLOAT_TOLERANCE = 1e-6f;
 
 /// =========================== Test Fixture for Vector2 ============================================

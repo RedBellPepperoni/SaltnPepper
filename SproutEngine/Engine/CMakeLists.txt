@@ -5,6 +5,7 @@ SET(CURRENT_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 ADD_SUBDIRECTORY("${CURRENT_DIR}/Utilities")
 ADD_SUBDIRECTORY("${CURRENT_DIR}/Math")
 ADD_SUBDIRECTORY("${CURRENT_DIR}/Core")
+ADD_SUBDIRECTORY("${CURRENT_DIR}/Platform")
 
 
 # Define an interface library to bundle Engine components

@@ -37,6 +37,13 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Utilities/cmake_install.cmake")
   include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Math/cmake_install.cmake")
   include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Core/cmake_install.cmake")
+  include("D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/Platform/cmake_install.cmake")
 
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "D:/GameEngineStuff/SproutGameEngine/out/build/x64-debug/SproutEngine/Engine/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

@@ -31,7 +31,25 @@ if(MSVC)
     string(APPEND CMAKE_C_FLAGS_RELEASE " /fsanitize=address")
     string(APPEND CMAKE_CXX_FLAGS_RELEASE " /fsanitize=address")
     message(STATUS "AddressSanitizer flags applied for MSVC build (Debug and Release).")
+
+
+    add_compile_options(/EHsc)
+
 endif()
+
+
+# Detect platform
+if (WIN32)
+    add_compile_definitions(SPROUT_PLATFORM_WINDOWS=1)
+elseif (UNIX AND NOT APPLE)
+    add_compile_definitions(SPROUT_PLATFORM_LINUX=1)
+elseif (APPLE)
+    add_compile_definitions(SPROUT_PLATFORM_MAC=1)
+else()
+    message(FATAL_ERROR "Unsupported platform!")
+endif()
+
+
 
 # Include sub-projects.
 ADD_SUBDIRECTORY ("SproutEngine")

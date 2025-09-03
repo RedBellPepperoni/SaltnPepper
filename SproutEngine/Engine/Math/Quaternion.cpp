@@ -16,7 +16,7 @@
 **************************************************************************/
 
 #include <Quaternion.hpp>
-#include <Vectors/Vector2.hpp>
+#include <Vectors/Vector.h>
 #include <MathFunctions.hpp>
 
 namespace SproutEngine::Maths
