@@ -26,10 +26,8 @@
 #include <Math/Vectors/Vector2_DX.h>
 #include <Math/Vectors/Vector3_DX.h>
 
-
 using	Vector2 = SproutEngine::Maths::SPROUT_VECTOR2_DX;
 using	Vector3 = SproutEngine::Maths::SPROUT_VECTOR3_DX;
-
 
 
 #elif defined(MATH_GLM)

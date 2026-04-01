@@ -29,8 +29,8 @@ namespace SproutEngine
 	namespace Maths
 	{
 
-		struct Vector2Int;
-		struct Quaternion;
+		//struct Vector2Int;
+		//struct Quaternion;
 
 		
 
@@ -201,7 +201,7 @@ namespace SproutEngine
 			
 			/// ------------------------------------- String Functions --------------------------------------------------
 
-			std::string ToString() const;
+			//TString ToString() const;
 
 		};
 
