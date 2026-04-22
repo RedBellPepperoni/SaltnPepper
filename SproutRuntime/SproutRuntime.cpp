@@ -1,7 +1,7 @@
 ﻿// SproutRuntime.cpp : Source file for your target.
 //
 
-#include "SproutRuntime.hpp"
+#include "SproutRuntime.h"
 
 
 using namespace std;
@@ -22,14 +22,14 @@ int main()
 
 	//printf("The Result is : [%f , %f]", vecOne.x, vecOne.y);
 
-	Maths::Vector2 vecOne = Maths::Vector2{ 1.0f };
-	Maths::Vector2 vecTwo = Maths::Vector2(2.0f, 0.0f);
+	Vector2 vecOne = Vector2{ 1.0f };
+	Vector2 vecTwo = Vector2(2.0f, 0.0f);
 
-	Maths::Vector2 newVec = vecOne * 2.0f;
-	Maths::Vector2 newVec2 = (-vecOne * (vecTwo) * 0) + vecOne;
+	Vector2 newVec = vecOne * 2.0f;
+	Vector2 newVec2 = (-vecOne * (vecTwo) * 0) + vecOne;
 
-	Maths::Vector3 vec3 = Maths::Vector3(1.0f);
-	Maths::Vector3 newvec3 = Maths::Vector3(2.0f) + vec3;
+	Vector3 vec3 = Vector3(1.0f);
+	Vector3 newvec3 = Vector3(2.0f) + vec3;
 
 
 	float x = 1.00f;

@@ -15,9 +15,9 @@
 |  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                |
 **************************************************************************/
 
-#include <Quaternion.hpp>
+#include <Quaternion.h>
 #include <Vectors/Vector.h>
-#include <MathFunctions.hpp>
+#include <MathFunctions.h>
 
 namespace SproutEngine::Maths
 {

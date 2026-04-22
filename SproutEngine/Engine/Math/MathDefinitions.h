@@ -21,7 +21,7 @@
 #include "Core/EngineDefines.h"
 
 // Math Functions
-#include <Math/MathFunctions.hpp>
+#include <Math/MathFunctions.h>
 
 
 // Vector Includes
@@ -29,7 +29,7 @@
 
 
 // Quaternion Include
-#include <Math/Quaternion.hpp>
+#include <Math/Quaternion.h>
 
 
 #endif // !MATHDEFINITIONS_H

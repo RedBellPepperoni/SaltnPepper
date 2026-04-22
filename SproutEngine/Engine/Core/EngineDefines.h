@@ -47,14 +47,9 @@
 
 
 /// MATH STUFFFFFF
-// Uses Direct X Maths (Vectorization using XMVECTOR aligned Registers)
-#define MATH_DIRECTX	1
+// Uses Direct X Maths (Vectorization using XMVECTOR Registers)
+#define SPROUT_MATH_DIRECTX	1
 
-// Uses GLM Library for Maths
-#define MATH_GLM		0
-
-// Uses Custom built maths Library (When I get time to actaully DO this ... lmao)
-#define MATH_SPROUT		0
 
 
 
