@@ -26,76 +26,76 @@ namespace SproutEngine
 {
 	namespace Maths
 	{
-		struct Vector2;
-		struct Vector3;
-		struct Vector4;
+		//struct Vector2;
+		//struct Vector3;
+		//struct Vector4;
 
 
 		struct Quaternion : public XMFLOAT4A
 		{
-			Quaternion() noexcept : XMFLOAT4A{ 0,0,0,1.0f } {}
-			constexpr Quaternion(float _valueX, float _valueY, float _valueZ, float _valueW) noexcept : XMFLOAT4A(_valueX, _valueY, _valueZ, _valueW) {};
+			//Quaternion() noexcept : XMFLOAT4A{ 0,0,0,1.0f } {}
+			//constexpr Quaternion(float _valueX, float _valueY, float _valueZ, float _valueW) noexcept : XMFLOAT4A(_valueX, _valueY, _valueZ, _valueW) {};
 
-			Quaternion(const Quaternion&) = default;
-			Quaternion& operator=(const Quaternion&) = default;
+			//Quaternion(const Quaternion&) = default;
+			//Quaternion& operator=(const Quaternion&) = default;
 
-			Quaternion(Quaternion&&) = default;
-			Quaternion& operator=(Quaternion&&) = default;
+			//Quaternion(Quaternion&&) = default;
+			//Quaternion& operator=(Quaternion&&) = default;
 
-			explicit Quaternion(const Vector4& _vector) noexcept;
-			explicit Quaternion(const Vector3& _vector, float _scalar) noexcept;
-			Quaternion(FXMVECTOR _fxmVector) noexcept { XMStoreFloat4A(this, _fxmVector); }
-			Quaternion(const XMFLOAT4A& _quatVector) noexcept { this->x = _quatVector.x; this->y = _quatVector.y; this->z = _quatVector.z; this->w = _quatVector.w; }
-			explicit Quaternion(const XMVECTORF32& _f32Vector) noexcept { this->x = _f32Vector.f[0]; this->y = _f32Vector.f[1]; this->z = _f32Vector.f[2]; this->w = _f32Vector.f[3]; }
+			////explicit Quaternion(const Vector4& _vector) noexcept;
+			//explicit Quaternion(const Vector3& _vector, float _scalar) noexcept;
+			//Quaternion(FXMVECTOR _fxmVector) noexcept { XMStoreFloat4A(this, _fxmVector); }
+			//Quaternion(const XMFLOAT4A& _quatVector) noexcept { this->x = _quatVector.x; this->y = _quatVector.y; this->z = _quatVector.z; this->w = _quatVector.w; }
+			//explicit Quaternion(const XMVECTORF32& _f32Vector) noexcept { this->x = _f32Vector.f[0]; this->y = _f32Vector.f[1]; this->z = _f32Vector.f[2]; this->w = _f32Vector.f[3]; }
 
-			operator XMVECTOR() const noexcept { return XMLoadFloat4A(this); }
+			//operator XMVECTOR() const noexcept { return XMLoadFloat4A(this); }
 
-			
+			//
 
-			/// Arithmatic
-			Quaternion& operator= (const XMVECTORF32& _f32Vector) noexcept { x = _f32Vector.f[0]; y = _f32Vector.f[1]; z = _f32Vector.f[2]; w = _f32Vector.f[3]; return *this; }
-			Quaternion& operator+= (const Quaternion& _quaternion) noexcept;
-			Quaternion& operator-= (const Quaternion& _quaternion) noexcept;
-			Quaternion& operator*= (const Quaternion& _quaternion) noexcept;
-			Quaternion& operator*= (float _scalar) noexcept;
-			Quaternion& operator/= (const Quaternion& _quaternion) noexcept;
+			///// Arithmatic
+			//Quaternion& operator= (const XMVECTORF32& _f32Vector) noexcept { x = _f32Vector.f[0]; y = _f32Vector.f[1]; z = _f32Vector.f[2]; w = _f32Vector.f[3]; return *this; }
+			//Quaternion& operator+= (const Quaternion& _quaternion) noexcept;
+			//Quaternion& operator-= (const Quaternion& _quaternion) noexcept;
+			//Quaternion& operator*= (const Quaternion& _quaternion) noexcept;
+			//Quaternion& operator*= (float _scalar) noexcept;
+			//Quaternion& operator/= (const Quaternion& _quaternion) noexcept;
 
-			/// Comparisons
-			bool operator == (const Quaternion& _quaternion) const noexcept;
-			bool operator != (const Quaternion& _quaternion) const noexcept;
+			///// Comparisons
+			//bool operator == (const Quaternion& _quaternion) const noexcept;
+			//bool operator != (const Quaternion& _quaternion) const noexcept;
 
-			/// Negative Value
-			Quaternion operator- () const noexcept;
-			Quaternion operator+ () const  noexcept;
-			
-			/// Free-Standing Operators for Left Handeded Operations
-			friend Quaternion operator+ (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
-			friend Quaternion operator- (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
-			friend Quaternion operator* (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
-			friend Quaternion operator* (const Quaternion& _quaternion, float _scalar) noexcept;
-			friend Quaternion operator/ (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
-			friend Quaternion operator* (float _scalar, const Quaternion& _quaternion) noexcept;
+			///// Negative Value
+			//Quaternion operator- () const noexcept;
+			//Quaternion operator+ () const  noexcept;
+			//
+			///// Free-Standing Operators for Left Handeded Operations
+			//friend Quaternion operator+ (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
+			//friend Quaternion operator- (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
+			//friend Quaternion operator* (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
+			//friend Quaternion operator* (const Quaternion& _quaternion, float _scalar) noexcept;
+			//friend Quaternion operator/ (const Quaternion& _quatOne, const Quaternion& _quatTwo) noexcept;
+			//friend Quaternion operator* (float _scalar, const Quaternion& _quaternion) noexcept;
 		
-			
-			float Length() const noexcept;
-			float LengthSquared() const noexcept;
+			//
+			//float Length() const noexcept;
+			//float LengthSquared() const noexcept;
 
-			bool IsFinite() const noexcept;
-			void Inverse(Quaternion& _result) const noexcept;
-			Quaternion Inverse() noexcept;
+			//bool IsFinite() const noexcept;
+			//void Inverse(Quaternion& _result) const noexcept;
+			//Quaternion Inverse() noexcept;
 
-			void Normalize() noexcept;
-			void Normalize(Quaternion& _result) const noexcept;
-			bool IsNormalized() const noexcept;
+			//void Normalize() noexcept;
+			//void Normalize(Quaternion& _result) const noexcept;
+			//bool IsNormalized() const noexcept;
 
-			void Conjugate() noexcept;
-			void Conjugate(Quaternion& _result) const noexcept;
+			//void Conjugate() noexcept;
+			//void Conjugate(Quaternion& _result) const noexcept;
 
-			void Log(Quaternion& _result) const noexcept;
-			Quaternion Log()  noexcept;
+			//void Log(Quaternion& _result) const noexcept;
+			//Quaternion Log()  noexcept;
 
-			void Exponent(Quaternion& _result) const noexcept;
-			Quaternion Exponent()  noexcept;
+			//void Exponent(Quaternion& _result) const noexcept;
+			//Quaternion Exponent()  noexcept;
 		
 		};
 	}

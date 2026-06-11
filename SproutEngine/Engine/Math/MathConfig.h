@@ -1,5 +1,6 @@
+
 /************************************************************************|
-|								Vector.h								 |
+|							   MathConfig.h			    			     |
 |************************************************************************|
 |                                                                        |
 |========================================================================|
@@ -15,34 +16,26 @@
 |  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                |
 **************************************************************************/
 
+#if SPROUT_MATH_DIRECTX
 
-#ifndef VECTOR_H
-#define VECTOR_H
+#include <Math/Vectors/DirectMath/Vector2_DX.h>
+#include <Math/Vectors/DirectMath/Vector3_DX.h>
 
+namespace SproutEngine::Maths
+{
+    using Vector2 = SPROUT_VECTOR2_DX;
+    using Vector3 = SPROUT_VECTOR3_DX;
+}
 
-/// ===============  Uses DirectX Maths ============================
+#elif SPROUT_MATH_GLM
 
+#include <Math/Vectors/GLMath/Vector2_GLM.h>
 
-// Recommended for Windows ONLY (If using SIMD)
-// GLM Is suggested in every other use case
-#if defined(SPROUT_PLATFORM_WINDOWS) && defined(SPROUT_MATH_DIRECTX)
+namespace SproutEngine::Maths
+{
+    using Vector2 = SPROUT_VECTOR2_GLM;
+}
 
-	#include <Vectors/DirectMath/Vector2_DX.h>
-	#include <Vectors/DirectMath/Vector3_DX.h>
-
-	using Vector2 = SproutEngine::Maths::SPROUT_VECTOR2_DX;  // DXMath fast path
-	using Vector3 = SproutEngine::Maths::SPROUT_VECTOR3_DX;
-
-
-// Default Math Library (for cross platform Operations)
 #else
-
-	using Vector2 = SproutEngine::Maths::SPROUT_VECTOR2_GLM; // Default everywhere
-
+#error "No math backend selected"
 #endif
-
-
-
-
-
-#endif // !VECTOR_H

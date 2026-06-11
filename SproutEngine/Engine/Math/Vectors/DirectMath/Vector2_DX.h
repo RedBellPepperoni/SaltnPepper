@@ -274,8 +274,8 @@ namespace SproutEngine
 
 		
 
-	}
-}
+	}// namespace Maths
+} // namespace SproutEngine
 
 
 

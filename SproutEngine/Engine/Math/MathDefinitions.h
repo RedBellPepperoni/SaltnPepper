@@ -20,6 +20,9 @@
 
 #include "Core/EngineDefines.h"
 
+// Defines the Math Backend
+#include "MathConfig.h"
+
 // Math Functions
 #include <Math/MathFunctions.h>
 
@@ -30,6 +33,10 @@
 
 // Quaternion Include
 #include <Math/Quaternion.h>
+
+
+
+
 
 
 #endif // !MATHDEFINITIONS_H
